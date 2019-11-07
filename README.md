@@ -37,6 +37,20 @@ Add paysdk.plist and set value of certificate.
 ```ruby
 pod 'AP_PaySDK', '1.0'
 ```
+Different version of Swift
+
+swift 4.0
+```ruby
+pod 'AP_PaySDK', '1.0'
+```
+swift 4.2
+```ruby
+pod 'AP_PaySDK-swift4.2', '1.0'
+```
+swift 5.0
+```ruby
+pod 'AP_PaySDK-swift5.0', '1.0'
+```
 
 ### Add implementation
 
