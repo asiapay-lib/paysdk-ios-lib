@@ -25,34 +25,39 @@
 
 Merchant need to integrate certificate. This certificate will be provided when merchant apply for the SDK service from [PayDollar Dashboard](https://www.paydollar.com/b2c2/eng/merchant/index.jsp).
 
-Add paysdk.plist and set value of certificate.
+Add `paysdk.plist` and set value of certificate.
 
+<img width="406" alt="Screenshot 2019-11-07 at 7 01 41 PM" src="https://user-images.githubusercontent.com/57219745/68393070-29b78480-0191-11ea-923a-19445f25fe52.png">
 
 ## Installation
+
+### Framework file 
+
+Add `AP_PaySDK.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries.
 
 ### CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate PayDollarSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'AP_PaySDK', '1.0'
+pod 'AP_PaySDK'
 ```
 Different version of Swift
 
 swift 4.0
 ```ruby
-pod 'AP_PaySDK', '1.0'
+pod 'AP_PaySDK'
 ```
 swift 4.2
 ```ruby
-pod 'AP_PaySDK-swift4.2', '1.0'
+pod 'AP_PaySDK-swift4.2'
 ```
 swift 5.0
 ```ruby
-pod 'AP_PaySDK-swift5.0', '1.0'
+pod 'AP_PaySDK-swift5.0'
 ```
 
-### Add implementation
+### Implementation
 
 Add implementation of PaySDK
 
@@ -101,6 +106,6 @@ extension ViewController : PaySDKDelegate {
     }
 }
 ```
-For detailed description kindly follow [PayDollar Guide](http://www.paydollar.com/pdf/op/enpdintguide.pdf).
+For detailed description kindly follow [PayDollar Guide](http://paydollar.com/pdf/op/enpdintguide.pdf).
                 
                 
