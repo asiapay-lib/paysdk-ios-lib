@@ -10,7 +10,7 @@
 
 ## Features
 - Direct Client Side Connection
-- Server Side Direct Connection
+- Client Post through Browser Side Connection
 - Payment via Alipay
 
 ## Requirements
