@@ -44,15 +44,15 @@ pod 'AP_PaySDK'
 ```
 #### Different version of Swift
 
-#### swift 4.0
+#### Swift 4.0
 ```ruby
 pod 'AP_PaySDK'
 ```
-#### swift 4.2
+#### Swift 4.2
 ```ruby
 pod 'AP_PaySDK-swift4.2'
 ```
-#### swift 5.0
+#### Swift 5.0
 ```ruby
 pod 'AP_PaySDK-swift5.0'
 ```
