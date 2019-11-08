@@ -42,17 +42,17 @@ Add `AP_PaySDK.framework` file into your project by adding the dependencies in B
 ```ruby
 pod 'AP_PaySDK'
 ```
-Different version of Swift
+#### Different version of Swift
 
-swift 4.0
+#### swift 4.0
 ```ruby
 pod 'AP_PaySDK'
 ```
-swift 4.2
+#### swift 4.2
 ```ruby
 pod 'AP_PaySDK-swift4.2'
 ```
-swift 5.0
+#### swift 5.0
 ```ruby
 pod 'AP_PaySDK-swift5.0'
 ```
@@ -74,6 +74,29 @@ class ViewController: UIViewController {
 
 ### Payment method 
 
+Creating PayData for payment and process.
+
+
+#### Hosted Payment
+```
+paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
+                                envType: EnvType.SANDBOX,
+                                amount : “10”,
+                                payGate: PayGate.PAYDOLLAR,
+                                currCode: currencyCode.HKD, 
+                                payType: payType.NORMAL_PAYMENT, 
+                                orderRef: "abcde12345”, 
+                                payMethod: payMethod.VISA,
+                                lang: Language.ENGLISH,
+                                merchantId: "1",
+                                remark: "",
+                                extraData :[:])
+
+paySDK.process()
+
+```
+
+#### Direct Payment
 ```
 paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 envType: EnvType.SANDBOX,
@@ -81,7 +104,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 payGate: PayGate.PAYDOLLAR,
                                 currCode: currencyCode.HKD, 
                                 payType: payType.NORMAL_PAYMENT, 
-                                orderRef: "2018102409220001”, 
+                                orderRef: "abcde12345”, 
                                 payMethod: payMethod.VISA,
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
@@ -89,10 +112,29 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 extraData :[:])
 
 paySDK. paymentDetails.cardDetails = CardDetails(cardHolderName: “abc abc”,
-                                                 cardNo: "4918914107195011”,
+                                                 cardNo: "1234567890123456”,
                                                  expMonth: “11”,
                                                  expYear: “2011”,
                                                  securityCode: “123”)
+paySDK.process()
+
+```
+
+#### Payment via AliPay
+```
+paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
+                                envType: EnvType.SANDBOX,
+                                amount : “10”,
+                                payGate: PayGate.PAYDOLLAR,
+                                currCode: currencyCode.HKD, 
+                                payType: payType.NORMAL_PAYMENT, 
+                                orderRef: "abcde12345”, 
+                                payMethod: payMethod.ALIPAYHKAPP,
+                                lang: Language.ENGLISH,
+                                merchantId: "1",
+                                remark: "",
+                                extraData :[:])
+
 paySDK.process()
 
 ```
