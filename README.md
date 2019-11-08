@@ -130,6 +130,8 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 payType: payType.NORMAL_PAYMENT, 
                                 orderRef: "abcde12345”, 
                                 payMethod: payMethod.ALIPAYHKAPP,
+                                //payMethod: payMethod.ALIPAYCNAPP
+                                //payMethod: payMethod.ALIPAYCNAPP                                
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
                                 remark: "",
