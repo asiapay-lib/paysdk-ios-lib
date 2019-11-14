@@ -25,7 +25,7 @@
 
 ## Pre-requisites
 
-Merchant need to integrate certificate. This certificate will be provided when merchant apply for the SDK service from [PayDollar Dashboard](https://www.paydollar.com/b2c2/eng/merchant/index.jsp).
+Merchant need to integrate certificate. This certificate is provided in [PayDollar Dashboard](https://www.paydollar.com/b2c2/eng/merchant/index.jsp).
 
 Add `paysdk.plist` and set value of certificate.
 
