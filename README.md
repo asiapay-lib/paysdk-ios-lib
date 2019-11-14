@@ -122,7 +122,7 @@ paySDK.process()
 
 ```
 
-#### Payment via AliPay
+#### Payment via AliPay and other value added services.
 ```
 paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 envType: EnvType.SANDBOX,
