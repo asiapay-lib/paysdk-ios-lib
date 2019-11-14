@@ -4,7 +4,7 @@
 
 - [Features](#features)
 - [Requirements](#requirements)
-- [Integration](#integration)
+- [Pre-requisites](#pre-requisites)
 - [Installation](#installation)
 - [Implementation](#implementation)
 
@@ -23,7 +23,7 @@
 
 
 
-## Integration
+## Pre-requisites
 
 Merchant need to integrate certificate. This certificate will be provided when merchant apply for the SDK service from [PayDollar Dashboard](https://www.paydollar.com/b2c2/eng/merchant/index.jsp).
 
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
     .
 ```
 
-### Payment method 
+### Payment Channel Types
 
 Creating PayData for payment and process.
 
@@ -83,11 +83,11 @@ Creating PayData for payment and process.
 ```
 paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
                                 envType: EnvType.SANDBOX,
-                                amount : “10”,
+                                amount : "10",
                                 payGate: PayGate.PAYDOLLAR,
                                 currCode: currencyCode.HKD, 
                                 payType: payType.NORMAL_PAYMENT, 
-                                orderRef: "abcde12345”, 
+                                orderRef: "abcde12345", 
                                 payMethod: payMethod.VISA,
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
@@ -102,22 +102,22 @@ paySDK.process()
 ```
 paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 envType: EnvType.SANDBOX,
-                                amount : “10”,
+                                amount : "10",
                                 payGate: PayGate.PAYDOLLAR,
                                 currCode: currencyCode.HKD, 
                                 payType: payType.NORMAL_PAYMENT, 
-                                orderRef: "abcde12345”, 
+                                orderRef: "abcde12345", 
                                 payMethod: payMethod.VISA,
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
                                 remark: "",
                                 extraData :[:])
 
-paySDK. paymentDetails.cardDetails = CardDetails(cardHolderName: “abc abc”,
+paySDK. paymentDetails.cardDetails = CardDetails(cardHolderName: "abc abc",
                                                  cardNo: "1234567890123456”,
-                                                 expMonth: “11”,
-                                                 expYear: “2011”,
-                                                 securityCode: “123”)
+                                                 expMonth: "11",
+                                                 expYear: "2011",
+                                                 securityCode: "123")
 paySDK.process()
 
 ```
