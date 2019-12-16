@@ -12,7 +12,7 @@
 
 ## Features
 - Direct Client Side Connection
-- Client Post through Browser Side Connection
+- WebView Payment - Client Post through Browser Side Connection
 - Payment via Alipay
 
 ## Requirements
@@ -44,20 +44,6 @@ Add `AP_PaySDK.framework` file into your project by adding the dependencies in B
 ```ruby
 pod 'AP_PaySDK'
 ```
-#### Different version of Swift
-
-#### Swift 4.0
-```ruby
-pod 'AP_PaySDK'
-```
-#### Swift 4.2
-```ruby
-pod 'AP_PaySDK-swift4.2'
-```
-#### Swift 5.0
-```ruby
-pod 'AP_PaySDK-swift5.0'
-```
 
 ### Implementation
 
@@ -67,7 +53,7 @@ Add implementation of PaySDK
 #import AP_PaySDK
 
 class ViewController: UIViewController {
-    var paySDK = PaySDK.shared
+    let paySDK = PaySDK.shared
     paySDK.delegate = self
     .
     .
@@ -79,7 +65,7 @@ class ViewController: UIViewController {
 Creating PayData for payment and process.
 
 
-#### Hosted Payment
+#### WebView Payment
 ```
 paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
                                 envType: EnvType.SANDBOX,
