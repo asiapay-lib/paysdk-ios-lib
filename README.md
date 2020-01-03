@@ -108,7 +108,7 @@ paySDK.process()
 
 ```
 
-#### Payment via AliPay and other value added services.
+#### Payment via AliPay.
 ```
 paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 envType: EnvType.SANDBOX,
@@ -120,6 +120,24 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 payMethod: payMethod.ALIPAYHKAPP,
                                 //payMethod: payMethod.ALIPAYCNAPP
                                 //payMethod: payMethod.ALIPAYAPP                                
+                                lang: Language.ENGLISH,
+                                merchantId: "1",
+                                remark: "",
+                                extraData :[:])
+
+paySDK.process()
+
+```
+#### Payment via WechatPay.
+```
+paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
+                                envType: EnvType.SANDBOX,
+                                amount : “10”,
+                                payGate: PayGate.PAYDOLLAR,
+                                currCode: currencyCode.HKD, 
+                                payType: payType.NORMAL_PAYMENT, 
+                                orderRef: "abcde12345”, 
+                                payMethod: payMethod.WECHATPAY,
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
                                 remark: "",
