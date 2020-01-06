@@ -117,9 +117,9 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 currCode: currencyCode.HKD, 
                                 payType: payType.NORMAL_PAYMENT, 
                                 orderRef: "abcde12345”, 
-                                payMethod: "ALIPAYHKAPP",
-                                //payMethod: "ALIPAYCNAPP"
-                                //payMethod: "ALIPAYAPP"
+                                payMethod: "ALIPAYHKAPP", // FOR ALIPAY HK
+                                //payMethod: "ALIPAYCNAPP" // FOR ALIPAY CN
+                                //payMethod: "ALIPAYAPP" // FOR ALIPAY GLOBAL
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
                                 remark: "",
@@ -128,7 +128,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
 paySDK.process()
 
 ```
-#### Payment via WechatPay.
+#### Payment via WeChat Pay.
 ```
 paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 envType: EnvType.SANDBOX,
