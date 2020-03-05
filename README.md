@@ -17,7 +17,7 @@
 
 ## Requirements
 
-- iOS 10.0+
+- iOS 11.0+
 - Xcode 10.0+
 - Swift version 4+
 
@@ -50,7 +50,7 @@ pod 'AP_PaySDK'
 Add implementation of PaySDK
 
 ```
-#import AP_PaySDK
+import AP_PaySDK
 
 class ViewController: UIViewController {
     let paySDK = PaySDK.shared
