@@ -35,7 +35,7 @@ Add `paysdk.plist` and set value of certificate.
 
 ### Framework file 
 
-Add `AP_PaySDK.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries.
+Add `AP_PaySDK.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries
 and also add `Material.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries or add using  cocoapods as 
 
 ```
