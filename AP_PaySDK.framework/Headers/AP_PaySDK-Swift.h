@@ -268,6 +268,14 @@ SWIFT_CLASS("_TtC9AP_PaySDK19ButtonCustomization")
 @end
 
 
+SWIFT_CLASS("_TtC9AP_PaySDK4Card")
+@interface Card : NSObject
+/// Instantiate the instance using the passed dictionary values to set the properties values
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS_NAMED("CardDetails")
 @interface CardDetails : NSObject
 - (nonnull instancetype)initWithCardHolderName:(NSString * _Nonnull)cardHolderName cardNo:(NSString * _Nonnull)cardNo expMonth:(NSString * _Nonnull)expMonth expYear:(NSString * _Nonnull)expYear securityCode:(NSString * _Nonnull)securityCode OBJC_DESIGNATED_INITIALIZER;
@@ -351,6 +359,13 @@ typedef SWIFT_ENUM(NSInteger, Language, open) {
 };
 
 
+SWIFT_CLASS("_TtC9AP_PaySDK7Methods")
+@interface Methods : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 
 
 
@@ -358,6 +373,7 @@ typedef SWIFT_ENUM(NSInteger, PayChannel, open) {
   PayChannelWEBVIEW = 0,
   PayChannelDIRECT = 1,
   PayChannelEASYPAYMENTFORM = 2,
+  PayChannelNONE = 3,
 };
 
 @class ThreeDSParams;
@@ -370,7 +386,7 @@ SWIFT_CLASS_NAMED("PayData")
 @property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -417,6 +433,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PaySDK * _Nonnull shar
 @property (nonatomic) BOOL useSDKProgressScreen;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (void)queryWithAction:(NSString * _Nonnull)action;
 - (void)process;
 - (void)invalidateToken;
 - (void)processOrderWithUrl:(NSURL * _Nonnull)url;
@@ -432,12 +449,16 @@ typedef SWIFT_ENUM(NSInteger, PaySDKButtonType, open) {
 };
 
 
+@class TransQueryResults;
+@class PaymentOptionsDetail;
 @class UIImage;
 @class UIViewController;
 
 SWIFT_PROTOCOL("_TtP9AP_PaySDK14PaySDKDelegate_")
 @protocol PaySDKDelegate
 - (void)paymentResultWithResult:(PayResult * _Nonnull)result;
+- (void)transQueryResultsWithResult:(TransQueryResults * _Nonnull)result;
+- (void)payMethodOptionsWithMethod:(PaymentOptionsDetail * _Nonnull)method;
 @optional
 - (void)showProgress;
 - (void)hideProgress;
@@ -478,6 +499,14 @@ SWIFT_PROTOCOL("_TtP9AP_PaySDK21PaySDKUiCustomization_")
 - (id <PaySDKToolbarCustomization> _Nullable)getToolbarCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC9AP_PaySDK20PaymentOptionsDetail")
+@interface PaymentOptionsDetail : NSObject
+@property (nonatomic, strong) Methods * _Null_unspecified methods;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
@@ -560,6 +589,22 @@ SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
+
+SWIFT_CLASS("_TtC9AP_PaySDK16TransQueryResult")
+@interface TransQueryResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
+@interface TransQueryResults : NSObject
+@property (nonatomic, copy) NSArray<TransQueryResult *> * _Nullable detail;
+@property (nonatomic, copy) NSString * _Nullable resultCode;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
 @class UIView;
 
 @interface UIButton (SWIFT_EXTENSION(AP_PaySDK))
@@ -627,6 +672,11 @@ SWIFT_CLASS("_TtC9AP_PaySDK15UiCustomization")
 - (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
+
+typedef SWIFT_ENUM(NSInteger, actionType, open) {
+  actionTypeTX_QUERY = 0,
+  actionTypePAYMENT_METHOD = 1,
+};
 
 typedef SWIFT_ENUM(NSInteger, payType, open) {
   payTypeNORMAL_PAYMENT = 0,
@@ -905,6 +955,14 @@ SWIFT_CLASS("_TtC9AP_PaySDK19ButtonCustomization")
 @end
 
 
+SWIFT_CLASS("_TtC9AP_PaySDK4Card")
+@interface Card : NSObject
+/// Instantiate the instance using the passed dictionary values to set the properties values
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS_NAMED("CardDetails")
 @interface CardDetails : NSObject
 - (nonnull instancetype)initWithCardHolderName:(NSString * _Nonnull)cardHolderName cardNo:(NSString * _Nonnull)cardNo expMonth:(NSString * _Nonnull)expMonth expYear:(NSString * _Nonnull)expYear securityCode:(NSString * _Nonnull)securityCode OBJC_DESIGNATED_INITIALIZER;
@@ -988,6 +1046,13 @@ typedef SWIFT_ENUM(NSInteger, Language, open) {
 };
 
 
+SWIFT_CLASS("_TtC9AP_PaySDK7Methods")
+@interface Methods : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 
 
 
@@ -995,6 +1060,7 @@ typedef SWIFT_ENUM(NSInteger, PayChannel, open) {
   PayChannelWEBVIEW = 0,
   PayChannelDIRECT = 1,
   PayChannelEASYPAYMENTFORM = 2,
+  PayChannelNONE = 3,
 };
 
 @class ThreeDSParams;
@@ -1007,7 +1073,7 @@ SWIFT_CLASS_NAMED("PayData")
 @property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1054,6 +1120,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PaySDK * _Nonnull shar
 @property (nonatomic) BOOL useSDKProgressScreen;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (void)queryWithAction:(NSString * _Nonnull)action;
 - (void)process;
 - (void)invalidateToken;
 - (void)processOrderWithUrl:(NSURL * _Nonnull)url;
@@ -1069,12 +1136,16 @@ typedef SWIFT_ENUM(NSInteger, PaySDKButtonType, open) {
 };
 
 
+@class TransQueryResults;
+@class PaymentOptionsDetail;
 @class UIImage;
 @class UIViewController;
 
 SWIFT_PROTOCOL("_TtP9AP_PaySDK14PaySDKDelegate_")
 @protocol PaySDKDelegate
 - (void)paymentResultWithResult:(PayResult * _Nonnull)result;
+- (void)transQueryResultsWithResult:(TransQueryResults * _Nonnull)result;
+- (void)payMethodOptionsWithMethod:(PaymentOptionsDetail * _Nonnull)method;
 @optional
 - (void)showProgress;
 - (void)hideProgress;
@@ -1115,6 +1186,14 @@ SWIFT_PROTOCOL("_TtP9AP_PaySDK21PaySDKUiCustomization_")
 - (id <PaySDKToolbarCustomization> _Nullable)getToolbarCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC9AP_PaySDK20PaymentOptionsDetail")
+@interface PaymentOptionsDetail : NSObject
+@property (nonatomic, strong) Methods * _Null_unspecified methods;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
@@ -1197,6 +1276,22 @@ SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
+
+SWIFT_CLASS("_TtC9AP_PaySDK16TransQueryResult")
+@interface TransQueryResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
+@interface TransQueryResults : NSObject
+@property (nonatomic, copy) NSArray<TransQueryResult *> * _Nullable detail;
+@property (nonatomic, copy) NSString * _Nullable resultCode;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
 @class UIView;
 
 @interface UIButton (SWIFT_EXTENSION(AP_PaySDK))
@@ -1264,6 +1359,11 @@ SWIFT_CLASS("_TtC9AP_PaySDK15UiCustomization")
 - (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
+
+typedef SWIFT_ENUM(NSInteger, actionType, open) {
+  actionTypeTX_QUERY = 0,
+  actionTypePAYMENT_METHOD = 1,
+};
 
 typedef SWIFT_ENUM(NSInteger, payType, open) {
   payTypeNORMAL_PAYMENT = 0,

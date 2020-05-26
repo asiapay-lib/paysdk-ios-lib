@@ -31,6 +31,15 @@ import WebKit
   @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
   @objc deinit
 }
+@objc public class TransQueryResults : ObjectiveC.NSObject {
+  @objc public var detail: [AP_PaySDK.TransQueryResult]?
+  @objc public var resultCode: Swift.String?
+  public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResults]
+  required public init?(dictionary: Foundation.NSDictionary)
+  public func dictionaryRepresentation() -> Foundation.NSDictionary
+  @objc override dynamic public init()
+  @objc deinit
+}
 @objc open class PayResult : ObjectiveC.NSObject {
   @objc public var amount: Swift.String!
   @objc public var successCode: Swift.String!
@@ -137,6 +146,15 @@ open class ThreeDSParams : ObjectiveC.NSObject {
     get
   }
 }
+@objc public enum actionType : Swift.Int {
+  case TX_QUERY
+  case PAYMENT_METHOD
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public enum PayGate : Swift.Int {
   case PAYDOLLAR
   case PESOPAY
@@ -151,6 +169,7 @@ open class ThreeDSParams : ObjectiveC.NSObject {
   case WEBVIEW
   case DIRECT
   case EASYPAYMENTFORM
+  case NONE
   public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
   public var rawValue: Swift.Int {
@@ -224,6 +243,10 @@ open class ThreeDSParams : ObjectiveC.NSObject {
     get
   }
 }
+@objc public class PaymentOptionsDetail : ObjectiveC.NSObject {
+  @objc public var methods: AP_PaySDK.Methods!
+  @objc deinit
+}
 extension UITextField {
   @objc override dynamic open func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
 }
@@ -256,6 +279,7 @@ infix operator >>> : DefaultPrecedence
   @objc public var uiCustomization: AP_PaySDK.UiCustomization?
   @objc public var isBioMetricRequired: Swift.Bool
   @objc public var useSDKProgressScreen: Swift.Bool
+  @objc public func query(action: Swift.String)
   @objc public func process()
   @objc public func invalidateToken()
   @objc public func processOrder(url: Foundation.URL)
@@ -263,6 +287,8 @@ infix operator >>> : DefaultPrecedence
 }
 @objc public protocol PaySDKDelegate {
   @objc func paymentResult(result: AP_PaySDK.PayResult)
+  @objc func transQueryResults(result: AP_PaySDK.TransQueryResults)
+  @objc func payMethodOptions(method: AP_PaySDK.PaymentOptionsDetail)
   @objc optional func showProgress()
   @objc optional func hideProgress()
   @objc optional func setMerchantInfoImg() -> UIKit.UIImage?
@@ -330,6 +356,45 @@ extension UIButton {
   @objc func getLabelCustomization() throws -> AP_PaySDK.PaySDKLabelCustomization
   @objc func getTextBoxCustomization() throws -> AP_PaySDK.PaySDKTextBoxCustomization
 }
+@objc public class Methods : ObjectiveC.NSObject {
+  public var card: [AP_PaySDK.Card]!
+  public var other: [AP_PaySDK.Card]!
+  public var netbanking: [AP_PaySDK.Card]!
+  public var saved: [AP_PaySDK.Card]!
+  @objc deinit
+}
+@objc open class TransQueryResult : ObjectiveC.NSObject {
+  public var cur: Swift.String?
+  public var txTime: Swift.String?
+  public var errMsg: Swift.String?
+  public var orderStatus: Swift.String?
+  public var amt: Swift.String?
+  public var remark: Swift.String?
+  public var eci: Swift.String?
+  public var ipCountry: Swift.String?
+  public var channelType: Swift.String?
+  public var merchantId: Swift.String?
+  public var authId: Swift.String?
+  public var payerAuth: Swift.String?
+  public var panLast4: Swift.String?
+  public var ref: Swift.String?
+  public var payMethod: Swift.String?
+  public var successcode: Swift.String?
+  public var cardIssuingCountry: Swift.String?
+  public var prc: Swift.String?
+  public var ord: Swift.String?
+  public var panFirst4: Swift.String?
+  public var alertCode: Swift.String?
+  public var src: Swift.String?
+  public var payRef: Swift.String?
+  public var holder: Swift.String?
+  public var sourceIp: Swift.String?
+  public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResult]
+  required public init?(dictionary: Foundation.NSDictionary)
+  public func dictionaryRepresentation() -> Foundation.NSDictionary
+  @objc override dynamic public init()
+  @objc deinit
+}
 @objc open class TextBoxCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKTextBoxCustomization {
   @objc override dynamic public init()
   @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ borderWidth: Swift.Int, _ borderColor: Swift.String, _ cornerRadius: Swift.Int)
@@ -340,6 +405,9 @@ extension UIButton {
   @objc public func getBorderWidth() -> Swift.Int
   @objc public func getBorderColor() -> Swift.String
   @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
+  @objc deinit
+}
+@objc public class Card : ObjectiveC.NSObject {
   @objc deinit
 }
 @objc open class LabelCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKLabelCustomization {
@@ -368,7 +436,7 @@ extension UIButton {
 @objc(PayData) open class PayData : ObjectiveC.NSObject {
   @objc public var cardDetails: AP_PaySDK.CardDetails?
   @objc public var threeDSParams: AP_PaySDK.ThreeDSParams?
-  @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, extraData: [Swift.String : Any]?)
+  @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, extraData: [Swift.String : Any]?)
   @objc deinit
 }
 extension AP_PaySDK.Language : Swift.Equatable {}
@@ -377,6 +445,9 @@ extension AP_PaySDK.Language : Swift.RawRepresentable {}
 extension AP_PaySDK.payType : Swift.Equatable {}
 extension AP_PaySDK.payType : Swift.Hashable {}
 extension AP_PaySDK.payType : Swift.RawRepresentable {}
+extension AP_PaySDK.actionType : Swift.Equatable {}
+extension AP_PaySDK.actionType : Swift.Hashable {}
+extension AP_PaySDK.actionType : Swift.RawRepresentable {}
 extension AP_PaySDK.PayGate : Swift.Equatable {}
 extension AP_PaySDK.PayGate : Swift.Hashable {}
 extension AP_PaySDK.PayGate : Swift.RawRepresentable {}
