@@ -146,12 +146,12 @@ open class ThreeDSParams : ObjectiveC.NSObject {
     get
   }
 }
-@objc public enum actionType : Swift.Int {
+public enum Action : Swift.String {
   case TX_QUERY
   case PAYMENT_METHOD
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
     get
   }
 }
@@ -279,6 +279,7 @@ infix operator >>> : DefaultPrecedence
   @objc public var uiCustomization: AP_PaySDK.UiCustomization?
   @objc public var isBioMetricRequired: Swift.Bool
   @objc public var useSDKProgressScreen: Swift.Bool
+  public func getSDKVersion() -> Swift.String
   @objc public func query(action: Swift.String)
   @objc public func process()
   @objc public func invalidateToken()
@@ -445,9 +446,9 @@ extension AP_PaySDK.Language : Swift.RawRepresentable {}
 extension AP_PaySDK.payType : Swift.Equatable {}
 extension AP_PaySDK.payType : Swift.Hashable {}
 extension AP_PaySDK.payType : Swift.RawRepresentable {}
-extension AP_PaySDK.actionType : Swift.Equatable {}
-extension AP_PaySDK.actionType : Swift.Hashable {}
-extension AP_PaySDK.actionType : Swift.RawRepresentable {}
+extension AP_PaySDK.Action : Swift.Equatable {}
+extension AP_PaySDK.Action : Swift.Hashable {}
+extension AP_PaySDK.Action : Swift.RawRepresentable {}
 extension AP_PaySDK.PayGate : Swift.Equatable {}
 extension AP_PaySDK.PayGate : Swift.Hashable {}
 extension AP_PaySDK.PayGate : Swift.RawRepresentable {}

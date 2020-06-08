@@ -35,13 +35,19 @@ Add `paysdk.plist` and set value of certificate.
 
 ### Framework file 
 
-Add `AP_PaySDK.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries.
+Add `AP_PaySDK.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries
+and also add `Material.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries or add using  cocoapods as 
+
+```
+pod 'Material'
+```
+
 
 ### CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate PayDollarSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
-```ruby
+```
 pod 'AP_PaySDK'
 ```
 

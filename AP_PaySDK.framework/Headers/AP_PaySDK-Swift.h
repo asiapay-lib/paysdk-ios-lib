@@ -631,11 +631,11 @@ SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
 
 
 
+
+
 @interface UITextField (SWIFT_EXTENSION(AP_PaySDK))
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @end
-
-
 
 
 
@@ -672,11 +672,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK15UiCustomization")
 - (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
-
-typedef SWIFT_ENUM(NSInteger, actionType, open) {
-  actionTypeTX_QUERY = 0,
-  actionTypePAYMENT_METHOD = 1,
-};
 
 typedef SWIFT_ENUM(NSInteger, payType, open) {
   payTypeNORMAL_PAYMENT = 0,
@@ -1318,11 +1313,11 @@ SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
 
 
 
+
+
 @interface UITextField (SWIFT_EXTENSION(AP_PaySDK))
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @end
-
-
 
 
 
@@ -1359,11 +1354,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK15UiCustomization")
 - (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
-
-typedef SWIFT_ENUM(NSInteger, actionType, open) {
-  actionTypeTX_QUERY = 0,
-  actionTypePAYMENT_METHOD = 1,
-};
 
 typedef SWIFT_ENUM(NSInteger, payType, open) {
   payTypeNORMAL_PAYMENT = 0,
