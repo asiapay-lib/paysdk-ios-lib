@@ -605,6 +605,8 @@ SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
+
+
 @class UIView;
 
 @interface UIButton (SWIFT_EXTENSION(AP_PaySDK))
@@ -672,6 +674,23 @@ SWIFT_CLASS("_TtC9AP_PaySDK15UiCustomization")
 - (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
+
+typedef SWIFT_ENUM(NSInteger, payMethod, open) {
+  payMethodALL = 0,
+  payMethodCREDIT_CARD = 1,
+  payMethodVISA = 2,
+  payMethodMASTER_CARD = 3,
+  payMethodJAPAN_CARD = 4,
+  payMethodAMERICAN_CARD = 5,
+  payMethodDINERS = 6,
+  payMethodALIPAYHKAPP = 7,
+  payMethodALIPAYCNAPP = 8,
+  payMethodALIPAYAPP = 9,
+  payMethodAPPLEPAY = 10,
+  payMethodWECHATAPP = 11,
+  payMethodTHREEDS2 = 12,
+  payMethodCIMBCLICKS = 13,
+};
 
 typedef SWIFT_ENUM(NSInteger, payType, open) {
   payTypeNORMAL_PAYMENT = 0,
@@ -1287,6 +1306,8 @@ SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
+
+
 @class UIView;
 
 @interface UIButton (SWIFT_EXTENSION(AP_PaySDK))
@@ -1354,6 +1375,23 @@ SWIFT_CLASS("_TtC9AP_PaySDK15UiCustomization")
 - (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
+
+typedef SWIFT_ENUM(NSInteger, payMethod, open) {
+  payMethodALL = 0,
+  payMethodCREDIT_CARD = 1,
+  payMethodVISA = 2,
+  payMethodMASTER_CARD = 3,
+  payMethodJAPAN_CARD = 4,
+  payMethodAMERICAN_CARD = 5,
+  payMethodDINERS = 6,
+  payMethodALIPAYHKAPP = 7,
+  payMethodALIPAYCNAPP = 8,
+  payMethodALIPAYAPP = 9,
+  payMethodAPPLEPAY = 10,
+  payMethodWECHATAPP = 11,
+  payMethodTHREEDS2 = 12,
+  payMethodCIMBCLICKS = 13,
+};
 
 typedef SWIFT_ENUM(NSInteger, payType, open) {
   payTypeNORMAL_PAYMENT = 0,

@@ -137,6 +137,27 @@ open class ThreeDSParams : ObjectiveC.NSObject {
     get
   }
 }
+@objc public enum payMethod : Swift.Int {
+  case ALL
+  case CREDIT_CARD
+  case VISA
+  case MASTER_CARD
+  case JAPAN_CARD
+  case AMERICAN_CARD
+  case DINERS
+  case ALIPAYHKAPP
+  case ALIPAYCNAPP
+  case ALIPAYAPP
+  case APPLEPAY
+  case WECHATAPP
+  case THREEDS2
+  case CIMBCLICKS
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public enum payType : Swift.Int {
   case NORMAL_PAYMENT
   case HOLD_PAYMENT
@@ -443,6 +464,9 @@ extension UIButton {
 extension AP_PaySDK.Language : Swift.Equatable {}
 extension AP_PaySDK.Language : Swift.Hashable {}
 extension AP_PaySDK.Language : Swift.RawRepresentable {}
+extension AP_PaySDK.payMethod : Swift.Equatable {}
+extension AP_PaySDK.payMethod : Swift.Hashable {}
+extension AP_PaySDK.payMethod : Swift.RawRepresentable {}
 extension AP_PaySDK.payType : Swift.Equatable {}
 extension AP_PaySDK.payType : Swift.Hashable {}
 extension AP_PaySDK.payType : Swift.RawRepresentable {}
