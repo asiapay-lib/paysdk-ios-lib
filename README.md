@@ -164,4 +164,6 @@ extension ViewController : PaySDKDelegate {
 ```
 For detailed description kindly follow [PayDollar Guide](http://paydollar.com/pdf/op/enpdintguide.pdf).
                 
-                
+# Related Sample
+- [DeepLink Demo](https://github.com/asiapay-lib/ios-deeplink-demo)
+- [Demo for all services](https://github.com/asiapay-lib/paysdk-ios-demo)
