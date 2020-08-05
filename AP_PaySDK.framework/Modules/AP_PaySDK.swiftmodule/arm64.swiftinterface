@@ -458,7 +458,7 @@ extension UIButton {
 @objc(PayData) open class PayData : ObjectiveC.NSObject {
   @objc public var cardDetails: AP_PaySDK.CardDetails?
   @objc public var threeDSParams: AP_PaySDK.ThreeDSParams?
-  @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, extraData: [Swift.String : Any]?)
+  @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, extraData: [Swift.String : Any]?)
   @objc deinit
 }
 extension AP_PaySDK.Language : Swift.Equatable {}

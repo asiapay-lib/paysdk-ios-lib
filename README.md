@@ -40,6 +40,7 @@ and also add `Material.framework` file into your project by adding the dependenc
 
 ```
 pod 'Material'
+
 ```
 
 
@@ -48,7 +49,8 @@ pod 'Material'
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate PayDollarSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```
-pod 'AP_PaySDK', '2.1.2'
+pod 'AP_PaySDK', '2.1.3'
+
 ```
 
 ### Implementation
@@ -84,6 +86,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
                                 remark: "",
+                                payRef: "","
                                 extraData :[:])
 
 paySDK.process()
@@ -103,6 +106,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
                                 remark: "",
+                                payRef: "","
                                 extraData :[:])
 
 paySDK. paymentDetails.cardDetails = CardDetails(cardHolderName: "abc abc",
@@ -129,6 +133,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
                                 remark: "",
+                                payRef: "","
                                 extraData :[:])
 
 paySDK.process()
@@ -147,6 +152,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
                                 remark: "",
+                                payRef: "","
                                 extraData :[:])
 
 paySDK.process()
@@ -161,6 +167,7 @@ extension ViewController : PaySDKDelegate {
 
     }
 }
+
 ```
 For detailed description kindly follow [PayDollar Guide](http://paydollar.com/pdf/op/enpdintguide.pdf).
                 
