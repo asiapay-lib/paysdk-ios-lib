@@ -66,6 +66,7 @@ class ViewController: UIViewController {
     .
     .
     .
+    
 ```
 
 ### Payment Channel Types
@@ -139,6 +140,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
 paySDK.process()
 
 ```
+
 #### Payment via WeChat Pay.
 ```
 paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
@@ -169,6 +171,7 @@ extension ViewController : PaySDKDelegate {
 }
 
 ```
+
 For detailed description kindly follow [PayDollar Guide](http://paydollar.com/pdf/op/enpdintguide.pdf).
                 
 # Related Sample
