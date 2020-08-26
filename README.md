@@ -119,48 +119,6 @@ paySDK.process()
 
 ```
 
-#### Payment via AliPay.
-```
-paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
-                                envType: EnvType.SANDBOX,
-                                amount : “10”,
-                                payGate: PayGate.PAYDOLLAR,
-                                currCode: currencyCode.HKD, 
-                                payType: payType.NORMAL_PAYMENT, 
-                                orderRef: "abcde12345”, 
-                                payMethod: "ALIPAYHKAPP", // FOR ALIPAY HK
-                                //payMethod: "ALIPAYCNAPP" // FOR ALIPAY CN
-                                //payMethod: "ALIPAYAPP" // FOR ALIPAY GLOBAL
-                                lang: Language.ENGLISH,
-                                merchantId: "1",
-                                remark: "",
-                                payRef: "","
-                                extraData :[:])
-
-paySDK.process()
-
-```
-
-#### Payment via WeChat Pay.
-```
-paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
-                                envType: EnvType.SANDBOX,
-                                amount : “10”,
-                                payGate: PayGate.PAYDOLLAR,
-                                currCode: currencyCode.HKD, 
-                                payType: payType.NORMAL_PAYMENT, 
-                                orderRef: "abcde12345”, 
-                                payMethod: "WECHATAPP",
-                                lang: Language.ENGLISH,
-                                merchantId: "1",
-                                remark: "",
-                                payRef: "","
-                                extraData :[:])
-
-paySDK.process()
-
-```
-
 ### Payment response
 
 ```
