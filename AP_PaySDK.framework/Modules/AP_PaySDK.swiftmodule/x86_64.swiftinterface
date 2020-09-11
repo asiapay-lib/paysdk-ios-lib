@@ -10,27 +10,15 @@ import Darwin
 import Dispatch
 import Foundation
 import LocalAuthentication
-import Material
 import MobileCoreServices
 import ObjectiveC
 import PassKit
 import QuartzCore
-import Security
 import StoreKit
 import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
-@objc open class ToolbarCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKToolbarCustomization {
-  @objc override dynamic public init()
-  @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ headerText: Swift.String)
-  @objc public func setBackgroundColor(_ hexColorCode: Swift.String) throws
-  @objc public func setHeaderText(_ headerText: Swift.String) throws
-  @objc public func getBackgroundColor() -> Swift.String
-  @objc public func getHeaderText() -> Swift.String
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
-  @objc deinit
-}
 @objc public class TransQueryResults : ObjectiveC.NSObject {
   @objc public var detail: [AP_PaySDK.TransQueryResult]?
   @objc public var resultCode: Swift.String?
@@ -57,68 +45,11 @@ import WebKit
   @objc public var descriptionStr: Swift.String!
   @objc deinit
 }
-@objc open class ButtonCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKButtonCustomization {
-  @objc override dynamic public init()
-  @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ cornerRadius: Swift.Int)
-  @objc public func setBackgroundColor(_ hexColorCode: Swift.String) throws
-  @objc public func setCornerRadius(_ cornerRadius: Swift.Int) throws
-  @objc public func getBackgroundColor() -> Swift.String
-  @objc public func getCornerRadius() -> Swift.Int
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
-  @objc deinit
+extension UITextField {
+  @objc override dynamic open func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
 }
-@objc @available(iOS 11.0, *)
-open class ThreeDSParams : ObjectiveC.NSObject {
-  @objc public var threeDSCustomerEmail: Swift.String?
-  @objc public var threeDSDeliveryEmail: Swift.String?
-  @objc public var threeDSMobilePhoneCountryCode: Swift.String?
-  @objc public var threeDSMobilePhoneNumber: Swift.String?
-  @objc public var threeDSHomePhoneCountryCode: Swift.String?
-  @objc public var threeDSHomePhoneNumber: Swift.String?
-  @objc public var threeDSWorkPhoneCountryCode: Swift.String?
-  @objc public var threeDSWorkPhoneNumber: Swift.String?
-  @objc public var threeDSBillingCountryCode: Swift.String?
-  @objc public var threeDSBillingState: Swift.String?
-  @objc public var threeDSBillingCity: Swift.String?
-  @objc public var threeDSBillingLine1: Swift.String?
-  @objc public var threeDSBillingLine2: Swift.String?
-  @objc public var threeDSBillingLine3: Swift.String?
-  @objc public var threeDSBillingPostalCode: Swift.String?
-  @objc public var threeDSShippingDetails: Swift.String?
-  @objc public var threeDSShippingCountryCode: Swift.String?
-  @objc public var threeDSShippingState: Swift.String?
-  @objc public var threeDSShippingCity: Swift.String?
-  @objc public var threeDSShippingLine1: Swift.String?
-  @objc public var threeDSShippingLine2: Swift.String?
-  @objc public var threeDSShippingLine3: Swift.String?
-  @objc public var threeDSAcctCreateDate: Swift.String?
-  @objc public var threeDSAcctAgeInd: Swift.String?
-  @objc public var threeDSAcctLastChangeDate: Swift.String?
-  @objc public var threeDSAcctLastChangeInd: Swift.String?
-  @objc public var threeDSAcctPwChangeDate: Swift.String?
-  @objc public var threeDSAcctPwChangeInd: Swift.String?
-  @objc public var threeDSAcctPurchaseCount: Swift.String?
-  @objc public var threeDSAcctCardProvisionAttempt: Swift.String?
-  @objc public var threeDSAcctNumTransDay: Swift.String?
-  @objc public var threeDSAcctNumTransYear: Swift.String?
-  @objc public var threeDSAcctPaymentAcctDate: Swift.String?
-  @objc public var threeDSAcctPaymentAcctInd: Swift.String?
-  @objc public var threeDSAcctShippingAddrLastChangeDate: Swift.String?
-  @objc public var threeDSAcctShippingAddrLastChangeInd: Swift.String?
-  @objc public var threeDSAcctIsShippingAcctNameSame: Swift.String?
-  @objc public var threeDSAcctIsSuspiciousAcct: Swift.String?
-  @objc public var threeDSAcctAuthMethod: Swift.String?
-  @objc public var threeDSAcctAuthTimestamp: Swift.String?
-  @objc public var threeDSDeliveryTime: Swift.String?
-  @objc public var threeDSPreOrderReason: Swift.String?
-  @objc public var threeDSPreOrderReadyDate: Swift.String?
-  @objc public var threeDSGiftCardAmount: Swift.String?
-  @objc public var threeDSGiftCardCurr: Swift.String?
-  @objc public var threeDSGiftCardCount: Swift.String?
-  @objc public var threeDSSdkMaxTimeout: Swift.String?
-  @objc public var threeDSSdkInterface: Swift.String?
-  @objc override dynamic public init()
-  @objc deinit
+extension UIColor {
+  @objc convenience dynamic public init?(hex: Swift.String)
 }
 @objc public enum Language : Swift.Int {
   case ENGLISH
@@ -268,36 +199,17 @@ public enum Action : Swift.String {
   @objc public var methods: AP_PaySDK.Methods!
   @objc deinit
 }
-extension UITextField {
-  @objc override dynamic open func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
-}
-extension UIColor {
-  @objc convenience dynamic public init?(hex: Swift.String)
-}
 @objc(CardDetails) open class CardDetails : ObjectiveC.NSObject {
   @objc public init(cardHolderName: Swift.String, cardNo: Swift.String, expMonth: Swift.String, expYear: Swift.String, securityCode: Swift.String)
   @objc deinit
 }
 infix operator <- : DefaultPrecedence
 infix operator >>> : DefaultPrecedence
-@objc open class UiCustomization : ObjectiveC.NSObject, AP_PaySDK.PaySDKUiCustomization {
-  @objc override dynamic public init()
-  @objc public func setButtonCustomization(_ buttonCustomization: AP_PaySDK.PaySDKButtonCustomization, _ buttonType: AP_PaySDK.PaySDKButtonType) throws
-  @objc public func setToolbarCustomization(_ toolbarCustomization: AP_PaySDK.PaySDKToolbarCustomization) throws
-  @objc public func setLabelCustomization(_ labelCustomization: AP_PaySDK.PaySDKLabelCustomization) throws
-  @objc public func setTextBoxCustomization(_ textBoxCustomization: AP_PaySDK.PaySDKTextBoxCustomization) throws
-  @objc public func getButtonCustomization(_ buttonType: AP_PaySDK.PaySDKButtonType) throws -> AP_PaySDK.PaySDKButtonCustomization
-  @objc public func getToolbarCustomization() throws -> AP_PaySDK.PaySDKToolbarCustomization
-  @objc public func getLabelCustomization() throws -> AP_PaySDK.PaySDKLabelCustomization
-  @objc public func getTextBoxCustomization() throws -> AP_PaySDK.PaySDKTextBoxCustomization
-  @objc deinit
-}
 @available(iOS 10.0, *)
 @objc(PaySDK) open class PaySDK : ObjectiveC.NSObject {
   @objc public static var shared: AP_PaySDK.PaySDK
   @objc public var delegate: AP_PaySDK.PaySDKDelegate?
   @objc public var paymentDetails: AP_PaySDK.PayData!
-  @objc public var uiCustomization: AP_PaySDK.UiCustomization?
   @objc public var isBioMetricRequired: Swift.Bool
   @objc public var useSDKProgressScreen: Swift.Bool
   public func getSDKVersion() -> Swift.String
@@ -319,64 +231,6 @@ infix operator >>> : DefaultPrecedence
 }
 extension UIButton {
   @objc dynamic public func setApplePayButton(btnType: AP_PaySDK.ApplePayButtonType, btnStyle: AP_PaySDK.ApplePayButtonStyle, inView: UIKit.UIView)
-}
-@objc public enum PaySDKButtonType : Swift.Int {
-  case SUBMIT
-  case CONTINUE
-  case NEXT
-  case CANCEL
-  case RESEND
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public protocol PaySDKCustomization {
-  @objc func setTextFontName(_ fontName: Swift.String) throws
-  @objc func setTextColor(_ hexColorCode: Swift.String) throws
-  @objc func setTextFontSize(_ fontSize: Swift.Int) throws
-  @objc func getTextFontName() -> Swift.String
-  @objc func getTextColor() -> Swift.String
-  @objc func getTextFontSize() -> Swift.Int
-}
-@objc public protocol PaySDKButtonCustomization : AP_PaySDK.PaySDKCustomization {
-  @objc func setBackgroundColor(_ hexColorCode: Swift.String) throws
-  @objc func setCornerRadius(_ cornerRadius: Swift.Int) throws
-  @objc func getBackgroundColor() -> Swift.String
-  @objc func getCornerRadius() -> Swift.Int
-}
-@objc public protocol PaySDKToolbarCustomization : AP_PaySDK.PaySDKCustomization {
-  @objc func setBackgroundColor(_ hexColorCode: Swift.String) throws
-  @objc func setHeaderText(_ headerText: Swift.String) throws
-  @objc func getBackgroundColor() -> Swift.String
-  @objc func getHeaderText() -> Swift.String
-}
-@objc public protocol PaySDKLabelCustomization : AP_PaySDK.PaySDKCustomization {
-  @objc func setHeadingTextColor(_ hexColorCode: Swift.String) throws
-  @objc func setHeadingTextFontName(_ fontName: Swift.String) throws
-  @objc func setHeadingTextFontSize(_ fontSize: Swift.Int) throws
-  @objc func getHeadingTextColor() -> Swift.String
-  @objc func getHeadingTextFontName() -> Swift.String
-  @objc func getHeadingTextFontSize() -> Swift.Int
-}
-@objc public protocol PaySDKTextBoxCustomization : AP_PaySDK.PaySDKCustomization {
-  @objc func setBorderWidth(_ borderWidth: Swift.Int) throws
-  @objc func setBorderColor(_ hexColorCode: Swift.String) throws
-  @objc func setCornerRadius(_ cornerRadius: Swift.Int) throws
-  @objc func getBorderWidth() -> Swift.Int
-  @objc func getBorderColor() -> Swift.String
-  @objc func getCornerRadius() -> Swift.Int
-}
-@objc public protocol PaySDKUiCustomization {
-  @objc func setButtonCustomization(_ buttonCustomization: AP_PaySDK.PaySDKButtonCustomization, _ buttonType: AP_PaySDK.PaySDKButtonType) throws
-  @objc func setToolbarCustomization(_ toolbarCustomization: AP_PaySDK.PaySDKToolbarCustomization) throws
-  @objc func setLabelCustomization(_ labelCustomization: AP_PaySDK.PaySDKLabelCustomization) throws
-  @objc func setTextBoxCustomization(_ textBoxCustomization: AP_PaySDK.PaySDKTextBoxCustomization) throws
-  @objc func getButtonCustomization(_ buttonType: AP_PaySDK.PaySDKButtonType) throws -> AP_PaySDK.PaySDKButtonCustomization
-  @objc func getToolbarCustomization() throws -> AP_PaySDK.PaySDKToolbarCustomization
-  @objc func getLabelCustomization() throws -> AP_PaySDK.PaySDKLabelCustomization
-  @objc func getTextBoxCustomization() throws -> AP_PaySDK.PaySDKTextBoxCustomization
 }
 @objc public class Methods : ObjectiveC.NSObject {
   public var card: [AP_PaySDK.Card]!
@@ -417,47 +271,11 @@ extension UIButton {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc open class TextBoxCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKTextBoxCustomization {
-  @objc override dynamic public init()
-  @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ borderWidth: Swift.Int, _ borderColor: Swift.String, _ cornerRadius: Swift.Int)
-  @objc public func setCornerRadius(_ cornerRadius: Swift.Int) throws
-  @objc public func getCornerRadius() -> Swift.Int
-  @objc public func setBorderWidth(_ borderWidth: Swift.Int) throws
-  @objc public func setBorderColor(_ hexColorCode: Swift.String) throws
-  @objc public func getBorderWidth() -> Swift.Int
-  @objc public func getBorderColor() -> Swift.String
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
-  @objc deinit
-}
 @objc public class Card : ObjectiveC.NSObject {
-  @objc deinit
-}
-@objc open class LabelCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKLabelCustomization {
-  @objc override dynamic public init()
-  @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ headingTextColor: Swift.String, _ headingTextFontName: Swift.String, _ headingTextFontSize: Swift.Int)
-  @objc public func setHeadingTextColor(_ hexColorCode: Swift.String) throws
-  @objc public func setHeadingTextFontName(_ fontName: Swift.String) throws
-  @objc public func setHeadingTextFontSize(_ fontSize: Swift.Int) throws
-  @objc public func getHeadingTextColor() -> Swift.String
-  @objc public func getHeadingTextFontName() -> Swift.String
-  @objc public func getHeadingTextFontSize() -> Swift.Int
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
-  @objc deinit
-}
-@objc open class Customization : ObjectiveC.NSObject, AP_PaySDK.PaySDKCustomization {
-  @objc override dynamic public init()
-  @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
-  @objc public func setTextFontName(_ fontName: Swift.String) throws
-  @objc public func setTextColor(_ hexColorCode: Swift.String) throws
-  @objc public func setTextFontSize(_ fontSize: Swift.Int) throws
-  @objc public func getTextFontName() -> Swift.String
-  @objc public func getTextColor() -> Swift.String
-  @objc public func getTextFontSize() -> Swift.Int
   @objc deinit
 }
 @objc(PayData) open class PayData : ObjectiveC.NSObject {
   @objc public var cardDetails: AP_PaySDK.CardDetails?
-  @objc public var threeDSParams: AP_PaySDK.ThreeDSParams?
   @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, extraData: [Swift.String : Any]?)
   @objc deinit
 }
@@ -491,5 +309,3 @@ extension AP_PaySDK.ApplePayButtonType : Swift.RawRepresentable {}
 extension AP_PaySDK.ApplePayButtonStyle : Swift.Equatable {}
 extension AP_PaySDK.ApplePayButtonStyle : Swift.Hashable {}
 extension AP_PaySDK.ApplePayButtonStyle : Swift.RawRepresentable {}
-extension AP_PaySDK.PaySDKButtonType : Swift.Hashable {}
-extension AP_PaySDK.PaySDKButtonType : Swift.RawRepresentable {}

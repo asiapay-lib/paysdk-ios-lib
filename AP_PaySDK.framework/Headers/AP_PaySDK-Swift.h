@@ -223,51 +223,6 @@ typedef SWIFT_ENUM(NSInteger, ApplePayButtonType, open) {
 };
 
 
-SWIFT_PROTOCOL("_TtP9AP_PaySDK19PaySDKCustomization_")
-@protocol PaySDKCustomization
-- (BOOL)setTextFontName:(NSString * _Nonnull)fontName error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextFontSize:(NSInteger)fontSize error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getTextFontName SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getTextColor SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getTextFontSize SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_PROTOCOL("_TtP9AP_PaySDK25PaySDKButtonCustomization_")
-@protocol PaySDKButtonCustomization <PaySDKCustomization>
-- (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK13Customization")
-@interface Customization : NSObject <PaySDKCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setTextFontName:(NSString * _Nonnull)fontName error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextFontSize:(NSInteger)fontSize error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getTextFontName SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getTextColor SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getTextFontSize SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK19ButtonCustomization")
-@interface ButtonCustomization : Customization <PaySDKButtonCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSInteger)cornerRadius OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC9AP_PaySDK4Card")
 @interface Card : NSObject
 /// Instantiate the instance using the passed dictionary values to set the properties values
@@ -314,36 +269,10 @@ typedef SWIFT_ENUM(NSInteger, CurrencyCode, open) {
 
 
 
-
 typedef SWIFT_ENUM(NSInteger, EnvType, open) {
   EnvTypeSANDBOX = 0,
   EnvTypePRODUCTION = 1,
 };
-
-
-SWIFT_PROTOCOL("_TtP9AP_PaySDK24PaySDKLabelCustomization_")
-@protocol PaySDKLabelCustomization <PaySDKCustomization>
-- (BOOL)setHeadingTextColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeadingTextFontName:(NSString * _Nonnull)fontName error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeadingTextFontSize:(NSInteger)fontSize error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getHeadingTextColor SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getHeadingTextFontName SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getHeadingTextFontSize SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK18LabelCustomization")
-@interface LabelCustomization : Customization <PaySDKLabelCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)headingTextColor :(NSString * _Nonnull)headingTextFontName :(NSInteger)headingTextFontSize OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setHeadingTextColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeadingTextFontName:(NSString * _Nonnull)fontName error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeadingTextFontSize:(NSInteger)fontSize error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getHeadingTextColor SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getHeadingTextFontName SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getHeadingTextFontSize SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
-@end
 
 typedef SWIFT_ENUM(NSInteger, Language, open) {
   LanguageENGLISH = 0,
@@ -376,14 +305,12 @@ typedef SWIFT_ENUM(NSInteger, PayChannel, open) {
   PayChannelNONE = 3,
 };
 
-@class ThreeDSParams;
 enum PayGate : NSInteger;
 enum payType : NSInteger;
 
 SWIFT_CLASS_NAMED("PayData")
 @interface PayData : NSObject
 @property (nonatomic, strong) CardDetails * _Nullable cardDetails;
-@property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 - (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
@@ -419,7 +346,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK9PayResult")
 @end
 
 @protocol PaySDKDelegate;
-@class UiCustomization;
 
 SWIFT_CLASS_NAMED("PaySDK") SWIFT_AVAILABILITY(ios,introduced=10.0)
 @interface PaySDK : NSObject
@@ -428,7 +354,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PaySDK * _Nonnull shar
 + (void)setShared:(PaySDK * _Nonnull)value;
 @property (nonatomic, strong) id <PaySDKDelegate> _Nullable delegate;
 @property (nonatomic, strong) PayData * _Null_unspecified paymentDetails;
-@property (nonatomic, strong) UiCustomization * _Nullable uiCustomization;
 @property (nonatomic) BOOL isBioMetricRequired;
 @property (nonatomic) BOOL useSDKProgressScreen;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -438,16 +363,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PaySDK * _Nonnull shar
 - (void)invalidateToken;
 - (void)processOrderWithUrl:(NSURL * _Nonnull)url;
 @end
-
-
-typedef SWIFT_ENUM(NSInteger, PaySDKButtonType, open) {
-  PaySDKButtonTypeSUBMIT = 0,
-  PaySDKButtonTypeCONTINUE = 1,
-  PaySDKButtonTypeNEXT = 2,
-  PaySDKButtonTypeCANCEL = 3,
-  PaySDKButtonTypeRESEND = 4,
-};
-
 
 @class TransQueryResults;
 @class PaymentOptionsDetail;
@@ -468,125 +383,11 @@ SWIFT_PROTOCOL("_TtP9AP_PaySDK14PaySDKDelegate_")
 @end
 
 
-
-SWIFT_PROTOCOL("_TtP9AP_PaySDK26PaySDKTextBoxCustomization_")
-@protocol PaySDKTextBoxCustomization <PaySDKCustomization>
-- (BOOL)setBorderWidth:(NSInteger)borderWidth error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setBorderColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
-- (NSInteger)getBorderWidth SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getBorderColor SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_PROTOCOL("_TtP9AP_PaySDK26PaySDKToolbarCustomization_")
-@protocol PaySDKToolbarCustomization <PaySDKCustomization>
-- (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeaderText:(NSString * _Nonnull)headerText error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getHeaderText SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_PROTOCOL("_TtP9AP_PaySDK21PaySDKUiCustomization_")
-@protocol PaySDKUiCustomization
-- (BOOL)setButtonCustomization:(id <PaySDKButtonCustomization> _Nonnull)buttonCustomization :(enum PaySDKButtonType)buttonType error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setToolbarCustomization:(id <PaySDKToolbarCustomization> _Nonnull)toolbarCustomization error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setLabelCustomization:(id <PaySDKLabelCustomization> _Nonnull)labelCustomization error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextBoxCustomization:(id <PaySDKTextBoxCustomization> _Nonnull)textBoxCustomization error:(NSError * _Nullable * _Nullable)error;
-- (id <PaySDKButtonCustomization> _Nullable)getButtonCustomization:(enum PaySDKButtonType)buttonType error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKToolbarCustomization> _Nullable)getToolbarCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 SWIFT_CLASS("_TtC9AP_PaySDK20PaymentOptionsDetail")
 @interface PaymentOptionsDetail : NSObject
 @property (nonatomic, strong) Methods * _Null_unspecified methods;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK20TextBoxCustomization")
-@interface TextBoxCustomization : Customization <PaySDKTextBoxCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSInteger)borderWidth :(NSString * _Nonnull)borderColor :(NSInteger)cornerRadius OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
-- (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)setBorderWidth:(NSInteger)borderWidth error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setBorderColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (NSInteger)getBorderWidth SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getBorderColor SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK13ThreeDSParams") SWIFT_AVAILABILITY(ios,introduced=11.0)
-@interface ThreeDSParams : NSObject
-@property (nonatomic, copy) NSString * _Nullable threeDSCustomerEmail;
-@property (nonatomic, copy) NSString * _Nullable threeDSDeliveryEmail;
-@property (nonatomic, copy) NSString * _Nullable threeDSMobilePhoneCountryCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSMobilePhoneNumber;
-@property (nonatomic, copy) NSString * _Nullable threeDSHomePhoneCountryCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSHomePhoneNumber;
-@property (nonatomic, copy) NSString * _Nullable threeDSWorkPhoneCountryCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSWorkPhoneNumber;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingCountryCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingState;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingCity;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine1;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine2;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine3;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingPostalCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingDetails;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingCountryCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingState;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingCity;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine1;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine2;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine3;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctCreateDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctAgeInd;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctLastChangeDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctLastChangeInd;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctPwChangeDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctPwChangeInd;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctPurchaseCount;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctCardProvisionAttempt;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctNumTransDay;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctNumTransYear;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctPaymentAcctDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctPaymentAcctInd;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctShippingAddrLastChangeDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctShippingAddrLastChangeInd;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctIsShippingAcctNameSame;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctIsSuspiciousAcct;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctAuthMethod;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctAuthTimestamp;
-@property (nonatomic, copy) NSString * _Nullable threeDSDeliveryTime;
-@property (nonatomic, copy) NSString * _Nullable threeDSPreOrderReason;
-@property (nonatomic, copy) NSString * _Nullable threeDSPreOrderReadyDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardAmount;
-@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardCurr;
-@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardCount;
-@property (nonatomic, copy) NSString * _Nullable threeDSSdkMaxTimeout;
-@property (nonatomic, copy) NSString * _Nullable threeDSSdkInterface;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
-@interface ToolbarCustomization : Customization <PaySDKToolbarCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSString * _Nonnull)headerText OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeaderText:(NSString * _Nonnull)headerText error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getHeaderText SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
 
@@ -631,10 +432,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
 
 
 
-
-
-
-
 @interface UITextField (SWIFT_EXTENSION(AP_PaySDK))
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -656,24 +453,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
 
 
 
-
-
-
-
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK15UiCustomization")
-@interface UiCustomization : NSObject <PaySDKUiCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setButtonCustomization:(id <PaySDKButtonCustomization> _Nonnull)buttonCustomization :(enum PaySDKButtonType)buttonType error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setToolbarCustomization:(id <PaySDKToolbarCustomization> _Nonnull)toolbarCustomization error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setLabelCustomization:(id <PaySDKLabelCustomization> _Nonnull)labelCustomization error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextBoxCustomization:(id <PaySDKTextBoxCustomization> _Nonnull)textBoxCustomization error:(NSError * _Nullable * _Nullable)error;
-- (id <PaySDKButtonCustomization> _Nullable)getButtonCustomization:(enum PaySDKButtonType)buttonType error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKToolbarCustomization> _Nullable)getToolbarCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-@end
 
 typedef SWIFT_ENUM(NSInteger, payMethod, open) {
   payMethodALL = 0,
@@ -924,51 +703,6 @@ typedef SWIFT_ENUM(NSInteger, ApplePayButtonType, open) {
 };
 
 
-SWIFT_PROTOCOL("_TtP9AP_PaySDK19PaySDKCustomization_")
-@protocol PaySDKCustomization
-- (BOOL)setTextFontName:(NSString * _Nonnull)fontName error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextFontSize:(NSInteger)fontSize error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getTextFontName SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getTextColor SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getTextFontSize SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_PROTOCOL("_TtP9AP_PaySDK25PaySDKButtonCustomization_")
-@protocol PaySDKButtonCustomization <PaySDKCustomization>
-- (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK13Customization")
-@interface Customization : NSObject <PaySDKCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setTextFontName:(NSString * _Nonnull)fontName error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextFontSize:(NSInteger)fontSize error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getTextFontName SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getTextColor SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getTextFontSize SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK19ButtonCustomization")
-@interface ButtonCustomization : Customization <PaySDKButtonCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSInteger)cornerRadius OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC9AP_PaySDK4Card")
 @interface Card : NSObject
 /// Instantiate the instance using the passed dictionary values to set the properties values
@@ -1015,36 +749,10 @@ typedef SWIFT_ENUM(NSInteger, CurrencyCode, open) {
 
 
 
-
 typedef SWIFT_ENUM(NSInteger, EnvType, open) {
   EnvTypeSANDBOX = 0,
   EnvTypePRODUCTION = 1,
 };
-
-
-SWIFT_PROTOCOL("_TtP9AP_PaySDK24PaySDKLabelCustomization_")
-@protocol PaySDKLabelCustomization <PaySDKCustomization>
-- (BOOL)setHeadingTextColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeadingTextFontName:(NSString * _Nonnull)fontName error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeadingTextFontSize:(NSInteger)fontSize error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getHeadingTextColor SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getHeadingTextFontName SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getHeadingTextFontSize SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK18LabelCustomization")
-@interface LabelCustomization : Customization <PaySDKLabelCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)headingTextColor :(NSString * _Nonnull)headingTextFontName :(NSInteger)headingTextFontSize OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setHeadingTextColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeadingTextFontName:(NSString * _Nonnull)fontName error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeadingTextFontSize:(NSInteger)fontSize error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getHeadingTextColor SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getHeadingTextFontName SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getHeadingTextFontSize SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
-@end
 
 typedef SWIFT_ENUM(NSInteger, Language, open) {
   LanguageENGLISH = 0,
@@ -1077,14 +785,12 @@ typedef SWIFT_ENUM(NSInteger, PayChannel, open) {
   PayChannelNONE = 3,
 };
 
-@class ThreeDSParams;
 enum PayGate : NSInteger;
 enum payType : NSInteger;
 
 SWIFT_CLASS_NAMED("PayData")
 @interface PayData : NSObject
 @property (nonatomic, strong) CardDetails * _Nullable cardDetails;
-@property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 - (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
@@ -1120,7 +826,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK9PayResult")
 @end
 
 @protocol PaySDKDelegate;
-@class UiCustomization;
 
 SWIFT_CLASS_NAMED("PaySDK") SWIFT_AVAILABILITY(ios,introduced=10.0)
 @interface PaySDK : NSObject
@@ -1129,7 +834,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PaySDK * _Nonnull shar
 + (void)setShared:(PaySDK * _Nonnull)value;
 @property (nonatomic, strong) id <PaySDKDelegate> _Nullable delegate;
 @property (nonatomic, strong) PayData * _Null_unspecified paymentDetails;
-@property (nonatomic, strong) UiCustomization * _Nullable uiCustomization;
 @property (nonatomic) BOOL isBioMetricRequired;
 @property (nonatomic) BOOL useSDKProgressScreen;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1139,16 +843,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PaySDK * _Nonnull shar
 - (void)invalidateToken;
 - (void)processOrderWithUrl:(NSURL * _Nonnull)url;
 @end
-
-
-typedef SWIFT_ENUM(NSInteger, PaySDKButtonType, open) {
-  PaySDKButtonTypeSUBMIT = 0,
-  PaySDKButtonTypeCONTINUE = 1,
-  PaySDKButtonTypeNEXT = 2,
-  PaySDKButtonTypeCANCEL = 3,
-  PaySDKButtonTypeRESEND = 4,
-};
-
 
 @class TransQueryResults;
 @class PaymentOptionsDetail;
@@ -1169,125 +863,11 @@ SWIFT_PROTOCOL("_TtP9AP_PaySDK14PaySDKDelegate_")
 @end
 
 
-
-SWIFT_PROTOCOL("_TtP9AP_PaySDK26PaySDKTextBoxCustomization_")
-@protocol PaySDKTextBoxCustomization <PaySDKCustomization>
-- (BOOL)setBorderWidth:(NSInteger)borderWidth error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setBorderColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
-- (NSInteger)getBorderWidth SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getBorderColor SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_PROTOCOL("_TtP9AP_PaySDK26PaySDKToolbarCustomization_")
-@protocol PaySDKToolbarCustomization <PaySDKCustomization>
-- (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeaderText:(NSString * _Nonnull)headerText error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getHeaderText SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_PROTOCOL("_TtP9AP_PaySDK21PaySDKUiCustomization_")
-@protocol PaySDKUiCustomization
-- (BOOL)setButtonCustomization:(id <PaySDKButtonCustomization> _Nonnull)buttonCustomization :(enum PaySDKButtonType)buttonType error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setToolbarCustomization:(id <PaySDKToolbarCustomization> _Nonnull)toolbarCustomization error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setLabelCustomization:(id <PaySDKLabelCustomization> _Nonnull)labelCustomization error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextBoxCustomization:(id <PaySDKTextBoxCustomization> _Nonnull)textBoxCustomization error:(NSError * _Nullable * _Nullable)error;
-- (id <PaySDKButtonCustomization> _Nullable)getButtonCustomization:(enum PaySDKButtonType)buttonType error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKToolbarCustomization> _Nullable)getToolbarCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 SWIFT_CLASS("_TtC9AP_PaySDK20PaymentOptionsDetail")
 @interface PaymentOptionsDetail : NSObject
 @property (nonatomic, strong) Methods * _Null_unspecified methods;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK20TextBoxCustomization")
-@interface TextBoxCustomization : Customization <PaySDKTextBoxCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSInteger)borderWidth :(NSString * _Nonnull)borderColor :(NSInteger)cornerRadius OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
-- (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)setBorderWidth:(NSInteger)borderWidth error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setBorderColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (NSInteger)getBorderWidth SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getBorderColor SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK13ThreeDSParams") SWIFT_AVAILABILITY(ios,introduced=11.0)
-@interface ThreeDSParams : NSObject
-@property (nonatomic, copy) NSString * _Nullable threeDSCustomerEmail;
-@property (nonatomic, copy) NSString * _Nullable threeDSDeliveryEmail;
-@property (nonatomic, copy) NSString * _Nullable threeDSMobilePhoneCountryCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSMobilePhoneNumber;
-@property (nonatomic, copy) NSString * _Nullable threeDSHomePhoneCountryCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSHomePhoneNumber;
-@property (nonatomic, copy) NSString * _Nullable threeDSWorkPhoneCountryCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSWorkPhoneNumber;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingCountryCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingState;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingCity;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine1;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine2;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine3;
-@property (nonatomic, copy) NSString * _Nullable threeDSBillingPostalCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingDetails;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingCountryCode;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingState;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingCity;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine1;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine2;
-@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine3;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctCreateDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctAgeInd;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctLastChangeDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctLastChangeInd;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctPwChangeDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctPwChangeInd;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctPurchaseCount;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctCardProvisionAttempt;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctNumTransDay;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctNumTransYear;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctPaymentAcctDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctPaymentAcctInd;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctShippingAddrLastChangeDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctShippingAddrLastChangeInd;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctIsShippingAcctNameSame;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctIsSuspiciousAcct;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctAuthMethod;
-@property (nonatomic, copy) NSString * _Nullable threeDSAcctAuthTimestamp;
-@property (nonatomic, copy) NSString * _Nullable threeDSDeliveryTime;
-@property (nonatomic, copy) NSString * _Nullable threeDSPreOrderReason;
-@property (nonatomic, copy) NSString * _Nullable threeDSPreOrderReadyDate;
-@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardAmount;
-@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardCurr;
-@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardCount;
-@property (nonatomic, copy) NSString * _Nullable threeDSSdkMaxTimeout;
-@property (nonatomic, copy) NSString * _Nullable threeDSSdkInterface;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
-@interface ToolbarCustomization : Customization <PaySDKToolbarCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSString * _Nonnull)headerText OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setHeaderText:(NSString * _Nonnull)headerText error:(NSError * _Nullable * _Nullable)error;
-- (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getHeaderText SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1332,10 +912,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
 
 
 
-
-
-
-
 @interface UITextField (SWIFT_EXTENSION(AP_PaySDK))
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -1357,24 +933,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
 
 
 
-
-
-
-
-
-
-SWIFT_CLASS("_TtC9AP_PaySDK15UiCustomization")
-@interface UiCustomization : NSObject <PaySDKUiCustomization>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)setButtonCustomization:(id <PaySDKButtonCustomization> _Nonnull)buttonCustomization :(enum PaySDKButtonType)buttonType error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setToolbarCustomization:(id <PaySDKToolbarCustomization> _Nonnull)toolbarCustomization error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setLabelCustomization:(id <PaySDKLabelCustomization> _Nonnull)labelCustomization error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)setTextBoxCustomization:(id <PaySDKTextBoxCustomization> _Nonnull)textBoxCustomization error:(NSError * _Nullable * _Nullable)error;
-- (id <PaySDKButtonCustomization> _Nullable)getButtonCustomization:(enum PaySDKButtonType)buttonType error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKToolbarCustomization> _Nullable)getToolbarCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKLabelCustomization> _Nullable)getLabelCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (id <PaySDKTextBoxCustomization> _Nullable)getTextBoxCustomizationAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-@end
 
 typedef SWIFT_ENUM(NSInteger, payMethod, open) {
   payMethodALL = 0,

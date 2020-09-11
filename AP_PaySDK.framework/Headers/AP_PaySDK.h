@@ -2,8 +2,8 @@
 //  AP_PaySDK.h
 //  AP_PaySDK
 //
-//  Created by Vaibhav on 28/11/19.
-//  Copyright © 2019 Vaibhav. All rights reserved.
+//  Created by Priyanka on 28/11/19.
+//  Copyright © 2019 Asiapay. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
