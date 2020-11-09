@@ -20,6 +20,7 @@
 - iOS 11.0+
 - Xcode 10.0+
 - Swift version 4+
+-Objective C
 
 
 
@@ -57,8 +58,9 @@ pod 'AP_PaySDK', '2.1.8'
 
 Add implementation of PaySDK
 
+* Swift Code
 ```
-import AP_PaySDK
+@import AP_PaySDK
 
 class ViewController: UIViewController {
     let paySDK = PaySDK.shared
@@ -68,13 +70,28 @@ class ViewController: UIViewController {
     .
     
 ```
+* Objective C Code
+```
+#import <AP_PaySDK/AP_PaySDK.h>
+#import <AP_PaySDK/AP_PaySDK-Swift.h>
+@import AP_PaySDK
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    paySDK = [PaySDK shared];
+    paySDK.delegate = self;
+    .
+    .
+    .
+```
 ### Payment Channel Types
 
 Creating PayData for payment and process.
 
 
 #### WebView Payment
+
+* Swift Code 
 ```
 paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
                                 envType: EnvType.SANDBOX,
@@ -87,14 +104,35 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
                                 remark: "",
-                                payRef: "","
-                                extraData :[:])
+                                payRef: "",
+                                resultPage: "F",
+                                extraData: [:])
 
 paySDK.process()
 
 ```
+* Objective C Code
+```
+paySDK.paymentDetails = [[PayData alloc] initWithChannelType: PayChannelWEBVIEW                                                            envType: EnvTypeSANDBOX 
+                                         amount: @"10" 
+                                         payGate: PayGatePAYDOLLAR 
+                                         currCode: CurrencyCodeHKD 
+                                         payType: payTypeNORMAL_PAYMENT 
+                                         orderRef: @"abcde12345" 
+                                         payMethod: @"CC" 
+                                         lang: LanguageENGLISH 
+                                         merchantId: @"1" 
+                                         remark: @"" 
+                                         payRef: @"" 
+                                         resultpage: @"F" 
+                                         extraData: nil];
+
+[paySDK process];
+```
 
 #### Direct Payment
+
+* Swift Code
 ```
 paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 envType: EnvType.SANDBOX,
@@ -119,17 +157,43 @@ paySDK.process()
 
 ```
 
-### Payment response
+* Objective C Code
+```
+paySDK.paymentDetails = [[PayData alloc] initWithChannelType:PayChannelDIRECT                                                              envType:EnvTypeSANDBOX 
+                                         amount:amountText.text 
+                                         payGate:PayGatePAYDOLLAR 
+                                         currCode:CurrencyCodeHKD 
+                                         payType:payTypeNORMAL_PAYMENT 
+                                         orderRef: orderRef 
+                                         payMethod:@"VISA" 
+                                         lang:LanguageENGLISH 
+                                         merchantId: merchantId 
+                                         remark:@"" 
+                                         payRef:@"" 
+                                         resultpage:resultPage 
+                                         extraData:nil];
 
+paySDK.paymentDetails.cardDetails = [[CardDetails alloc] initWithCardHolderName:@"Test Card"                                                               cardNo:cardNoText.text                                                                            expMonth:expMonthText.text 
+                                                         expYear:expYearText.text securityCode:securityCodeText.text];
+
+[paySDK process];
+```
+### Payment response
+* Swift Code
 ```
 extension ViewController : PaySDKDelegate {
     func paymentResult(result: PayResult) {
-
+        \\Code here
     }
 }
 
 ```
-
+*Objective C Code
+```
+-(void)paymentResultWithResult:(PayResult * _Nonnull)result {
+        \\Code here
+}
+```
 For detailed description kindly follow [PayDollar Guide](http://paydollar.com/pdf/op/enpdintguide.pdf).
                 
 # Related Sample
