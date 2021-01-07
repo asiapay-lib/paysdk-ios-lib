@@ -2,7 +2,8 @@
 //  AP_PaySDK.h
 //  AP_PaySDK
 //
-//  Created by Priyanka Gore on 24/12/20.
+//  Created by Priyanka on 28/11/19.
+//  Copyright © 2019 Asiapay. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,7 +14,6 @@
 #import "WXApi.h"
 //#import "WXApiObject.h"
 //#import "WechatAuthSDK.h"
-
 
 
 
