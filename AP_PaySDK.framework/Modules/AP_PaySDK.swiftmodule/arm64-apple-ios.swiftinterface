@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 effective-4.1.50 (swiftlang-1200.0.45 clang-1200.0.32.28)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name AP_PaySDK
+// swift-compiler-version: Apple Swift version 5.3.2 effective-4.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name AP_PaySDK
 @_exported import AP_PaySDK
 import AdSupport
 import CommonCrypto
@@ -65,7 +65,9 @@ extension IQKeyboardReturnKeyHandler : UIKit.UITextFieldDelegate {
   @objc dynamic public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
   @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
   @available(iOS 10.0, *)
-  @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField, reason: UIKit.UITextFieldDidEndEditingReason)
+  public typealias UITextFieldDidEndEditingReason = UIKit.UITextField.DidEndEditingReason
+  @available(iOS 10.0, *)
+  @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField, reason: AP_PaySDK.IQKeyboardReturnKeyHandler.UITextFieldDidEndEditingReason)
   @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
   @objc dynamic public func textFieldShouldClear(_ textField: UIKit.UITextField) -> Swift.Bool
   @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
@@ -735,10 +737,11 @@ extension UIButton {
   @objc deinit
 }
 @objc public class IQBarButtonItemConfiguration : ObjectiveC.NSObject {
-  @objc public init(barButtonSystemItem: UIKit.UIBarButtonSystemItem, action: ObjectiveC.Selector)
+  public typealias UIBarButtonSystemItem = UIKit.UIBarButtonItem.SystemItem
+  @objc public init(barButtonSystemItem: AP_PaySDK.IQBarButtonItemConfiguration.UIBarButtonSystemItem, action: ObjectiveC.Selector)
   @objc public init(image: UIKit.UIImage, action: ObjectiveC.Selector)
   @objc public init(title: Swift.String, action: ObjectiveC.Selector)
-  final public let barButtonSystemItem: UIKit.UIBarButtonSystemItem?
+  final public let barButtonSystemItem: AP_PaySDK.IQBarButtonItemConfiguration.UIBarButtonSystemItem?
   @objc final public let image: UIKit.UIImage?
   @objc final public let title: Swift.String?
   @objc final public let action: ObjectiveC.Selector?
@@ -837,6 +840,7 @@ extension IQKeyboardManager {
   @objc dynamic public var keyboardShowing: Swift.Bool {
     @objc get
   }
+  public typealias UIViewAnimationOptions = UIKit.UIView.AnimationOptions
 }
 @_inheritsConvenienceInitializers @objc open class Customization : ObjectiveC.NSObject, AP_PaySDK.PaySDKCustomization {
   @objc override dynamic public init()
