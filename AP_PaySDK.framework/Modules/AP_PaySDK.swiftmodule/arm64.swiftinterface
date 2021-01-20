@@ -855,8 +855,13 @@ extension IQKeyboardManager {
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(PayData) open class PayData : ObjectiveC.NSObject {
   @objc public var cardDetails: AP_PaySDK.CardDetails?
+  @objc public var callBackParam: AP_PaySDK.CallBackParam?
   @objc public var threeDSParams: AP_PaySDK.ThreeDSParams?
   @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, extraData: [Swift.String : Any]?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(CallBackParam) open class CallBackParam : ObjectiveC.NSObject {
+  @objc public init(successUrl: Swift.String, cancelUrl: Swift.String, errorUrl: Swift.String, failUrl: Swift.String)
   @objc deinit
 }
 extension AP_PaySDK.Language : Swift.Equatable {}

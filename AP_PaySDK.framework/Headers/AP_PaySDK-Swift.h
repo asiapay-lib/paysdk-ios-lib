@@ -276,6 +276,14 @@ SWIFT_CLASS("_TtC9AP_PaySDK19ButtonCustomization")
 @end
 
 
+SWIFT_CLASS_NAMED("CallBackParam")
+@interface CallBackParam : NSObject
+- (nonnull instancetype)initWithSuccessUrl:(NSString * _Nonnull)successUrl cancelUrl:(NSString * _Nonnull)cancelUrl errorUrl:(NSString * _Nonnull)errorUrl failUrl:(NSString * _Nonnull)failUrl OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC9AP_PaySDK4Card")
 @interface Card : NSObject
 /// Instantiate the instance using the passed dictionary values to set the properties values
@@ -739,6 +747,7 @@ enum payType : NSInteger;
 SWIFT_CLASS_NAMED("PayData")
 @interface PayData : NSObject
 @property (nonatomic, strong) CardDetails * _Nullable cardDetails;
+@property (nonatomic, strong) CallBackParam * _Nullable callBackParam;
 @property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
@@ -1390,6 +1399,14 @@ SWIFT_CLASS("_TtC9AP_PaySDK19ButtonCustomization")
 @end
 
 
+SWIFT_CLASS_NAMED("CallBackParam")
+@interface CallBackParam : NSObject
+- (nonnull instancetype)initWithSuccessUrl:(NSString * _Nonnull)successUrl cancelUrl:(NSString * _Nonnull)cancelUrl errorUrl:(NSString * _Nonnull)errorUrl failUrl:(NSString * _Nonnull)failUrl OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC9AP_PaySDK4Card")
 @interface Card : NSObject
 /// Instantiate the instance using the passed dictionary values to set the properties values
@@ -1853,6 +1870,7 @@ enum payType : NSInteger;
 SWIFT_CLASS_NAMED("PayData")
 @interface PayData : NSObject
 @property (nonatomic, strong) CardDetails * _Nullable cardDetails;
+@property (nonatomic, strong) CallBackParam * _Nullable callBackParam;
 @property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
