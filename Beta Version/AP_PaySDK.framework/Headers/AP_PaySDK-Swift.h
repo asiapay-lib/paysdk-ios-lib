@@ -278,6 +278,7 @@ SWIFT_CLASS("_TtC9AP_PaySDK19ButtonCustomization")
 
 SWIFT_CLASS("_TtC9AP_PaySDK4Card")
 @interface Card : NSObject
+/// Instantiate the instance using the passed dictionary values to set the properties values
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -1391,6 +1392,7 @@ SWIFT_CLASS("_TtC9AP_PaySDK19ButtonCustomization")
 
 SWIFT_CLASS("_TtC9AP_PaySDK4Card")
 @interface Card : NSObject
+/// Instantiate the instance using the passed dictionary values to set the properties values
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
