@@ -28,9 +28,9 @@
 
 Merchant need to integrate certificate. This certificate is provided in [PayDollar Dashboard](https://www.paydollar.com/b2c2/eng/merchant/index.jsp).
 
-Add `paysdk.plist` and set value of certificate.
+Add `paysdk.plist` and set value of certificate and "Domain" key value pair. Value for the Domain is optinal
 
-<img width="406" alt="Screenshot 2019-11-07 at 7 01 41 PM" src="https://user-images.githubusercontent.com/57219745/68393070-29b78480-0191-11ea-923a-19445f25fe52.png">
+<img width="406" alt="Screenshot 2021-01-22 at 1 51 30 AM" src="https://user-images.githubusercontent.com/57219862/105408838-80ee2b80-5c55-11eb-8f5b-085ddbf88615.png">
 
 ## Installation
 
@@ -50,7 +50,7 @@ pod 'Material'
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate PayDollarSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```
-pod 'AP_PaySDK', '2.1.10'
+pod 'AP_PaySDK', '2.3.1'
 
 ```
 
