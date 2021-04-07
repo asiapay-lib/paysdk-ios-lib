@@ -387,10 +387,10 @@ extension UIButton {
   @objc func getTextBoxCustomization() throws -> AP_PaySDK.PaySDKTextBoxCustomization
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Methods : ObjectiveC.NSObject {
-  public var card: [AP_PaySDK.Card]!
-  public var other: [AP_PaySDK.Card]!
-  public var netbanking: [AP_PaySDK.Card]!
-  public var saved: [AP_PaySDK.Card]!
+  public var card: [AP_PaySDK.Cards]!
+  public var other: [AP_PaySDK.Cards]!
+  public var netbanking: [AP_PaySDK.Cards]!
+  public var saved: [AP_PaySDK.Cards]!
   @objc deinit
 }
 @objc open class TransQueryResult : ObjectiveC.NSObject {
@@ -437,7 +437,7 @@ extension UIButton {
   @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Card : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Cards : ObjectiveC.NSObject {
   @objc deinit
 }
 @objc open class LabelCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKLabelCustomization {

@@ -283,17 +283,17 @@ SWIFT_CLASS_NAMED("CallBackParam")
 @end
 
 
-SWIFT_CLASS("_TtC9AP_PaySDK4Card")
-@interface Card : NSObject
-/// Instantiate the instance using the passed dictionary values to set the properties values
+SWIFT_CLASS_NAMED("CardDetails")
+@interface CardDetails : NSObject
+- (nonnull instancetype)initWithCardHolderName:(NSString * _Nonnull)cardHolderName cardNo:(NSString * _Nonnull)cardNo expMonth:(NSString * _Nonnull)expMonth expYear:(NSString * _Nonnull)expYear securityCode:(NSString * _Nonnull)securityCode OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
-SWIFT_CLASS_NAMED("CardDetails")
-@interface CardDetails : NSObject
-- (nonnull instancetype)initWithCardHolderName:(NSString * _Nonnull)cardHolderName cardNo:(NSString * _Nonnull)cardNo expMonth:(NSString * _Nonnull)expMonth expYear:(NSString * _Nonnull)expYear securityCode:(NSString * _Nonnull)securityCode OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC9AP_PaySDK5Cards")
+@interface Cards : NSObject
+/// Instantiate the instance using the passed dictionary values to set the properties values
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -977,17 +977,17 @@ SWIFT_CLASS_NAMED("CallBackParam")
 @end
 
 
-SWIFT_CLASS("_TtC9AP_PaySDK4Card")
-@interface Card : NSObject
-/// Instantiate the instance using the passed dictionary values to set the properties values
+SWIFT_CLASS_NAMED("CardDetails")
+@interface CardDetails : NSObject
+- (nonnull instancetype)initWithCardHolderName:(NSString * _Nonnull)cardHolderName cardNo:(NSString * _Nonnull)cardNo expMonth:(NSString * _Nonnull)expMonth expYear:(NSString * _Nonnull)expYear securityCode:(NSString * _Nonnull)securityCode OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
-SWIFT_CLASS_NAMED("CardDetails")
-@interface CardDetails : NSObject
-- (nonnull instancetype)initWithCardHolderName:(NSString * _Nonnull)cardHolderName cardNo:(NSString * _Nonnull)cardNo expMonth:(NSString * _Nonnull)expMonth expYear:(NSString * _Nonnull)expYear securityCode:(NSString * _Nonnull)securityCode OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC9AP_PaySDK5Cards")
+@interface Cards : NSObject
+/// Instantiate the instance using the passed dictionary values to set the properties values
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
