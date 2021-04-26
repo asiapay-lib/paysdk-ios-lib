@@ -267,9 +267,6 @@ public enum Action : Swift.String {
   @objc public var methods: AP_PaySDK.Methods!
   @objc deinit
 }
-extension UITextField {
-  @objc override dynamic open func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
-}
 extension UIColor {
   @objc convenience dynamic public init?(hex: Swift.String)
 }
@@ -308,7 +305,7 @@ infix operator >>> : DefaultPrecedence
   @objc public var uiCustomization: AP_PaySDK.UiCustomization?
   @objc public var isBioMetricRequired: Swift.Bool
   @objc public var useSDKProgressScreen: Swift.Bool
-  public func getSDKVersion() -> Swift.String
+  @objc public func getSDKVersion() -> Swift.String
   @objc public func query(action: Swift.String)
   @objc public func process()
   @objc public func invalidateToken()

@@ -454,6 +454,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PaySDK * _Nonnull shar
 @property (nonatomic) BOOL useSDKProgressScreen;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (NSString * _Nonnull)getSDKVersion SWIFT_WARN_UNUSED_RESULT;
 - (void)queryWithAction:(NSString * _Nonnull)action;
 - (void)process;
 - (void)invalidateToken;
@@ -641,11 +642,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
 
 
 
-
-
-@interface UITextField (SWIFT_EXTENSION(AP_PaySDK))
-- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
-@end
 
 
 
@@ -1148,6 +1144,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PaySDK * _Nonnull shar
 @property (nonatomic) BOOL useSDKProgressScreen;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (NSString * _Nonnull)getSDKVersion SWIFT_WARN_UNUSED_RESULT;
 - (void)queryWithAction:(NSString * _Nonnull)action;
 - (void)process;
 - (void)invalidateToken;
@@ -1335,11 +1332,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
 
 
 
-
-
-@interface UITextField (SWIFT_EXTENSION(AP_PaySDK))
-- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
-@end
 
 
 
