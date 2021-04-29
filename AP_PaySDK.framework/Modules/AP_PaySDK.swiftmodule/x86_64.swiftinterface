@@ -298,7 +298,7 @@ infix operator >>> : DefaultPrecedence
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 10.0, *)
-@objc(PaySDK) open class PaySDK : ObjectiveC.NSObject {
+@objc(PaySDK) open class PaySDK : ObjectiveC.NSObject, StoreKit.SKStoreProductViewControllerDelegate {
   @objc public static var shared: AP_PaySDK.PaySDK
   @objc public var delegate: AP_PaySDK.PaySDKDelegate?
   @objc public var paymentDetails: AP_PaySDK.PayData!

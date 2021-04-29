@@ -194,6 +194,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
+@import StoreKit;
 @import UIKit;
 #endif
 
@@ -443,7 +444,7 @@ SWIFT_CLASS("_TtC9AP_PaySDK9PayResult")
 @class UiCustomization;
 
 SWIFT_CLASS_NAMED("PaySDK") SWIFT_AVAILABILITY(ios,introduced=10.0)
-@interface PaySDK : NSObject
+@interface PaySDK : NSObject <SKStoreProductViewControllerDelegate>
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PaySDK * _Nonnull shared;)
 + (PaySDK * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 + (void)setShared:(PaySDK * _Nonnull)value;
@@ -884,6 +885,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
+@import StoreKit;
 @import UIKit;
 #endif
 
@@ -1133,7 +1135,7 @@ SWIFT_CLASS("_TtC9AP_PaySDK9PayResult")
 @class UiCustomization;
 
 SWIFT_CLASS_NAMED("PaySDK") SWIFT_AVAILABILITY(ios,introduced=10.0)
-@interface PaySDK : NSObject
+@interface PaySDK : NSObject <SKStoreProductViewControllerDelegate>
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PaySDK * _Nonnull shared;)
 + (PaySDK * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 + (void)setShared:(PaySDK * _Nonnull)value;
