@@ -29,12 +29,12 @@ import WebKit
   @objc deinit
   @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
 }
-@objc public class TransQueryResults : ObjectiveC.NSObject {
+@objc(TransQueryResults) public class TransQueryResults : ObjectiveC.NSObject {
   @objc public var detail: [AP_PaySDK.TransQueryResult]?
   @objc public var resultCode: Swift.String?
-  public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResults]
-  required public init?(dictionary: Foundation.NSDictionary)
-  public func dictionaryRepresentation() -> Foundation.NSDictionary
+  @objc public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResults]
+  @objc required public init?(dictionary: Foundation.NSDictionary)
+  @objc public func dictionaryRepresentation() -> Foundation.NSDictionary
   @objc deinit
   @objc override dynamic public init()
 }
@@ -390,35 +390,35 @@ extension UIButton {
   public var saved: [AP_PaySDK.Cards]!
   @objc deinit
 }
-@objc open class TransQueryResult : ObjectiveC.NSObject {
-  public var cur: Swift.String?
-  public var txTime: Swift.String?
-  public var errMsg: Swift.String?
-  public var orderStatus: Swift.String?
-  public var amt: Swift.String?
-  public var remark: Swift.String?
-  public var eci: Swift.String?
-  public var ipCountry: Swift.String?
-  public var channelType: Swift.String?
-  public var merchantId: Swift.String?
-  public var authId: Swift.String?
-  public var payerAuth: Swift.String?
-  public var panLast4: Swift.String?
-  public var ref: Swift.String?
-  public var payMethod: Swift.String?
-  public var successcode: Swift.String?
-  public var cardIssuingCountry: Swift.String?
-  public var prc: Swift.String?
-  public var ord: Swift.String?
-  public var panFirst4: Swift.String?
-  public var alertCode: Swift.String?
-  public var src: Swift.String?
-  public var payRef: Swift.String?
-  public var holder: Swift.String?
-  public var sourceIp: Swift.String?
-  public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResult]
-  required public init?(dictionary: Foundation.NSDictionary)
-  public func dictionaryRepresentation() -> Foundation.NSDictionary
+@objc(TransQueryResult) open class TransQueryResult : ObjectiveC.NSObject {
+  @objc public var cur: Swift.String?
+  @objc public var txTime: Swift.String?
+  @objc public var errMsg: Swift.String?
+  @objc public var orderStatus: Swift.String?
+  @objc public var amt: Swift.String?
+  @objc public var remark: Swift.String?
+  @objc public var eci: Swift.String?
+  @objc public var ipCountry: Swift.String?
+  @objc public var channelType: Swift.String?
+  @objc public var merchantId: Swift.String?
+  @objc public var authId: Swift.String?
+  @objc public var payerAuth: Swift.String?
+  @objc public var panLast4: Swift.String?
+  @objc public var ref: Swift.String?
+  @objc public var payMethod: Swift.String?
+  @objc public var successcode: Swift.String?
+  @objc public var cardIssuingCountry: Swift.String?
+  @objc public var prc: Swift.String?
+  @objc public var ord: Swift.String?
+  @objc public var panFirst4: Swift.String?
+  @objc public var alertCode: Swift.String?
+  @objc public var src: Swift.String?
+  @objc public var payRef: Swift.String?
+  @objc public var holder: Swift.String?
+  @objc public var sourceIp: Swift.String?
+  @objc public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResult]
+  @objc required public init?(dictionary: Foundation.NSDictionary)
+  @objc public func dictionaryRepresentation() -> Foundation.NSDictionary
   @objc deinit
   @objc override dynamic public init()
 }

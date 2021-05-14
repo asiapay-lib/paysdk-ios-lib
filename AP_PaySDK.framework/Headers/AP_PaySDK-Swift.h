@@ -612,18 +612,91 @@ SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
+@class NSArray;
+@class NSDictionary;
 
-SWIFT_CLASS("_TtC9AP_PaySDK16TransQueryResult")
+SWIFT_CLASS_NAMED("TransQueryResult")
 @interface TransQueryResult : NSObject
+@property (nonatomic, copy) NSString * _Nullable cur;
+@property (nonatomic, copy) NSString * _Nullable txTime;
+@property (nonatomic, copy) NSString * _Nullable errMsg;
+@property (nonatomic, copy) NSString * _Nullable orderStatus;
+@property (nonatomic, copy) NSString * _Nullable amt;
+@property (nonatomic, copy) NSString * _Nullable remark;
+@property (nonatomic, copy) NSString * _Nullable eci;
+@property (nonatomic, copy) NSString * _Nullable ipCountry;
+@property (nonatomic, copy) NSString * _Nullable channelType;
+@property (nonatomic, copy) NSString * _Nullable merchantId;
+@property (nonatomic, copy) NSString * _Nullable authId;
+@property (nonatomic, copy) NSString * _Nullable payerAuth;
+@property (nonatomic, copy) NSString * _Nullable panLast4;
+@property (nonatomic, copy) NSString * _Nullable ref;
+@property (nonatomic, copy) NSString * _Nullable payMethod;
+@property (nonatomic, copy) NSString * _Nullable successcode;
+@property (nonatomic, copy) NSString * _Nullable cardIssuingCountry;
+@property (nonatomic, copy) NSString * _Nullable prc;
+@property (nonatomic, copy) NSString * _Nullable ord;
+@property (nonatomic, copy) NSString * _Nullable panFirst4;
+@property (nonatomic, copy) NSString * _Nullable alertCode;
+@property (nonatomic, copy) NSString * _Nullable src;
+@property (nonatomic, copy) NSString * _Nullable payRef;
+@property (nonatomic, copy) NSString * _Nullable holder;
+@property (nonatomic, copy) NSString * _Nullable sourceIp;
+/// Returns an array of models based on given dictionary.
+/// Sample usage:
+/// let detail_list = Detail.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
+/// \param array NSArray from JSON dictionary.
+///
+///
+/// returns:
+/// Array of Detail Instances.
++ (NSArray<TransQueryResult *> * _Nonnull)modelsFromDictionaryArrayWithArray:(NSArray * _Nonnull)array SWIFT_WARN_UNUSED_RESULT;
+/// Constructs the object based on the given dictionary.
+/// Sample usage:
+/// let detail = Detail(someDictionaryFromJSON)
+/// \param dictionary NSDictionary from JSON.
+///
+///
+/// returns:
+/// Detail Instance.
+- (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
+/// Returns the dictionary representation for the current instance.
+///
+/// returns:
+/// NSDictionary.
+- (NSDictionary * _Nonnull)dictionaryRepresentation SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
-SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
+SWIFT_CLASS_NAMED("TransQueryResults")
 @interface TransQueryResults : NSObject
 @property (nonatomic, copy) NSArray<TransQueryResult *> * _Nullable detail;
 @property (nonatomic, copy) NSString * _Nullable resultCode;
+/// Returns an array of models based on given dictionary.
+/// Sample usage:
+/// let json4Swift_Base_list = Json4Swift_Base.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
+/// \param array NSArray from JSON dictionary.
+///
+///
+/// returns:
+/// Array of Json4Swift_Base Instances.
++ (NSArray<TransQueryResults *> * _Nonnull)modelsFromDictionaryArrayWithArray:(NSArray * _Nonnull)array SWIFT_WARN_UNUSED_RESULT;
+/// Constructs the object based on the given dictionary.
+/// Sample usage:
+/// let json4Swift_Base = Json4Swift_Base(someDictionaryFromJSON)
+/// \param dictionary NSDictionary from JSON.
+///
+///
+/// returns:
+/// Json4Swift_Base Instance.
+- (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
+/// Returns the dictionary representation for the current instance.
+///
+/// returns:
+/// NSDictionary.
+- (NSDictionary * _Nonnull)dictionaryRepresentation SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -1303,18 +1376,91 @@ SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
+@class NSArray;
+@class NSDictionary;
 
-SWIFT_CLASS("_TtC9AP_PaySDK16TransQueryResult")
+SWIFT_CLASS_NAMED("TransQueryResult")
 @interface TransQueryResult : NSObject
+@property (nonatomic, copy) NSString * _Nullable cur;
+@property (nonatomic, copy) NSString * _Nullable txTime;
+@property (nonatomic, copy) NSString * _Nullable errMsg;
+@property (nonatomic, copy) NSString * _Nullable orderStatus;
+@property (nonatomic, copy) NSString * _Nullable amt;
+@property (nonatomic, copy) NSString * _Nullable remark;
+@property (nonatomic, copy) NSString * _Nullable eci;
+@property (nonatomic, copy) NSString * _Nullable ipCountry;
+@property (nonatomic, copy) NSString * _Nullable channelType;
+@property (nonatomic, copy) NSString * _Nullable merchantId;
+@property (nonatomic, copy) NSString * _Nullable authId;
+@property (nonatomic, copy) NSString * _Nullable payerAuth;
+@property (nonatomic, copy) NSString * _Nullable panLast4;
+@property (nonatomic, copy) NSString * _Nullable ref;
+@property (nonatomic, copy) NSString * _Nullable payMethod;
+@property (nonatomic, copy) NSString * _Nullable successcode;
+@property (nonatomic, copy) NSString * _Nullable cardIssuingCountry;
+@property (nonatomic, copy) NSString * _Nullable prc;
+@property (nonatomic, copy) NSString * _Nullable ord;
+@property (nonatomic, copy) NSString * _Nullable panFirst4;
+@property (nonatomic, copy) NSString * _Nullable alertCode;
+@property (nonatomic, copy) NSString * _Nullable src;
+@property (nonatomic, copy) NSString * _Nullable payRef;
+@property (nonatomic, copy) NSString * _Nullable holder;
+@property (nonatomic, copy) NSString * _Nullable sourceIp;
+/// Returns an array of models based on given dictionary.
+/// Sample usage:
+/// let detail_list = Detail.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
+/// \param array NSArray from JSON dictionary.
+///
+///
+/// returns:
+/// Array of Detail Instances.
++ (NSArray<TransQueryResult *> * _Nonnull)modelsFromDictionaryArrayWithArray:(NSArray * _Nonnull)array SWIFT_WARN_UNUSED_RESULT;
+/// Constructs the object based on the given dictionary.
+/// Sample usage:
+/// let detail = Detail(someDictionaryFromJSON)
+/// \param dictionary NSDictionary from JSON.
+///
+///
+/// returns:
+/// Detail Instance.
+- (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
+/// Returns the dictionary representation for the current instance.
+///
+/// returns:
+/// NSDictionary.
+- (NSDictionary * _Nonnull)dictionaryRepresentation SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
-SWIFT_CLASS("_TtC9AP_PaySDK17TransQueryResults")
+SWIFT_CLASS_NAMED("TransQueryResults")
 @interface TransQueryResults : NSObject
 @property (nonatomic, copy) NSArray<TransQueryResult *> * _Nullable detail;
 @property (nonatomic, copy) NSString * _Nullable resultCode;
+/// Returns an array of models based on given dictionary.
+/// Sample usage:
+/// let json4Swift_Base_list = Json4Swift_Base.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
+/// \param array NSArray from JSON dictionary.
+///
+///
+/// returns:
+/// Array of Json4Swift_Base Instances.
++ (NSArray<TransQueryResults *> * _Nonnull)modelsFromDictionaryArrayWithArray:(NSArray * _Nonnull)array SWIFT_WARN_UNUSED_RESULT;
+/// Constructs the object based on the given dictionary.
+/// Sample usage:
+/// let json4Swift_Base = Json4Swift_Base(someDictionaryFromJSON)
+/// \param dictionary NSDictionary from JSON.
+///
+///
+/// returns:
+/// Json4Swift_Base Instance.
+- (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
+/// Returns the dictionary representation for the current instance.
+///
+/// returns:
+/// NSDictionary.
+- (NSDictionary * _Nonnull)dictionaryRepresentation SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
