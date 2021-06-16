@@ -642,23 +642,7 @@ SWIFT_CLASS_NAMED("TransQueryResult")
 @property (nonatomic, copy) NSString * _Nullable payRef;
 @property (nonatomic, copy) NSString * _Nullable holder;
 @property (nonatomic, copy) NSString * _Nullable sourceIp;
-/// Returns an array of models based on given dictionary.
-/// Sample usage:
-/// let detail_list = Detail.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
-/// \param array NSArray from JSON dictionary.
-///
-///
-/// returns:
-/// Array of Detail Instances.
 + (NSArray<TransQueryResult *> * _Nonnull)modelsFromDictionaryArrayWithArray:(NSArray * _Nonnull)array SWIFT_WARN_UNUSED_RESULT;
-/// Constructs the object based on the given dictionary.
-/// Sample usage:
-/// let detail = Detail(someDictionaryFromJSON)
-/// \param dictionary NSDictionary from JSON.
-///
-///
-/// returns:
-/// Detail Instance.
 - (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
 /// Returns the dictionary representation for the current instance.
 ///
@@ -692,11 +676,6 @@ SWIFT_CLASS_NAMED("TransQueryResults")
 /// returns:
 /// Json4Swift_Base Instance.
 - (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
-/// Returns the dictionary representation for the current instance.
-///
-/// returns:
-/// NSDictionary.
-- (NSDictionary * _Nonnull)dictionaryRepresentation SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -1406,23 +1385,7 @@ SWIFT_CLASS_NAMED("TransQueryResult")
 @property (nonatomic, copy) NSString * _Nullable payRef;
 @property (nonatomic, copy) NSString * _Nullable holder;
 @property (nonatomic, copy) NSString * _Nullable sourceIp;
-/// Returns an array of models based on given dictionary.
-/// Sample usage:
-/// let detail_list = Detail.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
-/// \param array NSArray from JSON dictionary.
-///
-///
-/// returns:
-/// Array of Detail Instances.
 + (NSArray<TransQueryResult *> * _Nonnull)modelsFromDictionaryArrayWithArray:(NSArray * _Nonnull)array SWIFT_WARN_UNUSED_RESULT;
-/// Constructs the object based on the given dictionary.
-/// Sample usage:
-/// let detail = Detail(someDictionaryFromJSON)
-/// \param dictionary NSDictionary from JSON.
-///
-///
-/// returns:
-/// Detail Instance.
 - (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
 /// Returns the dictionary representation for the current instance.
 ///
@@ -1456,11 +1419,6 @@ SWIFT_CLASS_NAMED("TransQueryResults")
 /// returns:
 /// Json4Swift_Base Instance.
 - (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
-/// Returns the dictionary representation for the current instance.
-///
-/// returns:
-/// NSDictionary.
-- (NSDictionary * _Nonnull)dictionaryRepresentation SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end

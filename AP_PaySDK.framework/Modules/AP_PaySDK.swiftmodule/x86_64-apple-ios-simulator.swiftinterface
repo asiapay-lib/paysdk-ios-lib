@@ -34,7 +34,6 @@ import WebKit
   @objc public var resultCode: Swift.String?
   @objc public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResults]
   @objc required public init?(dictionary: Foundation.NSDictionary)
-  @objc public func dictionaryRepresentation() -> Foundation.NSDictionary
   @objc deinit
   @objc override dynamic public init()
 }
