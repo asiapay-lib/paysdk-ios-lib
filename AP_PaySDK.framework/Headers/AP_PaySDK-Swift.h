@@ -657,6 +657,7 @@ SWIFT_CLASS_NAMED("TransQueryResult")
 SWIFT_CLASS_NAMED("TransQueryResults")
 @interface TransQueryResults : NSObject
 @property (nonatomic, copy) NSArray<TransQueryResult *> * _Nullable detail;
+@property (nonatomic, copy) NSString * _Nullable errMsg;
 @property (nonatomic, copy) NSString * _Nullable resultCode;
 /// Returns an array of models based on given dictionary.
 /// Sample usage:
@@ -1400,6 +1401,7 @@ SWIFT_CLASS_NAMED("TransQueryResult")
 SWIFT_CLASS_NAMED("TransQueryResults")
 @interface TransQueryResults : NSObject
 @property (nonatomic, copy) NSArray<TransQueryResult *> * _Nullable detail;
+@property (nonatomic, copy) NSString * _Nullable errMsg;
 @property (nonatomic, copy) NSString * _Nullable resultCode;
 /// Returns an array of models based on given dictionary.
 /// Sample usage:

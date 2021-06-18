@@ -30,7 +30,8 @@ import WebKit
   @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
 }
 @objc(TransQueryResults) public class TransQueryResults : ObjectiveC.NSObject {
-  @objc public var detail: [AP_PaySDK.TransQueryResult]?
+  @objc public var detail: Swift.Array<AP_PaySDK.TransQueryResult>?
+  @objc public var errMsg: Swift.String?
   @objc public var resultCode: Swift.String?
   @objc public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResults]
   @objc required public init?(dictionary: Foundation.NSDictionary)
