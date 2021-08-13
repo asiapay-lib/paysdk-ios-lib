@@ -659,23 +659,7 @@ SWIFT_CLASS_NAMED("TransQueryResults")
 @property (nonatomic, copy) NSArray<TransQueryResult *> * _Nullable detail;
 @property (nonatomic, copy) NSString * _Nullable errMsg;
 @property (nonatomic, copy) NSString * _Nullable resultCode;
-/// Returns an array of models based on given dictionary.
-/// Sample usage:
-/// let json4Swift_Base_list = Json4Swift_Base.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
-/// \param array NSArray from JSON dictionary.
-///
-///
-/// returns:
-/// Array of Json4Swift_Base Instances.
 + (NSArray<TransQueryResults *> * _Nonnull)modelsFromDictionaryArrayWithArray:(NSArray * _Nonnull)array SWIFT_WARN_UNUSED_RESULT;
-/// Constructs the object based on the given dictionary.
-/// Sample usage:
-/// let json4Swift_Base = Json4Swift_Base(someDictionaryFromJSON)
-/// \param dictionary NSDictionary from JSON.
-///
-///
-/// returns:
-/// Json4Swift_Base Instance.
 - (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
@@ -1403,23 +1387,7 @@ SWIFT_CLASS_NAMED("TransQueryResults")
 @property (nonatomic, copy) NSArray<TransQueryResult *> * _Nullable detail;
 @property (nonatomic, copy) NSString * _Nullable errMsg;
 @property (nonatomic, copy) NSString * _Nullable resultCode;
-/// Returns an array of models based on given dictionary.
-/// Sample usage:
-/// let json4Swift_Base_list = Json4Swift_Base.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
-/// \param array NSArray from JSON dictionary.
-///
-///
-/// returns:
-/// Array of Json4Swift_Base Instances.
 + (NSArray<TransQueryResults *> * _Nonnull)modelsFromDictionaryArrayWithArray:(NSArray * _Nonnull)array SWIFT_WARN_UNUSED_RESULT;
-/// Constructs the object based on the given dictionary.
-/// Sample usage:
-/// let json4Swift_Base = Json4Swift_Base(someDictionaryFromJSON)
-/// \param dictionary NSDictionary from JSON.
-///
-///
-/// returns:
-/// Json4Swift_Base Instance.
 - (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
