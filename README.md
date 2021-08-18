@@ -160,6 +160,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
                                 remark: "",
                                 payRef: "",
                                 resultPage: "F",
+                                showCloseButton: false,
                                 extraData: [:])
 
 paySDK.process()
@@ -179,6 +180,7 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType: PayChannelWEBVIEW 
                                          remark: @"" 
                                          payRef: @"" 
                                          resultpage: @"F" 
+                                         showCloseButton: false,
                                          extraData: nil];
 
 [paySDK process];
