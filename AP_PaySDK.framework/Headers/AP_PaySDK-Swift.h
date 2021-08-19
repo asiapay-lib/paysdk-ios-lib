@@ -397,6 +397,7 @@ typedef SWIFT_ENUM(NSInteger, PayChannel, open) {
   PayChannelNONE = 3,
 };
 
+@class ThreeDSParams;
 enum PayGate : NSInteger;
 enum payType : NSInteger;
 
@@ -404,6 +405,7 @@ SWIFT_CLASS_NAMED("PayData")
 @interface PayData : NSObject
 @property (nonatomic, strong) CardDetails * _Nullable cardDetails;
 @property (nonatomic, strong) CallBackParam * _Nullable callBackParam;
+@property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 - (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
@@ -544,6 +546,60 @@ SWIFT_CLASS("_TtC9AP_PaySDK20TextBoxCustomization")
 @end
 
 
+SWIFT_CLASS("_TtC9AP_PaySDK13ThreeDSParams") SWIFT_AVAILABILITY(ios,introduced=11.0)
+@interface ThreeDSParams : NSObject
+@property (nonatomic, copy) NSString * _Nullable threeDSCustomerEmail;
+@property (nonatomic, copy) NSString * _Nullable threeDSDeliveryEmail;
+@property (nonatomic, copy) NSString * _Nullable threeDSMobilePhoneCountryCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSMobilePhoneNumber;
+@property (nonatomic, copy) NSString * _Nullable threeDSHomePhoneCountryCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSHomePhoneNumber;
+@property (nonatomic, copy) NSString * _Nullable threeDSWorkPhoneCountryCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSWorkPhoneNumber;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingCountryCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingState;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingCity;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine1;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine2;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine3;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingPostalCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingDetails;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingCountryCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingState;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingCity;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine1;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine2;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine3;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctCreateDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctAgeInd;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctLastChangeDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctLastChangeInd;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctPwChangeDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctPwChangeInd;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctPurchaseCount;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctCardProvisionAttempt;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctNumTransDay;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctNumTransYear;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctPaymentAcctDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctPaymentAcctInd;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctShippingAddrLastChangeDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctShippingAddrLastChangeInd;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctIsShippingAcctNameSame;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctIsSuspiciousAcct;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctAuthMethod;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctAuthTimestamp;
+@property (nonatomic, copy) NSString * _Nullable threeDSDeliveryTime;
+@property (nonatomic, copy) NSString * _Nullable threeDSPreOrderReason;
+@property (nonatomic, copy) NSString * _Nullable threeDSPreOrderReadyDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardAmount;
+@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardCurr;
+@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardCount;
+@property (nonatomic, copy) NSString * _Nullable threeDSSdkMaxTimeout;
+@property (nonatomic, copy) NSString * _Nullable threeDSSdkInterface;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
 @interface ToolbarCustomization : Customization <PaySDKToolbarCustomization>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -602,23 +658,7 @@ SWIFT_CLASS_NAMED("TransQueryResults")
 @property (nonatomic, copy) NSArray<TransQueryResult *> * _Nullable detail;
 @property (nonatomic, copy) NSString * _Nullable errMsg;
 @property (nonatomic, copy) NSString * _Nullable resultCode;
-/// Returns an array of models based on given dictionary.
-/// Sample usage:
-/// let json4Swift_Base_list = Json4Swift_Base.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
-/// \param array NSArray from JSON dictionary.
-///
-///
-/// returns:
-/// Array of Json4Swift_Base Instances.
 + (NSArray<TransQueryResults *> * _Nonnull)modelsFromDictionaryArrayWithArray:(NSArray * _Nonnull)array SWIFT_WARN_UNUSED_RESULT;
-/// Constructs the object based on the given dictionary.
-/// Sample usage:
-/// let json4Swift_Base = Json4Swift_Base(someDictionaryFromJSON)
-/// \param dictionary NSDictionary from JSON.
-///
-///
-/// returns:
-/// Json4Swift_Base Instance.
 - (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
@@ -636,6 +676,7 @@ SWIFT_CLASS_NAMED("TransQueryResults")
 @interface UIColor (SWIFT_EXTENSION(AP_PaySDK))
 - (nullable instancetype)initWithHex:(NSString * _Nonnull)hex;
 @end
+
 
 
 
@@ -1083,6 +1124,7 @@ typedef SWIFT_ENUM(NSInteger, PayChannel, open) {
   PayChannelNONE = 3,
 };
 
+@class ThreeDSParams;
 enum PayGate : NSInteger;
 enum payType : NSInteger;
 
@@ -1090,6 +1132,7 @@ SWIFT_CLASS_NAMED("PayData")
 @interface PayData : NSObject
 @property (nonatomic, strong) CardDetails * _Nullable cardDetails;
 @property (nonatomic, strong) CallBackParam * _Nullable callBackParam;
+@property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 - (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
@@ -1230,6 +1273,60 @@ SWIFT_CLASS("_TtC9AP_PaySDK20TextBoxCustomization")
 @end
 
 
+SWIFT_CLASS("_TtC9AP_PaySDK13ThreeDSParams") SWIFT_AVAILABILITY(ios,introduced=11.0)
+@interface ThreeDSParams : NSObject
+@property (nonatomic, copy) NSString * _Nullable threeDSCustomerEmail;
+@property (nonatomic, copy) NSString * _Nullable threeDSDeliveryEmail;
+@property (nonatomic, copy) NSString * _Nullable threeDSMobilePhoneCountryCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSMobilePhoneNumber;
+@property (nonatomic, copy) NSString * _Nullable threeDSHomePhoneCountryCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSHomePhoneNumber;
+@property (nonatomic, copy) NSString * _Nullable threeDSWorkPhoneCountryCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSWorkPhoneNumber;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingCountryCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingState;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingCity;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine1;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine2;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingLine3;
+@property (nonatomic, copy) NSString * _Nullable threeDSBillingPostalCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingDetails;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingCountryCode;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingState;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingCity;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine1;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine2;
+@property (nonatomic, copy) NSString * _Nullable threeDSShippingLine3;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctCreateDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctAgeInd;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctLastChangeDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctLastChangeInd;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctPwChangeDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctPwChangeInd;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctPurchaseCount;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctCardProvisionAttempt;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctNumTransDay;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctNumTransYear;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctPaymentAcctDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctPaymentAcctInd;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctShippingAddrLastChangeDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctShippingAddrLastChangeInd;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctIsShippingAcctNameSame;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctIsSuspiciousAcct;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctAuthMethod;
+@property (nonatomic, copy) NSString * _Nullable threeDSAcctAuthTimestamp;
+@property (nonatomic, copy) NSString * _Nullable threeDSDeliveryTime;
+@property (nonatomic, copy) NSString * _Nullable threeDSPreOrderReason;
+@property (nonatomic, copy) NSString * _Nullable threeDSPreOrderReadyDate;
+@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardAmount;
+@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardCurr;
+@property (nonatomic, copy) NSString * _Nullable threeDSGiftCardCount;
+@property (nonatomic, copy) NSString * _Nullable threeDSSdkMaxTimeout;
+@property (nonatomic, copy) NSString * _Nullable threeDSSdkInterface;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
 @interface ToolbarCustomization : Customization <PaySDKToolbarCustomization>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -1288,23 +1385,7 @@ SWIFT_CLASS_NAMED("TransQueryResults")
 @property (nonatomic, copy) NSArray<TransQueryResult *> * _Nullable detail;
 @property (nonatomic, copy) NSString * _Nullable errMsg;
 @property (nonatomic, copy) NSString * _Nullable resultCode;
-/// Returns an array of models based on given dictionary.
-/// Sample usage:
-/// let json4Swift_Base_list = Json4Swift_Base.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
-/// \param array NSArray from JSON dictionary.
-///
-///
-/// returns:
-/// Array of Json4Swift_Base Instances.
 + (NSArray<TransQueryResults *> * _Nonnull)modelsFromDictionaryArrayWithArray:(NSArray * _Nonnull)array SWIFT_WARN_UNUSED_RESULT;
-/// Constructs the object based on the given dictionary.
-/// Sample usage:
-/// let json4Swift_Base = Json4Swift_Base(someDictionaryFromJSON)
-/// \param dictionary NSDictionary from JSON.
-///
-///
-/// returns:
-/// Json4Swift_Base Instance.
 - (nullable instancetype)initWithDictionary:(NSDictionary * _Nonnull)dictionary OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
@@ -1322,6 +1403,7 @@ SWIFT_CLASS_NAMED("TransQueryResults")
 @interface UIColor (SWIFT_EXTENSION(AP_PaySDK))
 - (nullable instancetype)initWithHex:(NSString * _Nonnull)hex;
 @end
+
 
 
 

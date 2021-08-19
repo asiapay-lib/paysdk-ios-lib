@@ -24,7 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) payOrder : (NSString *) param;
 - (void) payOrderDynamicLaunch : (NSString *) param;
 - (void) processOrder : (NSURL *) url;
-//- (void) processWechat : (NSArray *) arr;
 
 @end
 
