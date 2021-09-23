@@ -201,7 +201,9 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 lang: Language.ENGLISH,
                                 merchantId: "1",
                                 remark: "",
-                                payRef: "","
+                                payRef: "",
+                                resultPage: "F",
+                                showCloseButton: false,
                                 extraData :[:])
 
 paySDK. paymentDetails.cardDetails = CardDetails(cardHolderName: "abc abc",
@@ -227,6 +229,7 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType:PayChannelDIRECT   
                                          remark:@"" 
                                          payRef:@"" 
                                          resultpage:resultPage 
+                                         showCloseButton: false
                                          extraData:nil];
 
 paySDK.paymentDetails.cardDetails = [[CardDetails alloc] initWithCardHolderName:@"Test Card"                                                               cardNo:cardNoText.text                                                                            expMonth:expMonthText.text 
