@@ -50,7 +50,7 @@ pod 'Material'
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate PayDollarSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```
-pod 'AP_PaySDK', '2.4.36'
+pod 'AP_PaySDK', '2.4.37'
 
 ```
 
@@ -160,7 +160,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
                                 remark: "",
                                 payRef: "",
                                 resultPage: "F",
-                                showCloseButton: false,
+                                showCloseButton: true,
                                 extraData: [:])
 
 paySDK.process()
@@ -180,7 +180,7 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType: PayChannelWEBVIEW 
                                          remark: @"" 
                                          payRef: @"" 
                                          resultpage: @"F" 
-                                         showCloseButton: false,
+                                         showCloseButton: true,
                                          extraData: nil];
 
 [paySDK process];
