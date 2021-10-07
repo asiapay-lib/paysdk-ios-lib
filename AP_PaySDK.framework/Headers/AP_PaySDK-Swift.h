@@ -397,18 +397,20 @@ typedef SWIFT_ENUM(NSInteger, PayChannel, open) {
   PayChannelNONE = 3,
 };
 
+@class PresentViewController;
 @class ThreeDSParams;
 enum PayGate : NSInteger;
 enum payType : NSInteger;
 
 SWIFT_CLASS_NAMED("PayData")
 @interface PayData : NSObject
+@property (nonatomic, strong) PresentViewController * _Nullable presentController;
 @property (nonatomic, strong) CardDetails * _Nullable cardDetails;
 @property (nonatomic, strong) CallBackParam * _Nullable callBackParam;
 @property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton showToolbar:(BOOL)showToolbar extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -527,6 +529,14 @@ SWIFT_PROTOCOL("_TtP9AP_PaySDK21PaySDKUiCustomization_")
 SWIFT_CLASS("_TtC9AP_PaySDK20PaymentOptionsDetail")
 @interface PaymentOptionsDetail : NSObject
 @property (nonatomic, strong) Methods * _Null_unspecified methods;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS_NAMED("PresentViewController")
+@interface PresentViewController : NSObject
+- (nonnull instancetype)initWithPresentViewController:(UIViewController * _Nonnull)presentViewController OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -1124,18 +1134,20 @@ typedef SWIFT_ENUM(NSInteger, PayChannel, open) {
   PayChannelNONE = 3,
 };
 
+@class PresentViewController;
 @class ThreeDSParams;
 enum PayGate : NSInteger;
 enum payType : NSInteger;
 
 SWIFT_CLASS_NAMED("PayData")
 @interface PayData : NSObject
+@property (nonatomic, strong) PresentViewController * _Nullable presentController;
 @property (nonatomic, strong) CardDetails * _Nullable cardDetails;
 @property (nonatomic, strong) CallBackParam * _Nullable callBackParam;
 @property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton showToolbar:(BOOL)showToolbar extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1254,6 +1266,14 @@ SWIFT_PROTOCOL("_TtP9AP_PaySDK21PaySDKUiCustomization_")
 SWIFT_CLASS("_TtC9AP_PaySDK20PaymentOptionsDetail")
 @interface PaymentOptionsDetail : NSObject
 @property (nonatomic, strong) Methods * _Null_unspecified methods;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS_NAMED("PresentViewController")
+@interface PresentViewController : NSObject
+- (nonnull instancetype)initWithPresentViewController:(UIViewController * _Nonnull)presentViewController OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end

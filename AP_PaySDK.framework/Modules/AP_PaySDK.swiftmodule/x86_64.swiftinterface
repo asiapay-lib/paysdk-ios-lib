@@ -279,6 +279,10 @@ extension URL {
   @objc public init(orderId: Swift.String)
   @objc deinit
 }
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(PresentViewController) open class PresentViewController : ObjectiveC.NSObject {
+  @objc public init(presentViewController: UIKit.UIViewController)
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(CardDetails) open class CardDetails : ObjectiveC.NSObject {
   @objc public init(cardHolderName: Swift.String, cardNo: Swift.String, expMonth: Swift.String, expYear: Swift.String, securityCode: Swift.String)
   @objc deinit
@@ -460,10 +464,11 @@ extension UIButton {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(PayData) open class PayData : ObjectiveC.NSObject {
+  @objc public var presentController: AP_PaySDK.PresentViewController?
   @objc public var cardDetails: AP_PaySDK.CardDetails?
   @objc public var callBackParam: AP_PaySDK.CallBackParam?
   @objc public var threeDSParams: AP_PaySDK.ThreeDSParams?
-  @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, showCloseButton: Swift.Bool, extraData: [Swift.String : Any]?)
+  @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, showCloseButton: Swift.Bool, showToolbar: Swift.Bool, extraData: [Swift.String : Any]?)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(CallBackParam) open class CallBackParam : ObjectiveC.NSObject {

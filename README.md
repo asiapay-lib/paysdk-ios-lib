@@ -50,7 +50,7 @@ pod 'Material'
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate PayDollarSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```
-pod 'AP_PaySDK', '2.4.39'
+pod 'AP_PaySDK', '2.5.06'
 
 ```
 
@@ -161,7 +161,10 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
                                 payRef: "",
                                 resultPage: "F",
                                 showCloseButton: true,
+                                showToolbar: true,
                                 extraData: [:])
+
+paysdk.paymentDetails.presentController = PresentViewController(presentViewController: (UIApplication.shared.keyWindow?.rootViewController)!)
 
 paySDK.process()
 
@@ -180,8 +183,11 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType: PayChannelWEBVIEW 
                                          remark: @"" 
                                          payRef: @"" 
                                          resultpage: @"F" 
-                                         showCloseButton: true,
+                                         showCloseButton: true
+                                         showToolbar: true
                                          extraData: nil];
+
+paysdk.paymentDetails.presentController = [[PresentViewController alloc] initWithPresentViewController:[[[UIApplication sharedApplication]keyWindow]rootViewController]];
 
 [paySDK process];
 ```
@@ -204,13 +210,15 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 payRef: "",
                                 resultPage: "F",
                                 showCloseButton: false,
+                                showToolbar: false,
                                 extraData :[:])
 
-paySDK. paymentDetails.cardDetails = CardDetails(cardHolderName: "abc abc",
+paySDK.paymentDetails.cardDetails = CardDetails(cardHolderName: "abc abc",
                                                  cardNo: "1234567890123456”,
                                                  expMonth: "11",
                                                  expYear: "2011",
                                                  securityCode: "123")
+                                                 
 paySDK.process()
 
 ```
@@ -230,6 +238,7 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType:PayChannelDIRECT   
                                          payRef:@"" 
                                          resultpage:resultPage 
                                          showCloseButton: false
+                                         showToolbar: false
                                          extraData:nil];
 
 paySDK.paymentDetails.cardDetails = [[CardDetails alloc] initWithCardHolderName:@"Test Card"                                                               cardNo:cardNoText.text                                                                            expMonth:expMonthText.text 
