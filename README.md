@@ -97,7 +97,7 @@ let nextButtonCustomization = ButtonCustomization("Courier", "#FF0000", 15, "#d3
 let continueButtonCustomization = ButtonCustomization("Courier", "#FF0000", 15, "#d3d3d3", 4)
 let labelCustomization = LabelCustomization("Courier", "FF0000", 14, "FF0000", "Courier", 20)
 let textboxCustomization = TextBoxCustomization("Courier", "#FF0000", 14, 5, "#d3d3d3", 4)
-let toolBarCustomization = ToolbarCustomization("Courier", "#FFFFFF", 20, "#000000", "")
+let toolBarCustomization = ToolbarCustomization("Courier", "#FFFFFF", 20, "#000000", "Header Text", "Close Button Text")
 
 try! customization.setButtonCustomization(submitButtonCustomization, .SUBMIT)
 try! customization.setButtonCustomization(resendButtonCustomization, .RESEND)
@@ -162,6 +162,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
                                 resultPage: "F",
                                 showCloseButton: true,
                                 showToolbar: true,
+                                webViewClosePrompt: "Do you really want to close this page?",
                                 extraData: [:])
 
 paysdk.paymentDetails.presentController = PresentViewController(presentViewController: (UIApplication.shared.keyWindow?.rootViewController)!)
@@ -185,6 +186,7 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType: PayChannelWEBVIEW 
                                          resultpage: @"F" 
                                          showCloseButton: true
                                          showToolbar: true
+                                         webViewClosePrompt: @"Do you really want to close this page?"
                                          extraData: nil];
 
 paysdk.paymentDetails.presentController = [[PresentViewController alloc] initWithPresentViewController:[[[UIApplication sharedApplication]keyWindow]rootViewController]];
@@ -211,6 +213,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 resultPage: "F",
                                 showCloseButton: false,
                                 showToolbar: false,
+                                webViewClosePrompt: "",
                                 extraData :[:])
 
 paySDK.paymentDetails.cardDetails = CardDetails(cardHolderName: "abc abc",
@@ -239,6 +242,7 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType:PayChannelDIRECT   
                                          resultpage:resultPage 
                                          showCloseButton: false
                                          showToolbar: false
+                                         webViewClosePrompt: @"",
                                          extraData:nil];
 
 paySDK.paymentDetails.cardDetails = [[CardDetails alloc] initWithCardHolderName:@"Test Card"                                                               cardNo:cardNoText.text                                                                            expMonth:expMonthText.text 

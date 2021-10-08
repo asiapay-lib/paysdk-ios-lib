@@ -21,11 +21,13 @@ import UIKit
 import WebKit
 @objc open class ToolbarCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKToolbarCustomization {
   @objc override dynamic public init()
-  @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ headerText: Swift.String)
+  @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ headerText: Swift.String, _ rightBarButtonText: Swift.String)
   @objc public func setBackgroundColor(_ hexColorCode: Swift.String) throws
   @objc public func setHeaderText(_ headerText: Swift.String) throws
+  @objc public func setRightBarButtonText(_ rightBarButtonText: Swift.String) throws
   @objc public func getBackgroundColor() -> Swift.String
   @objc public func getHeaderText() -> Swift.String
+  @objc public func getRightBarButtonText() -> Swift.String
   @objc deinit
   @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
 }
@@ -59,10 +61,13 @@ import WebKit
 @objc open class ButtonCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKButtonCustomization {
   @objc override dynamic public init()
   @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ cornerRadius: Swift.Int)
+  @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ cornerRadius: Swift.Int, _ buttonName: Swift.String)
   @objc public func setBackgroundColor(_ hexColorCode: Swift.String) throws
   @objc public func setCornerRadius(_ cornerRadius: Swift.Int) throws
+  @objc public func setButtonName(_ buttonName: Swift.String) throws
   @objc public func getBackgroundColor() -> Swift.String
   @objc public func getCornerRadius() -> Swift.Int
+  @objc public func getButtonName() -> Swift.String
   @objc deinit
   @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
 }
@@ -351,14 +356,18 @@ extension UIButton {
 @objc public protocol PaySDKButtonCustomization : AP_PaySDK.PaySDKCustomization {
   @objc func setBackgroundColor(_ hexColorCode: Swift.String) throws
   @objc func setCornerRadius(_ cornerRadius: Swift.Int) throws
+  @objc func setButtonName(_ buttonName: Swift.String) throws
   @objc func getBackgroundColor() -> Swift.String
   @objc func getCornerRadius() -> Swift.Int
+  @objc func getButtonName() -> Swift.String
 }
 @objc public protocol PaySDKToolbarCustomization : AP_PaySDK.PaySDKCustomization {
   @objc func setBackgroundColor(_ hexColorCode: Swift.String) throws
   @objc func setHeaderText(_ headerText: Swift.String) throws
+  @objc func setRightBarButtonText(_ rightBarButtonText: Swift.String) throws
   @objc func getBackgroundColor() -> Swift.String
   @objc func getHeaderText() -> Swift.String
+  @objc func getRightBarButtonText() -> Swift.String
 }
 @objc public protocol PaySDKLabelCustomization : AP_PaySDK.PaySDKCustomization {
   @objc func setHeadingTextColor(_ hexColorCode: Swift.String) throws
@@ -468,7 +477,7 @@ extension UIButton {
   @objc public var cardDetails: AP_PaySDK.CardDetails?
   @objc public var callBackParam: AP_PaySDK.CallBackParam?
   @objc public var threeDSParams: AP_PaySDK.ThreeDSParams?
-  @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, showCloseButton: Swift.Bool, showToolbar: Swift.Bool, extraData: [Swift.String : Any]?)
+  @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, showCloseButton: Swift.Bool, showToolbar: Swift.Bool, webViewClosePrompt: Swift.String, extraData: [Swift.String : Any]?)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(CallBackParam) open class CallBackParam : ObjectiveC.NSObject {

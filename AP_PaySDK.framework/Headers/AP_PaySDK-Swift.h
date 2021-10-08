@@ -246,8 +246,10 @@ SWIFT_PROTOCOL("_TtP9AP_PaySDK25PaySDKButtonCustomization_")
 @protocol PaySDKButtonCustomization <PaySDKCustomization>
 - (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)setButtonName:(NSString * _Nonnull)buttonName error:(NSError * _Nullable * _Nullable)error;
 - (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getButtonName SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -268,10 +270,13 @@ SWIFT_CLASS("_TtC9AP_PaySDK19ButtonCustomization")
 @interface ButtonCustomization : Customization <PaySDKButtonCustomization>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSInteger)cornerRadius OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSInteger)cornerRadius :(NSString * _Nonnull)buttonName OBJC_DESIGNATED_INITIALIZER;
 - (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)setButtonName:(NSString * _Nonnull)buttonName error:(NSError * _Nullable * _Nullable)error;
 - (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getButtonName SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
@@ -410,7 +415,7 @@ SWIFT_CLASS_NAMED("PayData")
 @property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton showToolbar:(BOOL)showToolbar extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton showToolbar:(BOOL)showToolbar webViewClosePrompt:(NSString * _Nonnull)webViewClosePrompt extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -508,8 +513,10 @@ SWIFT_PROTOCOL("_TtP9AP_PaySDK26PaySDKToolbarCustomization_")
 @protocol PaySDKToolbarCustomization <PaySDKCustomization>
 - (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)setHeaderText:(NSString * _Nonnull)headerText error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)setRightBarButtonText:(NSString * _Nonnull)rightBarButtonText error:(NSError * _Nullable * _Nullable)error;
 - (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getHeaderText SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getRightBarButtonText SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -613,11 +620,13 @@ SWIFT_CLASS("_TtC9AP_PaySDK13ThreeDSParams") SWIFT_AVAILABILITY(ios,introduced=1
 SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
 @interface ToolbarCustomization : Customization <PaySDKToolbarCustomization>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSString * _Nonnull)headerText OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSString * _Nonnull)headerText :(NSString * _Nonnull)rightBarButtonText OBJC_DESIGNATED_INITIALIZER;
 - (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)setHeaderText:(NSString * _Nonnull)headerText error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)setRightBarButtonText:(NSString * _Nonnull)rightBarButtonText error:(NSError * _Nullable * _Nullable)error;
 - (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getHeaderText SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getRightBarButtonText SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
@@ -983,8 +992,10 @@ SWIFT_PROTOCOL("_TtP9AP_PaySDK25PaySDKButtonCustomization_")
 @protocol PaySDKButtonCustomization <PaySDKCustomization>
 - (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)setButtonName:(NSString * _Nonnull)buttonName error:(NSError * _Nullable * _Nullable)error;
 - (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getButtonName SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1005,10 +1016,13 @@ SWIFT_CLASS("_TtC9AP_PaySDK19ButtonCustomization")
 @interface ButtonCustomization : Customization <PaySDKButtonCustomization>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSInteger)cornerRadius OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSInteger)cornerRadius :(NSString * _Nonnull)buttonName OBJC_DESIGNATED_INITIALIZER;
 - (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)setCornerRadius:(NSInteger)cornerRadius error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)setButtonName:(NSString * _Nonnull)buttonName error:(NSError * _Nullable * _Nullable)error;
 - (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)getCornerRadius SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getButtonName SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
@@ -1147,7 +1161,7 @@ SWIFT_CLASS_NAMED("PayData")
 @property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton showToolbar:(BOOL)showToolbar extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton showToolbar:(BOOL)showToolbar webViewClosePrompt:(NSString * _Nonnull)webViewClosePrompt extraData:(NSDictionary<NSString *, id> * _Nullable)extraData OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1245,8 +1259,10 @@ SWIFT_PROTOCOL("_TtP9AP_PaySDK26PaySDKToolbarCustomization_")
 @protocol PaySDKToolbarCustomization <PaySDKCustomization>
 - (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)setHeaderText:(NSString * _Nonnull)headerText error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)setRightBarButtonText:(NSString * _Nonnull)rightBarButtonText error:(NSError * _Nullable * _Nullable)error;
 - (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getHeaderText SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getRightBarButtonText SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1350,11 +1366,13 @@ SWIFT_CLASS("_TtC9AP_PaySDK13ThreeDSParams") SWIFT_AVAILABILITY(ios,introduced=1
 SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
 @interface ToolbarCustomization : Customization <PaySDKToolbarCustomization>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSString * _Nonnull)headerText OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize :(NSString * _Nonnull)backgroundColor :(NSString * _Nonnull)headerText :(NSString * _Nonnull)rightBarButtonText OBJC_DESIGNATED_INITIALIZER;
 - (BOOL)setBackgroundColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)setHeaderText:(NSString * _Nonnull)headerText error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)setRightBarButtonText:(NSString * _Nonnull)rightBarButtonText error:(NSError * _Nullable * _Nullable)error;
 - (NSString * _Nonnull)getBackgroundColor SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getHeaderText SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getRightBarButtonText SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
