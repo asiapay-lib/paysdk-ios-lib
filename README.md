@@ -165,6 +165,7 @@ paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
                                 webViewClosePrompt: "Do you really want to close this page?",
                                 extraData: [:])
 
+//For giving the merchant app rootviewcontroller to present webview. Its an optional parameter.
 paysdk.paymentDetails.presentController = PresentViewController(presentViewController: (UIApplication.shared.keyWindow?.rootViewController)!)
 
 paySDK.process()
@@ -189,6 +190,7 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType: PayChannelWEBVIEW 
                                          webViewClosePrompt: @"Do you really want to close this page?"
                                          extraData: nil];
 
+//For giving the merchant app rootviewcontroller to present webview. Its an optional parameter.
 paysdk.paymentDetails.presentController = [[PresentViewController alloc] initWithPresentViewController:[[[UIApplication sharedApplication]keyWindow]rootViewController]];
 
 [paySDK process];
@@ -245,8 +247,11 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType:PayChannelDIRECT   
                                          webViewClosePrompt: @"",
                                          extraData:nil];
 
-paySDK.paymentDetails.cardDetails = [[CardDetails alloc] initWithCardHolderName:@"Test Card"                                                               cardNo:cardNoText.text                                                                            expMonth:expMonthText.text 
-                                                         expYear:expYearText.text securityCode:securityCodeText.text];
+paySDK.paymentDetails.cardDetails = [[CardDetails alloc] initWithCardHolderName:@"Test Card"
+                                                         cardNo:cardNoText.text
+                                                         expMonth:expMonthText.text 
+                                                         expYear:expYearText.text 
+                                                         securityCode:securityCodeText.text];
 
 [paySDK process];
 ```
