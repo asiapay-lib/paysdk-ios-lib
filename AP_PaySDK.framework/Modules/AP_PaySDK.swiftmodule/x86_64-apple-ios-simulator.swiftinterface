@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 effective-4.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.5 effective-4.2 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name AP_PaySDK
 @_exported import AP_PaySDK
 import AdSupport
@@ -19,6 +19,7 @@ import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
+import _Concurrency
 @objc open class ToolbarCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKToolbarCustomization {
   @objc override dynamic public init()
   @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ headerText: Swift.String, _ rightBarButtonText: Swift.String)
@@ -29,7 +30,6 @@ import WebKit
   @objc public func getHeaderText() -> Swift.String
   @objc public func getRightBarButtonText() -> Swift.String
   @objc deinit
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
 }
 @objc(TransQueryResults) public class TransQueryResults : ObjectiveC.NSObject {
   @objc public var detail: [AP_PaySDK.TransQueryResult]?
@@ -38,7 +38,6 @@ import WebKit
   @objc public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResults]
   @objc required public init?(dictionary: Foundation.NSDictionary)
   @objc deinit
-  @objc override dynamic public init()
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class PayResult : ObjectiveC.NSObject {
   @objc public var amount: Swift.String!
@@ -69,7 +68,6 @@ import WebKit
   @objc public func getCornerRadius() -> Swift.Int
   @objc public func getButtonName() -> Swift.String
   @objc deinit
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
 }
 @objc @_inheritsConvenienceInitializers @available(iOS 11.0, *)
 open class ThreeDSParams : ObjectiveC.NSObject {
@@ -135,8 +133,8 @@ open class ThreeDSParams : ObjectiveC.NSObject {
   case RUSSIAN
   case SPANISH
   case VIETNAMESE
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -156,8 +154,8 @@ open class ThreeDSParams : ObjectiveC.NSObject {
   case WECHATAPP
   case THREEDS2
   case CIMBCLICKS
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -165,8 +163,8 @@ open class ThreeDSParams : ObjectiveC.NSObject {
 @objc public enum payType : Swift.Int {
   case NORMAL_PAYMENT
   case HOLD_PAYMENT
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -174,8 +172,8 @@ open class ThreeDSParams : ObjectiveC.NSObject {
 public enum Action : Swift.String {
   case TX_QUERY
   case PAYMENT_METHOD
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -184,8 +182,8 @@ public enum Action : Swift.String {
   case PAYDOLLAR
   case PESOPAY
   case SIAMPAY
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -195,8 +193,8 @@ public enum Action : Swift.String {
   case DIRECT
   case EASYPAYMENTFORM
   case NONE
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -204,8 +202,8 @@ public enum Action : Swift.String {
 @objc public enum EnvType : Swift.Int {
   case SANDBOX
   case PRODUCTION
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -237,8 +235,8 @@ public enum Action : Swift.String {
   case LKR
   case KWD
   case NZD
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -252,8 +250,8 @@ public enum Action : Swift.String {
   case Checkout
   case Book
   case Subscribe
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -262,8 +260,8 @@ public enum Action : Swift.String {
   case White
   case WhiteOutline
   case Black
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -272,10 +270,10 @@ public enum Action : Swift.String {
   @objc public var methods: AP_PaySDK.Methods!
   @objc deinit
 }
-extension UIColor {
+extension UIKit.UIColor {
   @objc convenience dynamic public init?(hex: Swift.String)
 }
-extension URL {
+extension Foundation.URL {
   public var queryParameters: [Swift.String : Swift.String]? {
     get
   }
@@ -330,8 +328,8 @@ infix operator >>> : DefaultPrecedence
   @objc optional func setMerchantInfoScreen() -> UIKit.UIViewController?
   @objc optional func setMerchantInfo() -> Swift.String?
 }
-extension UIButton {
-  @objc dynamic public func setApplePayButton(btnType: AP_PaySDK.ApplePayButtonType, btnStyle: AP_PaySDK.ApplePayButtonStyle, inView: UIKit.UIView)
+extension UIKit.UIButton {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func setApplePayButton(btnType: AP_PaySDK.ApplePayButtonType, btnStyle: AP_PaySDK.ApplePayButtonStyle, inView: UIKit.UIView)
 }
 @objc public enum PaySDKButtonType : Swift.Int {
   case SUBMIT
@@ -339,8 +337,8 @@ extension UIButton {
   case NEXT
   case CANCEL
   case RESEND
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -432,7 +430,6 @@ extension UIButton {
   @objc required public init?(dictionary: Foundation.NSDictionary)
   @objc public func dictionaryRepresentation() -> Foundation.NSDictionary
   @objc deinit
-  @objc override dynamic public init()
 }
 @objc open class TextBoxCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKTextBoxCustomization {
   @objc override dynamic public init()
@@ -443,7 +440,6 @@ extension UIButton {
   @objc public func setBorderColor(_ hexColorCode: Swift.String) throws
   @objc public func getBorderWidth() -> Swift.Int
   @objc public func getBorderColor() -> Swift.String
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Cards : ObjectiveC.NSObject {
@@ -458,7 +454,6 @@ extension UIButton {
   @objc public func getHeadingTextColor() -> Swift.String
   @objc public func getHeadingTextFontName() -> Swift.String
   @objc public func getHeadingTextFontSize() -> Swift.Int
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc open class Customization : ObjectiveC.NSObject, AP_PaySDK.PaySDKCustomization {
