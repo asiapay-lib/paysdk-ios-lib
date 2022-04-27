@@ -1,10 +1,9 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 effective-4.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.5.2 effective-4.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name AP_PaySDK
 @_exported import AP_PaySDK
 import AdSupport
 import CommonCrypto
-import CoreGraphics
 import CoreLocation
 import Darwin
 import Dispatch
@@ -14,110 +13,31 @@ import Material
 import MobileCoreServices
 import ObjectiveC
 import PassKit
-import QuartzCore
 import Security
 import StoreKit
 import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
-@_inheritsConvenienceInitializers @objc public class IQPreviousNextView : UIKit.UIView {
-  @objc deinit
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
-}
-public let kIQUseDefaultKeyboardDistance: CoreGraphics.CGFloat
-@objc extension UIView {
-  @objc dynamic public var keyboardDistanceFromTextField: CoreGraphics.CGFloat {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc dynamic public var ignoreSwitchingByNextPrevious: Swift.Bool {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc dynamic public var enableMode: AP_PaySDK.IQEnableMode {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc dynamic public var shouldResignOnTouchOutsideMode: AP_PaySDK.IQEnableMode {
-    @objc get
-    @objc set(newValue)
-  }
-}
-@objc @_inheritsConvenienceInitializers public class IQKeyboardReturnKeyHandler : ObjectiveC.NSObject {
-  @objc weak public var delegate: (UIKit.UITextFieldDelegate & UIKit.UITextViewDelegate)?
-  @objc public var lastTextFieldReturnKeyType: UIKit.UIReturnKeyType {
-    @objc get
-    @objc set
-  }
-  @objc override dynamic public init()
-  @objc public init(controller: UIKit.UIViewController)
-  @objc deinit
-  @objc public func addTextFieldView(_ view: UIKit.UIView)
-  @objc public func removeTextFieldView(_ view: UIKit.UIView)
-  @objc public func addResponderFromView(_ view: UIKit.UIView)
-  @objc public func removeResponderFromView(_ view: UIKit.UIView)
-}
-extension IQKeyboardReturnKeyHandler : UIKit.UITextFieldDelegate {
-  @objc dynamic public func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
-  @objc dynamic public func textFieldShouldEndEditing(_ textField: UIKit.UITextField) -> Swift.Bool
-  @objc dynamic public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
-  @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
-  @available(iOS 10.0, *)
-  public typealias UITextFieldDidEndEditingReason = UIKit.UITextField.DidEndEditingReason
-  @available(iOS 10.0, *)
-  @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField, reason: AP_PaySDK.IQKeyboardReturnKeyHandler.UITextFieldDidEndEditingReason)
-  @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
-  @objc dynamic public func textFieldShouldClear(_ textField: UIKit.UITextField) -> Swift.Bool
-  @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
-}
-extension IQKeyboardReturnKeyHandler : UIKit.UITextViewDelegate {
-  @objc dynamic public func textViewShouldBeginEditing(_ textView: UIKit.UITextView) -> Swift.Bool
-  @objc dynamic public func textViewShouldEndEditing(_ textView: UIKit.UITextView) -> Swift.Bool
-  @objc dynamic public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
-  @objc dynamic public func textViewDidEndEditing(_ textView: UIKit.UITextView)
-  @objc dynamic public func textView(_ textView: UIKit.UITextView, shouldChangeTextIn range: Foundation.NSRange, replacementText text: Swift.String) -> Swift.Bool
-  @objc dynamic public func textViewDidChange(_ textView: UIKit.UITextView)
-  @objc dynamic public func textViewDidChangeSelection(_ textView: UIKit.UITextView)
-  @available(iOS 10.0, *)
-  @objc dynamic public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
-  @available(iOS 10.0, *)
-  @objc dynamic public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith textAttachment: UIKit.NSTextAttachment, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
-  @available(iOS, deprecated: 10.0)
-  @objc dynamic public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange) -> Swift.Bool
-  @available(iOS, deprecated: 10.0)
-  @objc dynamic public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith textAttachment: UIKit.NSTextAttachment, in characterRange: Foundation.NSRange) -> Swift.Bool
-}
-@objc @_inheritsConvenienceInitializers open class IQBarButtonItem : UIKit.UIBarButtonItem {
-  @objc override dynamic public init()
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic open var tintColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc open func setTarget(_ target: Swift.AnyObject?, action: ObjectiveC.Selector?)
-  @objc open var invocation: AP_PaySDK.IQInvocation?
-  @objc deinit
-}
+import _Concurrency
 @objc open class ToolbarCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKToolbarCustomization {
   @objc override dynamic public init()
-  @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ headerText: Swift.String)
+  @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ headerText: Swift.String, _ rightBarButtonText: Swift.String)
   @objc public func setBackgroundColor(_ hexColorCode: Swift.String) throws
   @objc public func setHeaderText(_ headerText: Swift.String) throws
+  @objc public func setRightBarButtonText(_ rightBarButtonText: Swift.String) throws
   @objc public func getBackgroundColor() -> Swift.String
   @objc public func getHeaderText() -> Swift.String
+  @objc public func getRightBarButtonText() -> Swift.String
   @objc deinit
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
 }
-@objc public class TransQueryResults : ObjectiveC.NSObject {
+@objc(TransQueryResults) public class TransQueryResults : ObjectiveC.NSObject {
   @objc public var detail: [AP_PaySDK.TransQueryResult]?
+  @objc public var errMsg: Swift.String?
   @objc public var resultCode: Swift.String?
-  public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResults]
-  required public init?(dictionary: Foundation.NSDictionary)
-  public func dictionaryRepresentation() -> Foundation.NSDictionary
+  @objc public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResults]
+  @objc required public init?(dictionary: Foundation.NSDictionary)
   @objc deinit
-  @objc override dynamic public init()
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class PayResult : ObjectiveC.NSObject {
   @objc public var amount: Swift.String!
@@ -134,102 +54,20 @@ extension IQKeyboardReturnKeyHandler : UIKit.UITextViewDelegate {
   @objc public var src: Swift.String!
   @objc public var transactionTime: Swift.String!
   @objc public var descriptionStr: Swift.String!
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class IQTitleBarButtonItem : AP_PaySDK.IQBarButtonItem {
-  @objc open var titleFont: UIKit.UIFont? {
-    @objc get
-    @objc set
-  }
-  @objc override dynamic open var title: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc open var titleColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc open var selectableTitleColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc override open var invocation: AP_PaySDK.IQInvocation? {
-    @objc get
-    @objc set
-  }
-  @objc convenience public init(title: Swift.String?)
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public var orderId: Swift.String?
   @objc deinit
 }
 @objc open class ButtonCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKButtonCustomization {
   @objc override dynamic public init()
   @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ cornerRadius: Swift.Int)
+  @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ cornerRadius: Swift.Int, _ buttonName: Swift.String)
   @objc public func setBackgroundColor(_ hexColorCode: Swift.String) throws
   @objc public func setCornerRadius(_ cornerRadius: Swift.Int) throws
+  @objc public func setButtonName(_ buttonName: Swift.String) throws
   @objc public func getBackgroundColor() -> Swift.String
   @objc public func getCornerRadius() -> Swift.Int
+  @objc public func getButtonName() -> Swift.String
   @objc deinit
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class IQKeyboardManager : ObjectiveC.NSObject {
-  @objc public static let shared: AP_PaySDK.IQKeyboardManager
-  @objc public var enable: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc public var keyboardDistanceFromTextField: CoreGraphics.CGFloat
-  @objc public var enableAutoToolbar: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc public var toolbarManageBehaviour: AP_PaySDK.IQAutoToolbarManageBehaviour
-  @objc public var shouldToolbarUsesTextFieldTintColor: Swift.Bool
-  @objc public var toolbarTintColor: UIKit.UIColor?
-  @objc public var toolbarBarTintColor: UIKit.UIColor?
-  @objc public var previousNextDisplayMode: AP_PaySDK.IQPreviousNextDisplayMode
-  @objc public var toolbarPreviousBarButtonItemImage: UIKit.UIImage?
-  @objc public var toolbarNextBarButtonItemImage: UIKit.UIImage?
-  @objc public var toolbarDoneBarButtonItemImage: UIKit.UIImage?
-  @objc public var toolbarPreviousBarButtonItemText: Swift.String?
-  @objc public var toolbarPreviousBarButtonItemAccessibilityLabel: Swift.String?
-  @objc public var toolbarNextBarButtonItemText: Swift.String?
-  @objc public var toolbarNextBarButtonItemAccessibilityLabel: Swift.String?
-  @objc public var toolbarDoneBarButtonItemText: Swift.String?
-  @objc public var toolbarDoneBarButtonItemAccessibilityLabel: Swift.String?
-  @objc public var shouldShowToolbarPlaceholder: Swift.Bool
-  @objc public var placeholderFont: UIKit.UIFont?
-  @objc public var placeholderColor: UIKit.UIColor?
-  @objc public var placeholderButtonColor: UIKit.UIColor?
-  @objc public var overrideKeyboardAppearance: Swift.Bool
-  @objc public var keyboardAppearance: UIKit.UIKeyboardAppearance
-  @objc public var shouldResignOnTouchOutside: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc public var resignFirstResponderGesture: UIKit.UITapGestureRecognizer {
-    @objc get
-    @objc set
-  }
-  @discardableResult
-  @objc public func resignFirstResponder() -> Swift.Bool
-  @objc public var shouldPlayInputClicks: Swift.Bool
-  @objc public var layoutIfNeededOnUpdate: Swift.Bool
-  @objc public var disabledDistanceHandlingClasses: [UIKit.UIViewController.Type]
-  @objc public var enabledDistanceHandlingClasses: [UIKit.UIViewController.Type]
-  @objc public var disabledToolbarClasses: [UIKit.UIViewController.Type]
-  @objc public var enabledToolbarClasses: [UIKit.UIViewController.Type]
-  @objc public var toolbarPreviousNextAllowedClasses: [UIKit.UIView.Type]
-  @objc public var disabledTouchResignedClasses: [UIKit.UIViewController.Type]
-  @objc public var enabledTouchResignedClasses: [UIKit.UIViewController.Type]
-  @objc public var touchResignedGestureIgnoreClasses: [UIKit.UIView.Type]
-  @objc public func registerTextFieldViewClass(_ aClass: UIKit.UIView.Type, didBeginEditingNotificationName: Swift.String, didEndEditingNotificationName: Swift.String)
-  @objc public func unregisterTextFieldViewClass(_ aClass: UIKit.UIView.Type, didBeginEditingNotificationName: Swift.String, didEndEditingNotificationName: Swift.String)
-  @objc deinit
-  @objc public func reloadLayoutIfNeeded()
-}
-extension IQKeyboardManager : UIKit.UIGestureRecognizerDelegate {
-  @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
-  @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
 }
 @objc @_inheritsConvenienceInitializers @available(iOS 11.0, *)
 open class ThreeDSParams : ObjectiveC.NSObject {
@@ -284,48 +122,6 @@ open class ThreeDSParams : ObjectiveC.NSObject {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers open class IQTextView : UIKit.UITextView {
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer?)
-  @objc override dynamic open func awakeFromNib()
-  @objc deinit
-  @objc @IBInspectable open var placeholderTextColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable open var placeholder: Swift.String? {
-    @objc get
-    @objc set
-  }
-  open var attributedPlaceholder: Foundation.NSAttributedString? {
-    get
-    set
-  }
-  @objc override dynamic open func layoutSubviews()
-  @objc override dynamic open var text: Swift.String! {
-    @objc get
-    @objc set
-  }
-  @objc override dynamic open var attributedText: Foundation.NSAttributedString! {
-    @objc get
-    @objc set
-  }
-  @objc override dynamic open var font: UIKit.UIFont? {
-    @objc get
-    @objc set
-  }
-  @objc override dynamic open var textAlignment: UIKit.NSTextAlignment {
-    @objc get
-    @objc set
-  }
-  @objc override weak dynamic open var delegate: UIKit.UITextViewDelegate? {
-    @objc get
-    @objc set
-  }
-  @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
-    @objc get
-  }
-}
 @objc public enum Language : Swift.Int {
   case ENGLISH
   case CHINESE_TRADITIONAL
@@ -337,8 +133,8 @@ open class ThreeDSParams : ObjectiveC.NSObject {
   case RUSSIAN
   case SPANISH
   case VIETNAMESE
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -358,8 +154,8 @@ open class ThreeDSParams : ObjectiveC.NSObject {
   case WECHATAPP
   case THREEDS2
   case CIMBCLICKS
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -367,8 +163,8 @@ open class ThreeDSParams : ObjectiveC.NSObject {
 @objc public enum payType : Swift.Int {
   case NORMAL_PAYMENT
   case HOLD_PAYMENT
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -376,8 +172,8 @@ open class ThreeDSParams : ObjectiveC.NSObject {
 public enum Action : Swift.String {
   case TX_QUERY
   case PAYMENT_METHOD
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -386,8 +182,8 @@ public enum Action : Swift.String {
   case PAYDOLLAR
   case PESOPAY
   case SIAMPAY
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -397,8 +193,8 @@ public enum Action : Swift.String {
   case DIRECT
   case EASYPAYMENTFORM
   case NONE
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -406,8 +202,8 @@ public enum Action : Swift.String {
 @objc public enum EnvType : Swift.Int {
   case SANDBOX
   case PRODUCTION
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -439,8 +235,8 @@ public enum Action : Swift.String {
   case LKR
   case KWD
   case NZD
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -454,8 +250,8 @@ public enum Action : Swift.String {
   case Checkout
   case Book
   case Subscribe
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -464,30 +260,31 @@ public enum Action : Swift.String {
   case White
   case WhiteOutline
   case Black
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
-  }
-}
-extension IQKeyboardManager {
-  @objc dynamic public var movedDistance: CoreGraphics.CGFloat {
-    @objc get
-  }
-  @objc dynamic public var movedDistanceChanged: ((CoreGraphics.CGFloat) -> Swift.Void)? {
-    @objc get
-    @objc set(newValue)
   }
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PaymentOptionsDetail : ObjectiveC.NSObject {
   @objc public var methods: AP_PaySDK.Methods!
   @objc deinit
 }
-extension UITextField {
-  @objc override dynamic open func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
-}
-extension UIColor {
+extension UIKit.UIColor {
   @objc convenience dynamic public init?(hex: Swift.String)
+}
+extension Foundation.URL {
+  public var queryParameters: [Swift.String : Swift.String]? {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(OrderId) open class OrderId : ObjectiveC.NSObject {
+  @objc public init(orderId: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(PresentViewController) open class PresentViewController : ObjectiveC.NSObject {
+  @objc public init(presentViewController: UIKit.UIViewController)
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(CardDetails) open class CardDetails : ObjectiveC.NSObject {
   @objc public init(cardHolderName: Swift.String, cardNo: Swift.String, expMonth: Swift.String, expYear: Swift.String, securityCode: Swift.String)
@@ -507,47 +304,17 @@ infix operator >>> : DefaultPrecedence
   @objc public func getTextBoxCustomization() throws -> AP_PaySDK.PaySDKTextBoxCustomization
   @objc deinit
 }
-@objc extension UIScrollView {
-  @objc dynamic public var shouldIgnoreScrollingAdjustment: Swift.Bool {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc dynamic public var shouldIgnoreContentInsetAdjustment: Swift.Bool {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc dynamic public var shouldRestoreScrollViewContentOffset: Swift.Bool {
-    @objc get
-    @objc set(newValue)
-  }
-}
-extension IQKeyboardManager {
-  @objc dynamic public func reloadInputViews()
-}
-extension IQKeyboardManager {
-  @objc dynamic public var canGoPrevious: Swift.Bool {
-    @objc get
-  }
-  @objc dynamic public var canGoNext: Swift.Bool {
-    @objc get
-  }
-  @discardableResult
-  @objc dynamic public func goPrevious() -> Swift.Bool
-  @discardableResult
-  @objc dynamic public func goNext() -> Swift.Bool
-}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 10.0, *)
-@objc(PaySDK) open class PaySDK : ObjectiveC.NSObject {
+@objc(PaySDK) open class PaySDK : ObjectiveC.NSObject, StoreKit.SKStoreProductViewControllerDelegate {
   @objc public static var shared: AP_PaySDK.PaySDK
   @objc public var delegate: AP_PaySDK.PaySDKDelegate?
   @objc public var paymentDetails: AP_PaySDK.PayData!
   @objc public var uiCustomization: AP_PaySDK.UiCustomization?
   @objc public var isBioMetricRequired: Swift.Bool
   @objc public var useSDKProgressScreen: Swift.Bool
-  public func getSDKVersion() -> Swift.String
+  @objc public func getSDKVersion() -> Swift.String
   @objc public func query(action: Swift.String)
   @objc public func process()
-  @objc public func invalidateToken()
   @objc public func processOrder(url: Foundation.URL)
   @objc deinit
 }
@@ -561,16 +328,8 @@ extension IQKeyboardManager {
   @objc optional func setMerchantInfoScreen() -> UIKit.UIViewController?
   @objc optional func setMerchantInfo() -> Swift.String?
 }
-extension IQKeyboardManager {
-  @objc dynamic public var enableDebugging: Swift.Bool {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc dynamic public func registerAllNotifications()
-  @objc dynamic public func unregisterAllNotifications()
-}
-extension UIButton {
-  @objc dynamic public func setApplePayButton(btnType: AP_PaySDK.ApplePayButtonType, btnStyle: AP_PaySDK.ApplePayButtonStyle, inView: UIKit.UIView)
+extension UIKit.UIButton {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func setApplePayButton(btnType: AP_PaySDK.ApplePayButtonType, btnStyle: AP_PaySDK.ApplePayButtonStyle, inView: UIKit.UIView)
 }
 @objc public enum PaySDKButtonType : Swift.Int {
   case SUBMIT
@@ -578,8 +337,8 @@ extension UIButton {
   case NEXT
   case CANCEL
   case RESEND
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -595,14 +354,18 @@ extension UIButton {
 @objc public protocol PaySDKButtonCustomization : AP_PaySDK.PaySDKCustomization {
   @objc func setBackgroundColor(_ hexColorCode: Swift.String) throws
   @objc func setCornerRadius(_ cornerRadius: Swift.Int) throws
+  @objc func setButtonName(_ buttonName: Swift.String) throws
   @objc func getBackgroundColor() -> Swift.String
   @objc func getCornerRadius() -> Swift.Int
+  @objc func getButtonName() -> Swift.String
 }
 @objc public protocol PaySDKToolbarCustomization : AP_PaySDK.PaySDKCustomization {
   @objc func setBackgroundColor(_ hexColorCode: Swift.String) throws
   @objc func setHeaderText(_ headerText: Swift.String) throws
+  @objc func setRightBarButtonText(_ rightBarButtonText: Swift.String) throws
   @objc func getBackgroundColor() -> Swift.String
   @objc func getHeaderText() -> Swift.String
+  @objc func getRightBarButtonText() -> Swift.String
 }
 @objc public protocol PaySDKLabelCustomization : AP_PaySDK.PaySDKCustomization {
   @objc func setHeadingTextColor(_ hexColorCode: Swift.String) throws
@@ -631,65 +394,42 @@ extension UIButton {
   @objc func getTextBoxCustomization() throws -> AP_PaySDK.PaySDKTextBoxCustomization
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Methods : ObjectiveC.NSObject {
-  public var card: [AP_PaySDK.Card]!
-  public var other: [AP_PaySDK.Card]!
-  public var netbanking: [AP_PaySDK.Card]!
-  public var saved: [AP_PaySDK.Card]!
+  public var card: [AP_PaySDK.Cards]!
+  public var other: [AP_PaySDK.Cards]!
+  public var netbanking: [AP_PaySDK.Cards]!
+  public var saved: [AP_PaySDK.Cards]!
   @objc deinit
 }
-@objc extension UIViewController {
-  @objc dynamic public func parentIQContainerViewController() -> UIKit.UIViewController?
-  @objc @available(*, deprecated, message: "Due to change in core-logic of handling distance between textField and keyboard distance, this layout contraint tweak is no longer needed and things will just work out of the box regardless of constraint pinned with safeArea/layoutGuide/superview.")
-  @IBOutlet dynamic public var IQLayoutGuideConstraint: UIKit.NSLayoutConstraint? {
-    @objc get
-    @objc set(newValue)
-  }
-}
-@objc public class IQInvocation : ObjectiveC.NSObject {
-  @objc weak public var target: Swift.AnyObject?
-  @objc public var action: ObjectiveC.Selector
-  @objc public init(_ target: Swift.AnyObject, _ action: ObjectiveC.Selector)
-  @objc public func invoke(from: Any)
+@objc(TransQueryResult) open class TransQueryResult : ObjectiveC.NSObject {
+  @objc public var cur: Swift.String?
+  @objc public var txTime: Swift.String?
+  @objc public var errMsg: Swift.String?
+  @objc public var orderStatus: Swift.String?
+  @objc public var amt: Swift.String?
+  @objc public var remark: Swift.String?
+  @objc public var eci: Swift.String?
+  @objc public var ipCountry: Swift.String?
+  @objc public var channelType: Swift.String?
+  @objc public var merchantId: Swift.String?
+  @objc public var authId: Swift.String?
+  @objc public var payerAuth: Swift.String?
+  @objc public var panLast4: Swift.String?
+  @objc public var ref: Swift.String?
+  @objc public var payMethod: Swift.String?
+  @objc public var successcode: Swift.String?
+  @objc public var cardIssuingCountry: Swift.String?
+  @objc public var prc: Swift.String?
+  @objc public var ord: Swift.String?
+  @objc public var panFirst4: Swift.String?
+  @objc public var alertCode: Swift.String?
+  @objc public var src: Swift.String?
+  @objc public var payRef: Swift.String?
+  @objc public var holder: Swift.String?
+  @objc public var sourceIp: Swift.String?
+  @objc public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResult]
+  @objc required public init?(dictionary: Foundation.NSDictionary)
+  @objc public func dictionaryRepresentation() -> Foundation.NSDictionary
   @objc deinit
-  @objc override dynamic public init()
-}
-@objc open class TransQueryResult : ObjectiveC.NSObject {
-  public var cur: Swift.String?
-  public var txTime: Swift.String?
-  public var errMsg: Swift.String?
-  public var orderStatus: Swift.String?
-  public var amt: Swift.String?
-  public var remark: Swift.String?
-  public var eci: Swift.String?
-  public var ipCountry: Swift.String?
-  public var channelType: Swift.String?
-  public var merchantId: Swift.String?
-  public var authId: Swift.String?
-  public var payerAuth: Swift.String?
-  public var panLast4: Swift.String?
-  public var ref: Swift.String?
-  public var payMethod: Swift.String?
-  public var successcode: Swift.String?
-  public var cardIssuingCountry: Swift.String?
-  public var prc: Swift.String?
-  public var ord: Swift.String?
-  public var panFirst4: Swift.String?
-  public var alertCode: Swift.String?
-  public var src: Swift.String?
-  public var payRef: Swift.String?
-  public var holder: Swift.String?
-  public var sourceIp: Swift.String?
-  public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResult]
-  required public init?(dictionary: Foundation.NSDictionary)
-  public func dictionaryRepresentation() -> Foundation.NSDictionary
-  @objc deinit
-  @objc override dynamic public init()
-}
-@objc extension UIView {
-  @objc dynamic public func viewContainingController() -> UIKit.UIViewController?
-  @objc dynamic public func topMostController() -> UIKit.UIViewController?
-  @objc dynamic public func parentContainerViewController() -> UIKit.UIViewController?
-  @objc dynamic public func superviewOfClassType(_ classType: UIKit.UIView.Type, belowView: UIKit.UIView? = nil) -> UIKit.UIView?
 }
 @objc open class TextBoxCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKTextBoxCustomization {
   @objc override dynamic public init()
@@ -700,128 +440,9 @@ extension UIButton {
   @objc public func setBorderColor(_ hexColorCode: Swift.String) throws
   @objc public func getBorderWidth() -> Swift.Int
   @objc public func getBorderColor() -> Swift.String
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
   @objc deinit
 }
-@objc public enum IQAutoToolbarManageBehaviour : Swift.Int {
-  case bySubviews
-  case byTag
-  case byPosition
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum IQPreviousNextDisplayMode : Swift.Int {
-  case `default`
-  case alwaysHide
-  case alwaysShow
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum IQEnableMode : Swift.Int {
-  case `default`
-  case enabled
-  case disabled
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Card : ObjectiveC.NSObject {
-  @objc deinit
-}
-@objc public class IQBarButtonItemConfiguration : ObjectiveC.NSObject {
-  public typealias UIBarButtonSystemItem = UIKit.UIBarButtonItem.SystemItem
-  @objc public init(barButtonSystemItem: AP_PaySDK.IQBarButtonItemConfiguration.UIBarButtonSystemItem, action: ObjectiveC.Selector)
-  @objc public init(image: UIKit.UIImage, action: ObjectiveC.Selector)
-  @objc public init(title: Swift.String, action: ObjectiveC.Selector)
-  final public let barButtonSystemItem: AP_PaySDK.IQBarButtonItemConfiguration.UIBarButtonSystemItem?
-  @objc final public let image: UIKit.UIImage?
-  @objc final public let title: Swift.String?
-  @objc final public let action: ObjectiveC.Selector?
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc extension UIImage {
-  @objc public static func keyboardLeftImage() -> UIKit.UIImage?
-  @objc public static func keyboardRightImage() -> UIKit.UIImage?
-  @objc public static func keyboardUpImage() -> UIKit.UIImage?
-  @objc public static func keyboardDownImage() -> UIKit.UIImage?
-  @objc public static func keyboardPreviousImage() -> UIKit.UIImage?
-  @objc public static func keyboardNextImage() -> UIKit.UIImage?
-}
-@objc extension UIView {
-  @objc dynamic public var keyboardToolbar: AP_PaySDK.IQToolbar {
-    @objc get
-  }
-  @objc dynamic public var shouldHideToolbarPlaceholder: Swift.Bool {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc dynamic public var toolbarPlaceholder: Swift.String? {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc dynamic public var drawingToolbarPlaceholder: Swift.String? {
-    @objc get
-  }
-  @objc dynamic public func addKeyboardToolbarWithTarget(target: Swift.AnyObject?, titleText: Swift.String?, rightBarButtonConfiguration: AP_PaySDK.IQBarButtonItemConfiguration?, previousBarButtonConfiguration: AP_PaySDK.IQBarButtonItemConfiguration? = nil, nextBarButtonConfiguration: AP_PaySDK.IQBarButtonItemConfiguration? = nil)
-  @objc dynamic public func addDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, action: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
-  @objc dynamic public func addDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, action: ObjectiveC.Selector, titleText: Swift.String?)
-  @objc dynamic public func addRightButtonOnKeyboardWithImage(_ image: UIKit.UIImage, target: Swift.AnyObject?, action: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
-  @objc dynamic public func addRightButtonOnKeyboardWithImage(_ image: UIKit.UIImage, target: Swift.AnyObject?, action: ObjectiveC.Selector, titleText: Swift.String?)
-  @objc dynamic public func addRightButtonOnKeyboardWithText(_ text: Swift.String, target: Swift.AnyObject?, action: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
-  @objc dynamic public func addRightButtonOnKeyboardWithText(_ text: Swift.String, target: Swift.AnyObject?, action: ObjectiveC.Selector, titleText: Swift.String?)
-  @objc dynamic public func addCancelDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, cancelAction: ObjectiveC.Selector, doneAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
-  @objc dynamic public func addRightLeftOnKeyboardWithTarget(_ target: Swift.AnyObject?, leftButtonTitle: Swift.String, rightButtonTitle: Swift.String, leftButtonAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
-  @objc dynamic public func addRightLeftOnKeyboardWithTarget(_ target: Swift.AnyObject?, leftButtonImage: UIKit.UIImage, rightButtonImage: UIKit.UIImage, leftButtonAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
-  @objc dynamic public func addCancelDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, cancelAction: ObjectiveC.Selector, doneAction: ObjectiveC.Selector, titleText: Swift.String?)
-  @objc dynamic public func addRightLeftOnKeyboardWithTarget(_ target: Swift.AnyObject?, leftButtonTitle: Swift.String, rightButtonTitle: Swift.String, leftButtonAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, titleText: Swift.String?)
-  @objc dynamic public func addRightLeftOnKeyboardWithTarget(_ target: Swift.AnyObject?, leftButtonImage: UIKit.UIImage, rightButtonImage: UIKit.UIImage, leftButtonAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, titleText: Swift.String?)
-  @objc dynamic public func addPreviousNextDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, doneAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
-  @objc dynamic public func addPreviousNextRightOnKeyboardWithTarget(_ target: Swift.AnyObject?, rightButtonImage: UIKit.UIImage, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
-  @objc dynamic public func addPreviousNextRightOnKeyboardWithTarget(_ target: Swift.AnyObject?, rightButtonTitle: Swift.String, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
-  @objc dynamic public func addPreviousNextDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, doneAction: ObjectiveC.Selector, titleText: Swift.String?)
-  @objc dynamic public func addPreviousNextRightOnKeyboardWithTarget(_ target: Swift.AnyObject?, rightButtonImage: UIKit.UIImage, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, titleText: Swift.String?)
-  @objc dynamic public func addPreviousNextRightOnKeyboardWithTarget(_ target: Swift.AnyObject?, rightButtonTitle: Swift.String, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, titleText: Swift.String?)
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class IQToolbar : UIKit.UIToolbar, UIKit.UIInputViewAudioFeedback {
-  @objc open var previousBarButton: AP_PaySDK.IQBarButtonItem {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc open var nextBarButton: AP_PaySDK.IQBarButtonItem {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc open var titleBarButton: AP_PaySDK.IQTitleBarButtonItem {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc open var doneBarButton: AP_PaySDK.IQBarButtonItem {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc open var fixedSpaceBarButton: AP_PaySDK.IQBarButtonItem {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic open func sizeThatFits(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
-  @objc override dynamic open var tintColor: UIKit.UIColor! {
-    @objc get
-    @objc set
-  }
-  @objc override dynamic open func layoutSubviews()
-  @objc open var enableInputClicksWhenVisible: Swift.Bool {
-    @objc get
-  }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Cards : ObjectiveC.NSObject {
   @objc deinit
 }
 @objc open class LabelCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKLabelCustomization {
@@ -833,14 +454,7 @@ extension UIButton {
   @objc public func getHeadingTextColor() -> Swift.String
   @objc public func getHeadingTextFontName() -> Swift.String
   @objc public func getHeadingTextFontSize() -> Swift.Int
-  @objc override public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int)
   @objc deinit
-}
-extension IQKeyboardManager {
-  @objc dynamic public var keyboardShowing: Swift.Bool {
-    @objc get
-  }
-  public typealias UIViewAnimationOptions = UIKit.UIView.AnimationOptions
 }
 @_inheritsConvenienceInitializers @objc open class Customization : ObjectiveC.NSObject, AP_PaySDK.PaySDKCustomization {
   @objc override dynamic public init()
@@ -854,9 +468,15 @@ extension IQKeyboardManager {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(PayData) open class PayData : ObjectiveC.NSObject {
+  @objc public var presentController: AP_PaySDK.PresentViewController?
   @objc public var cardDetails: AP_PaySDK.CardDetails?
+  @objc public var callBackParam: AP_PaySDK.CallBackParam?
   @objc public var threeDSParams: AP_PaySDK.ThreeDSParams?
-  @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, extraData: [Swift.String : Any]?)
+  @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, showCloseButton: Swift.Bool, showToolbar: Swift.Bool, webViewClosePrompt: Swift.String, extraData: [Swift.String : Any]?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(CallBackParam) open class CallBackParam : ObjectiveC.NSObject {
+  @objc public init(successUrl: Swift.String, cancelUrl: Swift.String, errorUrl: Swift.String, failUrl: Swift.String)
   @objc deinit
 }
 extension AP_PaySDK.Language : Swift.Equatable {}
@@ -892,12 +512,3 @@ extension AP_PaySDK.ApplePayButtonStyle : Swift.RawRepresentable {}
 extension AP_PaySDK.PaySDKButtonType : Swift.Equatable {}
 extension AP_PaySDK.PaySDKButtonType : Swift.Hashable {}
 extension AP_PaySDK.PaySDKButtonType : Swift.RawRepresentable {}
-extension AP_PaySDK.IQAutoToolbarManageBehaviour : Swift.Equatable {}
-extension AP_PaySDK.IQAutoToolbarManageBehaviour : Swift.Hashable {}
-extension AP_PaySDK.IQAutoToolbarManageBehaviour : Swift.RawRepresentable {}
-extension AP_PaySDK.IQPreviousNextDisplayMode : Swift.Equatable {}
-extension AP_PaySDK.IQPreviousNextDisplayMode : Swift.Hashable {}
-extension AP_PaySDK.IQPreviousNextDisplayMode : Swift.RawRepresentable {}
-extension AP_PaySDK.IQEnableMode : Swift.Equatable {}
-extension AP_PaySDK.IQEnableMode : Swift.Hashable {}
-extension AP_PaySDK.IQEnableMode : Swift.RawRepresentable {}

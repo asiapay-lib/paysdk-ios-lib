@@ -12,8 +12,10 @@
 #import <CommonCrypto/CommonHMAC.h>
 #import "UPPaymentControl.h"
 #import "WXApi.h"
-//#import "WXApiObject.h"
-//#import "WechatAuthSDK.h"
+#import "WXApiObject.h"
+#import "WKWebViewJavascriptBridge.h"
+#import "WebViewJavascriptBridge_JS.h"
+#import "WechatAuthSDK.h"
 
 
 
