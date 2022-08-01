@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 effective-4.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6.1 effective-4.2 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name AP_PaySDK
 @_exported import AP_PaySDK
 import AdSupport
@@ -9,7 +9,6 @@ import Darwin
 import Dispatch
 import Foundation
 import LocalAuthentication
-import Material
 import MobileCoreServices
 import ObjectiveC
 import PassKit
@@ -472,7 +471,7 @@ extension UIKit.UIButton {
   @objc public var cardDetails: AP_PaySDK.CardDetails?
   @objc public var callBackParam: AP_PaySDK.CallBackParam?
   @objc public var threeDSParams: AP_PaySDK.ThreeDSParams?
-  @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, showCloseButton: Swift.Bool, showToolbar: Swift.Bool, webViewClosePrompt: Swift.String, extraData: [Swift.String : Any]?)
+  public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, showCloseButton: Swift.Bool, showToolbar: Swift.Bool, webViewClosePrompt: Swift.String, extraData: [Swift.String : Any]?, merchantCapabilitiesData: PassKit.PKMerchantCapability, supportedNetworksData: [PassKit.PKPaymentNetwork])
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(CallBackParam) open class CallBackParam : ObjectiveC.NSObject {
