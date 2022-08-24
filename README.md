@@ -34,7 +34,7 @@ Add `paysdk.plist` and set value of certificate and "Domain" key value pair. Val
 
 ## Installation
 
-### Framework file 
+### Framework file (On version 2.6.02 and lower version)
 
 Add `AP_PaySDK.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries
 and also add `Material.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries or add using  cocoapods as 
@@ -50,7 +50,7 @@ pod 'Material'
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate PayDollarSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```
-pod 'AP_PaySDK', '2.6.17'
+pod 'AP_PaySDK', '2.6.18'
 
 ```
 
@@ -188,7 +188,9 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType: PayChannelWEBVIEW 
                                          showCloseButton: true
                                          showToolbar: true
                                          webViewClosePrompt: @"Do you really want to close this page?"
-                                         extraData: nil];
+                                         extraData: nil,
+                          merchantCapabilitiesData:nil
+                             supportedNetworksData:nil];
 
 //For giving the merchant app rootviewcontroller to present webview. Its an optional parameter.
 paysdk.paymentDetails.presentController = [[PresentViewController alloc] initWithPresentViewController:[[[UIApplication sharedApplication]keyWindow]rootViewController]];
@@ -245,7 +247,9 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType:PayChannelDIRECT   
                                          showCloseButton: false
                                          showToolbar: false
                                          webViewClosePrompt: @"",
-                                         extraData:nil];
+                                         extraData: nil,
+                          merchantCapabilitiesData:nil
+                             supportedNetworksData:nil];
 
 paySDK.paymentDetails.cardDetails = [[CardDetails alloc] initWithCardHolderName:@"Test Card"
                                                          cardNo:cardNoText.text

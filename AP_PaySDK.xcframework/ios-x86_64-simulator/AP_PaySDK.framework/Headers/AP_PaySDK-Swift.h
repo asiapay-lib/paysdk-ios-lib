@@ -201,6 +201,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
+@import PassKit;
 @import StoreKit;
 @import UIKit;
 #endif
@@ -412,6 +413,8 @@ typedef SWIFT_ENUM(NSInteger, PayChannel, open) {
 
 @class PresentViewController;
 @class ThreeDSParams;
+enum PayGate : NSInteger;
+enum payType : NSInteger;
 
 SWIFT_CLASS_NAMED("PayData")
 @interface PayData : NSObject
@@ -421,6 +424,7 @@ SWIFT_CLASS_NAMED("PayData")
 @property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton showToolbar:(BOOL)showToolbar webViewClosePrompt:(NSString * _Nonnull)webViewClosePrompt extraData:(NSDictionary<NSString *, id> * _Nullable)extraData merchantCapabilitiesData:(PKMerchantCapability)merchantCapabilitiesData supportedNetworksData:(NSArray<PKPaymentNetwork> * _Nonnull)supportedNetworksData OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -636,8 +640,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
-@class NSArray;
-@class NSDictionary;
 
 SWIFT_CLASS_NAMED("TransQueryResult")
 @interface TransQueryResult : NSObject
@@ -954,6 +956,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
+@import PassKit;
 @import StoreKit;
 @import UIKit;
 #endif
@@ -1165,6 +1168,8 @@ typedef SWIFT_ENUM(NSInteger, PayChannel, open) {
 
 @class PresentViewController;
 @class ThreeDSParams;
+enum PayGate : NSInteger;
+enum payType : NSInteger;
 
 SWIFT_CLASS_NAMED("PayData")
 @interface PayData : NSObject
@@ -1174,6 +1179,7 @@ SWIFT_CLASS_NAMED("PayData")
 @property (nonatomic, strong) ThreeDSParams * _Nullable threeDSParams;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (nonnull instancetype)initWithChannelType:(enum PayChannel)channelType envType:(enum EnvType)envType amount:(NSString * _Nonnull)amount payGate:(enum PayGate)payGate currCode:(enum CurrencyCode)currCode payType:(enum payType)payType orderRef:(NSString * _Nonnull)orderRef payMethod:(NSString * _Nonnull)payMethod lang:(enum Language)lang merchantId:(NSString * _Nonnull)merchantId remark:(NSString * _Nonnull)remark payRef:(NSString * _Nonnull)payRef resultpage:(NSString * _Nonnull)resultpage showCloseButton:(BOOL)showCloseButton showToolbar:(BOOL)showToolbar webViewClosePrompt:(NSString * _Nonnull)webViewClosePrompt extraData:(NSDictionary<NSString *, id> * _Nullable)extraData merchantCapabilitiesData:(PKMerchantCapability)merchantCapabilitiesData supportedNetworksData:(NSArray<PKPaymentNetwork> * _Nonnull)supportedNetworksData OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1389,8 +1395,6 @@ SWIFT_CLASS("_TtC9AP_PaySDK20ToolbarCustomization")
 - (nonnull instancetype)init:(NSString * _Nonnull)textFontName :(NSString * _Nonnull)textColor :(NSInteger)textFontSize SWIFT_UNAVAILABLE;
 @end
 
-@class NSArray;
-@class NSDictionary;
 
 SWIFT_CLASS_NAMED("TransQueryResult")
 @interface TransQueryResult : NSObject

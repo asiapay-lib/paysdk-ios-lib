@@ -34,7 +34,7 @@ Add `paysdk.plist` and set value of certificate.
 
 ## Installation
 
-### Framework file 
+### Framework file (On version 2.6.02 and lower version)
 
 Add `AP_PaySDK.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries
 and also add `Material.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries or add using  cocoapods as 
@@ -50,7 +50,7 @@ pod 'Material'
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate PayDollarSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```
-pod 'AP_PaySDK', '2.6.17'
+pod 'AP_PaySDK', '2.6.18'
 
 ```
 
@@ -125,7 +125,9 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType: PayChannelWEBVIEW 
                                          remark: @"" 
                                          payRef: @"" 
                                          resultpage: @"F" 
-                                         extraData: nil];
+                                         extraData: nil,
+                          merchantCapabilitiesData:nil
+                             supportedNetworksData:nil];
 
 [paySDK process];
 ```
@@ -171,7 +173,9 @@ paySDK.paymentDetails = [[PayData alloc] initWithChannelType:PayChannelDIRECT   
                                          remark:@"" 
                                          payRef:@"" 
                                          resultpage:resultPage 
-                                         extraData:nil];
+                                         extraData: nil,
+                          merchantCapabilitiesData:nil
+                             supportedNetworksData:nil];
 
 paySDK.paymentDetails.cardDetails = [[CardDetails alloc] initWithCardHolderName:@"Test Card"                                                               cardNo:cardNoText.text                                                                            expMonth:expMonthText.text 
                                                          expYear:expYearText.text securityCode:securityCodeText.text];
