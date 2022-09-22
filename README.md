@@ -275,6 +275,14 @@ extension ViewController : PaySDKDelegate {
         \\Code here
 }
 ```
+
+## Error Code
+
+| successCode | prc | Error Code | Error Type | Error Message |
+| :----------:| :--:| :--------: | :--------: | :-----------: |
+| 1 | -10 | EI01 | Invalid Payment Method | Invalid Payment Method Exception |
+| 1 | -10 | ET01 | System Timeout | Timeout Exception |
+
 For detailed description kindly follow [PayDollar Guide](http://paydollar.com/pdf/op/enpdintguide.pdf).
                 
 # Related Sample
