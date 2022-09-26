@@ -265,6 +265,24 @@ public enum Action : Swift.String {
     get
   }
 }
+@_hasMissingDesignatedInitializers public class CommonKey {
+  public static let keyPassSuccessCode: Swift.String
+  public static let keyFailSuccessCode: Swift.String
+  public static let keyErrorSuccessCode: Swift.String
+  public static let keyAppBundle: Swift.String
+  public static let msgInvalidPayMethod: Swift.String
+  public static let msgTimeoutException: Swift.String
+  public static let msgSdkException: Swift.String
+  public static let msgSdkUnexpectedException: Swift.String
+  public static let msgSthWentWrong: Swift.String
+  public static let msgNoResponse: Swift.String
+  public static let msgDeviceNotConnectToInternet: Swift.String
+  public static let msgOsVersionIncompatible: Swift.String
+  public static let keyPrcSdkError: Swift.String
+  public static let keyInvalidPayMethod: Swift.String
+  public static let keyTimeoutException: Swift.String
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PaymentOptionsDetail : ObjectiveC.NSObject {
   @objc public var methods: AP_PaySDK.Methods!
   @objc deinit
@@ -301,6 +319,11 @@ infix operator >>> : DefaultPrecedence
   @objc public func getToolbarCustomization() throws -> AP_PaySDK.PaySDKToolbarCustomization
   @objc public func getLabelCustomization() throws -> AP_PaySDK.PaySDKLabelCustomization
   @objc public func getTextBoxCustomization() throws -> AP_PaySDK.PaySDKTextBoxCustomization
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class GlobalJsIntegrateViewModel : ObjectiveC.NSObject {
+  @objc public var tncUrl: Swift.String!
+  @objc public var showInApp: Swift.String!
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 10.0, *)

@@ -351,6 +351,15 @@ typedef SWIFT_ENUM(NSInteger, EnvType, open) {
 };
 
 
+SWIFT_CLASS("_TtC9AP_PaySDK26GlobalJsIntegrateViewModel")
+@interface GlobalJsIntegrateViewModel : NSObject
+@property (nonatomic, copy) NSString * _Null_unspecified tncUrl;
+@property (nonatomic, copy) NSString * _Null_unspecified showInApp;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_PROTOCOL("_TtP9AP_PaySDK24PaySDKLabelCustomization_")
 @protocol PaySDKLabelCustomization <PaySDKCustomization>
 - (BOOL)setHeadingTextColor:(NSString * _Nonnull)hexColorCode error:(NSError * _Nullable * _Nullable)error;
@@ -1104,6 +1113,15 @@ typedef SWIFT_ENUM(NSInteger, EnvType, open) {
   EnvTypeSANDBOX = 0,
   EnvTypePRODUCTION = 1,
 };
+
+
+SWIFT_CLASS("_TtC9AP_PaySDK26GlobalJsIntegrateViewModel")
+@interface GlobalJsIntegrateViewModel : NSObject
+@property (nonatomic, copy) NSString * _Null_unspecified tncUrl;
+@property (nonatomic, copy) NSString * _Null_unspecified showInApp;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
 
 
 SWIFT_PROTOCOL("_TtP9AP_PaySDK24PaySDKLabelCustomization_")
