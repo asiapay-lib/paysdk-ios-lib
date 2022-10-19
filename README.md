@@ -37,12 +37,12 @@ Add `paysdk.plist` and set value of certificate and "Domain" key value pair. Val
 ### Framework file (On version 2.6.02 and lower version)
 
 Add `AP_PaySDK.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries
-and also add `Material.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries or add using  cocoapods as 
+<!-- and also add `Material.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries or add using  cocoapods as 
 
 ```
 pod 'Material'
 
-```
+``` -->
 
 
 ### CocoaPods
