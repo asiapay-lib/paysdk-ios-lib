@@ -51,7 +51,6 @@ pod 'Material'
 
 ```
 pod 'AP_PaySDK', '2.6.22'
-
 ```
 
 ### Implementation
@@ -59,7 +58,7 @@ pod 'AP_PaySDK', '2.6.22'
 Add implementation of PaySDK
 
 * Swift Code
-```
+```swift
 @import AP_PaySDK
 
 class ViewController: UIViewController {
@@ -71,7 +70,7 @@ class ViewController: UIViewController {
     
 ```
 * Objective C Code
-```
+```objc
 #import <AP_PaySDK/AP_PaySDK.h>
 #import <AP_PaySDK/AP_PaySDK-Swift.h>
 @import AP_PaySDK
@@ -87,7 +86,7 @@ class ViewController: UIViewController {
 
 ### For UICustomization
 * Swift Code
-```
+```swift
 let customization = UiCustomization()
 
 let submitButtonCustomization = ButtonCustomization("Courier", "#FF0000", 15, "#d3d3d3", 4)
@@ -112,7 +111,7 @@ paySDK.uiCustomization = customization
 ```
 
 * Objective C Code
-```
+```objc
 UiCustomization *customization = [[UiCustomization alloc] init];
 
 ButtonCustomization *submitButtonCustomization = [[ButtonCustomization alloc] init:@"Courier" :@"#FF0000" :15 :@"#d3d3d3" :4];
@@ -146,7 +145,7 @@ Creating PayData for payment and process.
 #### WebView Payment
 
 * Swift Code 
-```
+```swift
 paySDK.paymentDetails = PayData(channelType: PayChannel.WEBVIEW,
                                 envType: EnvType.SANDBOX,
                                 amount : "10",
@@ -172,7 +171,7 @@ paySDK.process()
 
 ```
 * Objective C Code
-```
+```objc
 paySDK.paymentDetails = [[PayData alloc] initWithChannelType: PayChannelWEBVIEW                                                            envType: EnvTypeSANDBOX 
                                          amount: @"10" 
                                          payGate: PayGatePAYDOLLAR 
@@ -201,7 +200,7 @@ paysdk.paymentDetails.presentController = [[PresentViewController alloc] initWit
 #### Direct Payment
 
 * Swift Code
-```
+```swift
 paySDK.paymentDetails = PayData(channelType: PayChannel.DIRECT,
                                 envType: EnvType.SANDBOX,
                                 amount : "10",
@@ -231,7 +230,7 @@ paySDK.process()
 ```
 
 * Objective C Code
-```
+```objc
 paySDK.paymentDetails = [[PayData alloc] initWithChannelType:PayChannelDIRECT                                                              envType:EnvTypeSANDBOX 
                                          amount:amountText.text 
                                          payGate:PayGatePAYDOLLAR 
@@ -261,7 +260,7 @@ paySDK.paymentDetails.cardDetails = [[CardDetails alloc] initWithCardHolderName:
 ```
 ### Payment response
 * Swift Code
-```
+```swift
 extension ViewController : PaySDKDelegate {
     func paymentResult(result: PayResult) {
         \\Code here
@@ -270,7 +269,7 @@ extension ViewController : PaySDKDelegate {
 
 ```
 *Objective C Code
-```
+```objc
 -(void)paymentResultWithResult:(PayResult * _Nonnull)result {
         \\Code here
 }
