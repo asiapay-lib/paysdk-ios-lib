@@ -289,6 +289,48 @@ public enum Action : Swift.String {
   @objc public var methods: AP_PaySDK.Methods!
   @objc deinit
 }
+public enum PayMethodType : Swift.String {
+  case visa
+  case all
+  case octopus
+  case fps
+  case unionpay
+  case credit
+  case alipayhk
+  case alipaycn
+  case alipayapp
+  case alipayhkonline
+  case wechatonline
+  case wechatapp
+  case payme
+  case threeDS2
+  case applepay
+  case bocpay
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum CardSchemeType : Swift.String {
+  case visa
+  case master
+  case amex
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ActionType : Swift.String {
+  case paymethod
+  case txquery
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 extension UIKit.UIColor {
   @objc convenience dynamic public init?(hex: Swift.String)
 }
@@ -533,6 +575,15 @@ extension AP_PaySDK.ApplePayButtonType : Swift.RawRepresentable {}
 extension AP_PaySDK.ApplePayButtonStyle : Swift.Equatable {}
 extension AP_PaySDK.ApplePayButtonStyle : Swift.Hashable {}
 extension AP_PaySDK.ApplePayButtonStyle : Swift.RawRepresentable {}
+extension AP_PaySDK.PayMethodType : Swift.Equatable {}
+extension AP_PaySDK.PayMethodType : Swift.Hashable {}
+extension AP_PaySDK.PayMethodType : Swift.RawRepresentable {}
+extension AP_PaySDK.CardSchemeType : Swift.Equatable {}
+extension AP_PaySDK.CardSchemeType : Swift.Hashable {}
+extension AP_PaySDK.CardSchemeType : Swift.RawRepresentable {}
+extension AP_PaySDK.ActionType : Swift.Equatable {}
+extension AP_PaySDK.ActionType : Swift.Hashable {}
+extension AP_PaySDK.ActionType : Swift.RawRepresentable {}
 extension AP_PaySDK.PaySDKButtonType : Swift.Equatable {}
 extension AP_PaySDK.PaySDKButtonType : Swift.Hashable {}
 extension AP_PaySDK.PaySDKButtonType : Swift.RawRepresentable {}

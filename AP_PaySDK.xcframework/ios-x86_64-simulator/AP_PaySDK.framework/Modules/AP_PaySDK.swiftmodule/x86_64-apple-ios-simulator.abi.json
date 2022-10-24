@@ -14586,6 +14586,1168 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AP_PaySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PayMethodType",
+        "printedName": "PayMethodType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "visa",
+            "printedName": "visa",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO4visayA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO4visayA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "all",
+            "printedName": "all",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO3allyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO3allyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "octopus",
+            "printedName": "octopus",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO7octopusyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO7octopusyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "fps",
+            "printedName": "fps",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO3fpsyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO3fpsyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "unionpay",
+            "printedName": "unionpay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO8unionpayyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO8unionpayyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "credit",
+            "printedName": "credit",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO6credityA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO6credityA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "alipayhk",
+            "printedName": "alipayhk",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO8alipayhkyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO8alipayhkyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "alipaycn",
+            "printedName": "alipaycn",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO8alipaycnyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO8alipaycnyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "alipayapp",
+            "printedName": "alipayapp",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO9alipayappyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO9alipayappyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "alipayhkonline",
+            "printedName": "alipayhkonline",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO14alipayhkonlineyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO14alipayhkonlineyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "wechatonline",
+            "printedName": "wechatonline",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO12wechatonlineyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO12wechatonlineyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "wechatapp",
+            "printedName": "wechatapp",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO9wechatappyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO9wechatappyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "payme",
+            "printedName": "payme",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO5paymeyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO5paymeyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "threeDS2",
+            "printedName": "threeDS2",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO8threeDS2yA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO8threeDS2yA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "applepay",
+            "printedName": "applepay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO8applepayyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO8applepayyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "bocpay",
+            "printedName": "bocpay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.PayMethodType.Type) -> AP_PaySDK.PayMethodType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.PayMethodType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayMethodType",
+                        "printedName": "AP_PaySDK.PayMethodType",
+                        "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO6bocpayyA2CmF",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO6bocpayyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AP_PaySDK.PayMethodType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayMethodType",
+                    "printedName": "AP_PaySDK.PayMethodType",
+                    "usr": "s:9AP_PaySDK0B10MethodTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "AP_PaySDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AP_PaySDK0B10MethodTypeO8rawValueSSvp",
+            "mangledName": "$s9AP_PaySDK0B10MethodTypeO8rawValueSSvp",
+            "moduleName": "AP_PaySDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AP_PaySDK0B10MethodTypeO8rawValueSSvg",
+                "mangledName": "$s9AP_PaySDK0B10MethodTypeO8rawValueSSvg",
+                "moduleName": "AP_PaySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9AP_PaySDK0B10MethodTypeO",
+        "mangledName": "$s9AP_PaySDK0B10MethodTypeO",
+        "moduleName": "AP_PaySDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CardSchemeType",
+        "printedName": "CardSchemeType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "visa",
+            "printedName": "visa",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.CardSchemeType.Type) -> AP_PaySDK.CardSchemeType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CardSchemeType",
+                    "printedName": "AP_PaySDK.CardSchemeType",
+                    "usr": "s:9AP_PaySDK14CardSchemeTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.CardSchemeType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CardSchemeType",
+                        "printedName": "AP_PaySDK.CardSchemeType",
+                        "usr": "s:9AP_PaySDK14CardSchemeTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK14CardSchemeTypeO4visayA2CmF",
+            "mangledName": "$s9AP_PaySDK14CardSchemeTypeO4visayA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "master",
+            "printedName": "master",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.CardSchemeType.Type) -> AP_PaySDK.CardSchemeType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CardSchemeType",
+                    "printedName": "AP_PaySDK.CardSchemeType",
+                    "usr": "s:9AP_PaySDK14CardSchemeTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.CardSchemeType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CardSchemeType",
+                        "printedName": "AP_PaySDK.CardSchemeType",
+                        "usr": "s:9AP_PaySDK14CardSchemeTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK14CardSchemeTypeO6masteryA2CmF",
+            "mangledName": "$s9AP_PaySDK14CardSchemeTypeO6masteryA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "amex",
+            "printedName": "amex",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.CardSchemeType.Type) -> AP_PaySDK.CardSchemeType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CardSchemeType",
+                    "printedName": "AP_PaySDK.CardSchemeType",
+                    "usr": "s:9AP_PaySDK14CardSchemeTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.CardSchemeType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CardSchemeType",
+                        "printedName": "AP_PaySDK.CardSchemeType",
+                        "usr": "s:9AP_PaySDK14CardSchemeTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK14CardSchemeTypeO4amexyA2CmF",
+            "mangledName": "$s9AP_PaySDK14CardSchemeTypeO4amexyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AP_PaySDK.CardSchemeType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CardSchemeType",
+                    "printedName": "AP_PaySDK.CardSchemeType",
+                    "usr": "s:9AP_PaySDK14CardSchemeTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AP_PaySDK14CardSchemeTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s9AP_PaySDK14CardSchemeTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "AP_PaySDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AP_PaySDK14CardSchemeTypeO8rawValueSSvp",
+            "mangledName": "$s9AP_PaySDK14CardSchemeTypeO8rawValueSSvp",
+            "moduleName": "AP_PaySDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AP_PaySDK14CardSchemeTypeO8rawValueSSvg",
+                "mangledName": "$s9AP_PaySDK14CardSchemeTypeO8rawValueSSvg",
+                "moduleName": "AP_PaySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9AP_PaySDK14CardSchemeTypeO",
+        "mangledName": "$s9AP_PaySDK14CardSchemeTypeO",
+        "moduleName": "AP_PaySDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ActionType",
+        "printedName": "ActionType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "paymethod",
+            "printedName": "paymethod",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.ActionType.Type) -> AP_PaySDK.ActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ActionType",
+                    "printedName": "AP_PaySDK.ActionType",
+                    "usr": "s:9AP_PaySDK10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.ActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ActionType",
+                        "printedName": "AP_PaySDK.ActionType",
+                        "usr": "s:9AP_PaySDK10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK10ActionTypeO9paymethodyA2CmF",
+            "mangledName": "$s9AP_PaySDK10ActionTypeO9paymethodyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "txquery",
+            "printedName": "txquery",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AP_PaySDK.ActionType.Type) -> AP_PaySDK.ActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ActionType",
+                    "printedName": "AP_PaySDK.ActionType",
+                    "usr": "s:9AP_PaySDK10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AP_PaySDK.ActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ActionType",
+                        "printedName": "AP_PaySDK.ActionType",
+                        "usr": "s:9AP_PaySDK10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AP_PaySDK10ActionTypeO7txqueryyA2CmF",
+            "mangledName": "$s9AP_PaySDK10ActionTypeO7txqueryyA2CmF",
+            "moduleName": "AP_PaySDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AP_PaySDK.ActionType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ActionType",
+                    "printedName": "AP_PaySDK.ActionType",
+                    "usr": "s:9AP_PaySDK10ActionTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AP_PaySDK10ActionTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s9AP_PaySDK10ActionTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "AP_PaySDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AP_PaySDK10ActionTypeO8rawValueSSvp",
+            "mangledName": "$s9AP_PaySDK10ActionTypeO8rawValueSSvp",
+            "moduleName": "AP_PaySDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AP_PaySDK10ActionTypeO8rawValueSSvg",
+                "mangledName": "$s9AP_PaySDK10ActionTypeO8rawValueSSvg",
+                "moduleName": "AP_PaySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9AP_PaySDK10ActionTypeO",
+        "mangledName": "$s9AP_PaySDK10ActionTypeO",
+        "moduleName": "AP_PaySDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -29267,6 +30429,300 @@
       "offset": 11603,
       "length": 23,
       "value": "\"AP_PaySDK.NVActivityIndicatorView\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 207,
+      "length": 6,
+      "value": "\"VISA\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 229,
+      "length": 5,
+      "value": "\"ALL\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 254,
+      "length": 9,
+      "value": "\"OCTOPUS\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 279,
+      "length": 5,
+      "value": "\"FPS\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 305,
+      "length": 6,
+      "value": "\"UPOP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 330,
+      "length": 4,
+      "value": "\"CC\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 355,
+      "length": 13,
+      "value": "\"ALIPAYHKAPP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 389,
+      "length": 13,
+      "value": "\"ALIPAYCNAPP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 424,
+      "length": 11,
+      "value": "\"ALIPAYAPP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 462,
+      "length": 13,
+      "value": "\"ALIPAYHKONL\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 500,
+      "length": 11,
+      "value": "\"WECHATONL\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 533,
+      "length": 11,
+      "value": "\"WECHATAPP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 562,
+      "length": 7,
+      "value": "\"PayMe\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 590,
+      "length": 10,
+      "value": "\"THREEDS2\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 621,
+      "length": 10,
+      "value": "\"APPLEPAY\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 650,
+      "length": 11,
+      "value": "\"BoCPayAPP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 207,
+      "length": 6,
+      "value": "\"VISA\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 229,
+      "length": 5,
+      "value": "\"ALL\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 254,
+      "length": 9,
+      "value": "\"OCTOPUS\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 279,
+      "length": 5,
+      "value": "\"FPS\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 305,
+      "length": 6,
+      "value": "\"UPOP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 330,
+      "length": 4,
+      "value": "\"CC\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 355,
+      "length": 13,
+      "value": "\"ALIPAYHKAPP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 389,
+      "length": 13,
+      "value": "\"ALIPAYCNAPP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 424,
+      "length": 11,
+      "value": "\"ALIPAYAPP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 462,
+      "length": 13,
+      "value": "\"ALIPAYHKONL\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 500,
+      "length": 11,
+      "value": "\"WECHATONL\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 533,
+      "length": 11,
+      "value": "\"WECHATAPP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 562,
+      "length": 7,
+      "value": "\"PayMe\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 590,
+      "length": 10,
+      "value": "\"THREEDS2\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 621,
+      "length": 10,
+      "value": "\"APPLEPAY\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 650,
+      "length": 11,
+      "value": "\"BoCPayAPP\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 718,
+      "length": 6,
+      "value": "\"VISA\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 743,
+      "length": 8,
+      "value": "\"Master\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 768,
+      "length": 6,
+      "value": "\"AMEX\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 718,
+      "length": 6,
+      "value": "\"VISA\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 743,
+      "length": 8,
+      "value": "\"Master\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 768,
+      "length": 6,
+      "value": "\"AMEX\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 832,
+      "length": 16,
+      "value": "\"PAYMENT_METHOD\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 868,
+      "length": 10,
+      "value": "\"TX_QUERY\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 832,
+      "length": 16,
+      "value": "\"PAYMENT_METHOD\""
+    },
+    {
+      "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/Enums\/PaySdkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 868,
+      "length": 10,
+      "value": "\"TX_QUERY\""
     },
     {
       "filePath": "\/Users\/felixmo\/Desktop\/AP\/src\/PaySDK\/iOS_PaySDK\/AP_PaySDK\/NewScreenView\/Toast.swift",
