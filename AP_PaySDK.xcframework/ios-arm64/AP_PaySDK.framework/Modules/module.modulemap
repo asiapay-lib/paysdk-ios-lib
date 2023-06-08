@@ -6,6 +6,6 @@ framework module AP_PaySDK {
 }
 
 module AP_PaySDK.Swift {
-  header "AP_PaySDK-Swift.h"
-  requires objc
+    header "AP_PaySDK-Swift.h"
+    requires objc
 }
