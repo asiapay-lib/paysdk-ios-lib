@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 effective-4.2 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.8 effective-4.2 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name AP_PaySDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 @_exported import AP_PaySDK
@@ -289,7 +289,7 @@ public enum Action : Swift.String {
   @objc public var methods: AP_PaySDK.Methods!
   @objc deinit
 }
-public enum PayMethodType : Swift.String {
+@objc public enum PayMethodType : Swift.Int, Swift.RawRepresentable {
   case visa
   case all
   case octopus
@@ -306,11 +306,12 @@ public enum PayMethodType : Swift.String {
   case threeDS2
   case applepay
   case bocpay
-  public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public func toString() -> Swift.String
+  public var rawValue: AP_PaySDK.PayMethodType.RawValue {
     get
   }
+  public init?(rawValue: AP_PaySDK.PayMethodType.RawValue)
 }
 public enum CardSchemeType : Swift.String {
   case visa
@@ -355,14 +356,14 @@ infix operator <- : DefaultPrecedence
 infix operator >>> : DefaultPrecedence
 @_inheritsConvenienceInitializers @objc open class UiCustomization : ObjectiveC.NSObject, AP_PaySDK.PaySDKUiCustomization {
   @objc override dynamic public init()
-  @objc public func setButtonCustomization(_ buttonCustomization: AP_PaySDK.PaySDKButtonCustomization, _ buttonType: AP_PaySDK.PaySDKButtonType) throws
-  @objc public func setToolbarCustomization(_ toolbarCustomization: AP_PaySDK.PaySDKToolbarCustomization) throws
-  @objc public func setLabelCustomization(_ labelCustomization: AP_PaySDK.PaySDKLabelCustomization) throws
-  @objc public func setTextBoxCustomization(_ textBoxCustomization: AP_PaySDK.PaySDKTextBoxCustomization) throws
-  @objc public func getButtonCustomization(_ buttonType: AP_PaySDK.PaySDKButtonType) throws -> AP_PaySDK.PaySDKButtonCustomization
-  @objc public func getToolbarCustomization() throws -> AP_PaySDK.PaySDKToolbarCustomization
-  @objc public func getLabelCustomization() throws -> AP_PaySDK.PaySDKLabelCustomization
-  @objc public func getTextBoxCustomization() throws -> AP_PaySDK.PaySDKTextBoxCustomization
+  @objc public func setButtonCustomization(_ buttonCustomization: any AP_PaySDK.PaySDKButtonCustomization, _ buttonType: AP_PaySDK.PaySDKButtonType) throws
+  @objc public func setToolbarCustomization(_ toolbarCustomization: any AP_PaySDK.PaySDKToolbarCustomization) throws
+  @objc public func setLabelCustomization(_ labelCustomization: any AP_PaySDK.PaySDKLabelCustomization) throws
+  @objc public func setTextBoxCustomization(_ textBoxCustomization: any AP_PaySDK.PaySDKTextBoxCustomization) throws
+  @objc public func getButtonCustomization(_ buttonType: AP_PaySDK.PaySDKButtonType) throws -> any AP_PaySDK.PaySDKButtonCustomization
+  @objc public func getToolbarCustomization() throws -> any AP_PaySDK.PaySDKToolbarCustomization
+  @objc public func getLabelCustomization() throws -> any AP_PaySDK.PaySDKLabelCustomization
+  @objc public func getTextBoxCustomization() throws -> any AP_PaySDK.PaySDKTextBoxCustomization
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class GlobalJsIntegrateViewModel : ObjectiveC.NSObject {
@@ -373,7 +374,7 @@ infix operator >>> : DefaultPrecedence
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 10.0, *)
 @objc(PaySDK) open class PaySDK : ObjectiveC.NSObject, StoreKit.SKStoreProductViewControllerDelegate {
   @objc public static var shared: AP_PaySDK.PaySDK
-  @objc public var delegate: AP_PaySDK.PaySDKDelegate?
+  @objc public var delegate: (any AP_PaySDK.PaySDKDelegate)?
   @objc public var paymentDetails: AP_PaySDK.PayData!
   @objc public var uiCustomization: AP_PaySDK.UiCustomization?
   @objc public var isBioMetricRequired: Swift.Bool
@@ -450,14 +451,14 @@ extension UIKit.UIButton {
   @objc func getCornerRadius() -> Swift.Int
 }
 @objc public protocol PaySDKUiCustomization {
-  @objc func setButtonCustomization(_ buttonCustomization: AP_PaySDK.PaySDKButtonCustomization, _ buttonType: AP_PaySDK.PaySDKButtonType) throws
-  @objc func setToolbarCustomization(_ toolbarCustomization: AP_PaySDK.PaySDKToolbarCustomization) throws
-  @objc func setLabelCustomization(_ labelCustomization: AP_PaySDK.PaySDKLabelCustomization) throws
-  @objc func setTextBoxCustomization(_ textBoxCustomization: AP_PaySDK.PaySDKTextBoxCustomization) throws
-  @objc func getButtonCustomization(_ buttonType: AP_PaySDK.PaySDKButtonType) throws -> AP_PaySDK.PaySDKButtonCustomization
-  @objc func getToolbarCustomization() throws -> AP_PaySDK.PaySDKToolbarCustomization
-  @objc func getLabelCustomization() throws -> AP_PaySDK.PaySDKLabelCustomization
-  @objc func getTextBoxCustomization() throws -> AP_PaySDK.PaySDKTextBoxCustomization
+  @objc func setButtonCustomization(_ buttonCustomization: any AP_PaySDK.PaySDKButtonCustomization, _ buttonType: AP_PaySDK.PaySDKButtonType) throws
+  @objc func setToolbarCustomization(_ toolbarCustomization: any AP_PaySDK.PaySDKToolbarCustomization) throws
+  @objc func setLabelCustomization(_ labelCustomization: any AP_PaySDK.PaySDKLabelCustomization) throws
+  @objc func setTextBoxCustomization(_ textBoxCustomization: any AP_PaySDK.PaySDKTextBoxCustomization) throws
+  @objc func getButtonCustomization(_ buttonType: AP_PaySDK.PaySDKButtonType) throws -> any AP_PaySDK.PaySDKButtonCustomization
+  @objc func getToolbarCustomization() throws -> any AP_PaySDK.PaySDKToolbarCustomization
+  @objc func getLabelCustomization() throws -> any AP_PaySDK.PaySDKLabelCustomization
+  @objc func getTextBoxCustomization() throws -> any AP_PaySDK.PaySDKTextBoxCustomization
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Methods : ObjectiveC.NSObject {
   public var card: [AP_PaySDK.Cards]!
@@ -577,7 +578,6 @@ extension AP_PaySDK.ApplePayButtonStyle : Swift.Hashable {}
 extension AP_PaySDK.ApplePayButtonStyle : Swift.RawRepresentable {}
 extension AP_PaySDK.PayMethodType : Swift.Equatable {}
 extension AP_PaySDK.PayMethodType : Swift.Hashable {}
-extension AP_PaySDK.PayMethodType : Swift.RawRepresentable {}
 extension AP_PaySDK.CardSchemeType : Swift.Equatable {}
 extension AP_PaySDK.CardSchemeType : Swift.Hashable {}
 extension AP_PaySDK.CardSchemeType : Swift.RawRepresentable {}
