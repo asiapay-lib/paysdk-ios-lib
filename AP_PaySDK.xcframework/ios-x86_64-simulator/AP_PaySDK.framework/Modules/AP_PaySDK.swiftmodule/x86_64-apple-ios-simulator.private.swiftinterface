@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8 effective-4.2 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.9 effective-4.2 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name AP_PaySDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 @_exported import AP_PaySDK
@@ -7,6 +7,7 @@ import AdSupport
 import CommonCrypto
 import CoreLocation
 import Darwin
+import DeveloperToolsSupport
 import Dispatch
 import Foundation
 import LocalAuthentication
@@ -16,11 +17,13 @@ import PassKit
 import Security
 import StoreKit
 import Swift
+import SwiftUI
 import SystemConfiguration
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 @objc open class ToolbarCustomization : AP_PaySDK.Customization, AP_PaySDK.PaySDKToolbarCustomization {
   @objc override dynamic public init()
   @objc public init(_ textFontName: Swift.String, _ textColor: Swift.String, _ textFontSize: Swift.Int, _ backgroundColor: Swift.String, _ headerText: Swift.String, _ rightBarButtonText: Swift.String)
@@ -281,6 +284,18 @@ public enum Action : Swift.String {
   public static let msgDeviceNotConnectToInternet: Swift.String
   public static let msgOsVersionIncompatible: Swift.String
   public static let msgPaymentNotComplete: Swift.String
+  public static let msgTransactionSuccess: Swift.String
+  public static let msgTransactionFail: Swift.String
+  public static let msgTransactionCancel: Swift.String
+  public static let msgTransactionError: Swift.String
+  public static let msgUnableResponseFromServer: Swift.String
+  public static let msgAuthSucess: Swift.String
+  public static let msgAuthFailTranDenied: Swift.String
+  public static let msgTransactionCancelByUser: Swift.String
+  public static let msgUnableChallengeCase: Swift.String
+  public static let msgPayDataNotNil: Swift.String
+  public static let msgUserAuthFail: Swift.String
+  public static let msgWeChatOutDated: Swift.String
   public static let keyPrcSdkError: Swift.String
   public static let keyInvalidPayMethod: Swift.String
   public static let keyTimeoutException: Swift.String

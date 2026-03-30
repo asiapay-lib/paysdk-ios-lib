@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>3ds2.directory.mastercard.com.cer</key>
+		<data>
+		Tu5Lv2MzyoUGTWfMZ/6WTuUvbtI=
+		</data>
 		<key>3ds2.rsa.encryption.crt</key>
 		<data>
-		qRJvB3lXLTr70w3JiHqTZNzsagw=
+		r9ZFRUHm9Mcj8EVJfiIWkyJSDno=
 		</data>
 		<key>AlipaySDK.bundle/alipay_msp_back@2x.png</key>
 		<data>
@@ -42,11 +46,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		iTx4/Km9IWx0XOUa98K3U7nbP54=
+		E1WAcVPC3qsjXS6HJlut4zRCMzk=
 		</data>
 		<key>Headers/AP_PaySDK-Swift.h</key>
 		<data>
-		qcaD4hwJ1q+VFdl5gDeuVclRXEE=
+		UTJMfdBXZnJNXuBLv1dxB9JXFqQ=
 		</data>
 		<key>Headers/AP_PaySDK.h</key>
 		<data>
@@ -90,15 +94,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Zh86I7q55bZvY3UHI7EwoWQ6kd0=
+		b6XiS2E/OA8Twj7W7Oc14SA3mhQ=
 		</data>
 		<key>Main.storyboardc/AZN-ab-SNP-view-kTi-YP-LvB.nib/objects-12.3+.nib</key>
 		<data>
-		GYiHKpfdiW+omwRpp3PC2vkRczU=
+		9+hwU0vPqh0IfwQ+tT79e5nTz7A=
 		</data>
 		<key>Main.storyboardc/AZN-ab-SNP-view-kTi-YP-LvB.nib/runtime.nib</key>
 		<data>
-		b8B8yuKuXqUQWGx4AlviDi8MV2E=
+		GSNIN0bYhz0XcN35fT0MGXqHVIg=
 		</data>
 		<key>Main.storyboardc/BuyOptions1ViewController.nib/objects-12.3+.nib</key>
 		<data>
@@ -118,11 +122,11 @@
 		</data>
 		<key>Main.storyboardc/DF2-Uc-ZyI-view-RhD-A5-a8i.nib/objects-12.3+.nib</key>
 		<data>
-		0RZWpjsbvHNbZCc2nCW5uUoAFaY=
+		SFRVLqTIMik0VezJr60Rl5xef8w=
 		</data>
 		<key>Main.storyboardc/DF2-Uc-ZyI-view-RhD-A5-a8i.nib/runtime.nib</key>
 		<data>
-		bM9RFU1Qf6OlBcXn51b76xpZ87g=
+		nviuqFgIvKJhWB0H6MdjrS8eP9g=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
@@ -130,19 +134,19 @@
 		</data>
 		<key>Main.storyboardc/JDJ-ch-yoM-view-hVD-87-sWu.nib/objects-12.3+.nib</key>
 		<data>
-		5ckEz3rpU22MzJ74K6A3FDfVqy0=
+		wyc6H1dkxY2tAxSe0y4OyiPshh4=
 		</data>
 		<key>Main.storyboardc/JDJ-ch-yoM-view-hVD-87-sWu.nib/runtime.nib</key>
 		<data>
-		5ckEz3rpU22MzJ74K6A3FDfVqy0=
+		wyc6H1dkxY2tAxSe0y4OyiPshh4=
 		</data>
 		<key>Main.storyboardc/K5K-6Y-Adj-view-f3C-jc-Gdm.nib/objects-12.3+.nib</key>
 		<data>
-		0A5VMJvKOg/uotrm+zK3C0iMQQU=
+		9AK6oDMYFf8j3KnXvHQKqR0j/TQ=
 		</data>
 		<key>Main.storyboardc/K5K-6Y-Adj-view-f3C-jc-Gdm.nib/runtime.nib</key>
 		<data>
-		xzNLOvIoJugCt/SLCOpVQpjGbbI=
+		KZ8lXHXR95cV+adorZ6t+8quJ+0=
 		</data>
 		<key>Main.storyboardc/MerchantInfoScreenViewController.nib/objects-12.3+.nib</key>
 		<data>
@@ -154,11 +158,11 @@
 		</data>
 		<key>Main.storyboardc/N9n-SJ-xPd-view-2xU-a3-LOx.nib/objects-12.3+.nib</key>
 		<data>
-		a8sVltMUpVl7nkSBuHzWIGKNlYU=
+		iYxa6saHRwrERudGErDbgKWtDpA=
 		</data>
 		<key>Main.storyboardc/N9n-SJ-xPd-view-2xU-a3-LOx.nib/runtime.nib</key>
 		<data>
-		a8sVltMUpVl7nkSBuHzWIGKNlYU=
+		iYxa6saHRwrERudGErDbgKWtDpA=
 		</data>
 		<key>Main.storyboardc/NetbankingPaymentView.nib/objects-12.3+.nib</key>
 		<data>
@@ -194,11 +198,11 @@
 		</data>
 		<key>Main.storyboardc/S97-Wu-33Z-view-eZP-Fk-aed.nib/objects-12.3+.nib</key>
 		<data>
-		8emK5M6Me5QlMNzLdu0hgbDNYb8=
+		Efo4tzio3XaO207ITUoCk40j8KE=
 		</data>
 		<key>Main.storyboardc/S97-Wu-33Z-view-eZP-Fk-aed.nib/runtime.nib</key>
 		<data>
-		8emK5M6Me5QlMNzLdu0hgbDNYb8=
+		Efo4tzio3XaO207ITUoCk40j8KE=
 		</data>
 		<key>Main.storyboardc/ShowChallengeViewController.nib/objects-12.3+.nib</key>
 		<data>
@@ -210,11 +214,11 @@
 		</data>
 		<key>Main.storyboardc/UINavigationController-d0k-hv-APK.nib/objects-12.3+.nib</key>
 		<data>
-		KbMWrDewf1ns6JJYsh2jZD4kOxY=
+		OIUv1CKHHOJmmVdAb5U1t3z+Hr8=
 		</data>
 		<key>Main.storyboardc/UINavigationController-d0k-hv-APK.nib/runtime.nib</key>
 		<data>
-		KbMWrDewf1ns6JJYsh2jZD4kOxY=
+		OIUv1CKHHOJmmVdAb5U1t3z+Hr8=
 		</data>
 		<key>Main.storyboardc/ViewController1.nib/objects-12.3+.nib</key>
 		<data>
@@ -226,35 +230,35 @@
 		</data>
 		<key>Main.storyboardc/aaa.nib/objects-12.3+.nib</key>
 		<data>
-		TWwEEW78hw78c5gNRJtbsgTMKBs=
+		ZPyT5Mce5SC3UX9FS/4/nXEul7c=
 		</data>
 		<key>Main.storyboardc/aaa.nib/runtime.nib</key>
 		<data>
-		TWwEEW78hw78c5gNRJtbsgTMKBs=
+		ZPyT5Mce5SC3UX9FS/4/nXEul7c=
 		</data>
 		<key>Main.storyboardc/gr8-ot-mny-view-cLu-TE-Phq.nib/objects-12.3+.nib</key>
 		<data>
-		hOKB7I8nWvjdPhzfiOgkfT7bwQ8=
+		jQ1lDD9+VKz5JKwQEClxQeoJEXg=
 		</data>
 		<key>Main.storyboardc/gr8-ot-mny-view-cLu-TE-Phq.nib/runtime.nib</key>
 		<data>
-		hOKB7I8nWvjdPhzfiOgkfT7bwQ8=
+		jQ1lDD9+VKz5JKwQEClxQeoJEXg=
 		</data>
 		<key>Main.storyboardc/iif-Cl-MBd-view-xkC-Vb-zs1.nib/objects-12.3+.nib</key>
 		<data>
-		u468OzeqAWRRM+3o8aVCqz+JROs=
+		xp7ihQlvvHVssHwEdpq8AqPd0Hw=
 		</data>
 		<key>Main.storyboardc/iif-Cl-MBd-view-xkC-Vb-zs1.nib/runtime.nib</key>
 		<data>
-		u468OzeqAWRRM+3o8aVCqz+JROs=
+		xp7ihQlvvHVssHwEdpq8AqPd0Hw=
 		</data>
 		<key>Main.storyboardc/lyo-Bn-Ul7-view-g7h-5y-q4s.nib/objects-12.3+.nib</key>
 		<data>
-		7TlClNlhpKC/bG71mz15U16wsvk=
+		3lsMjHoXk4tKaKSkvNk4AUPjWeo=
 		</data>
 		<key>Main.storyboardc/lyo-Bn-Ul7-view-g7h-5y-q4s.nib/runtime.nib</key>
 		<data>
-		iBwPWnl2MU0c/EPHtGRRted4xRU=
+		H6QaUUpmMIMIOnb1FJN+0AcCpyE=
 		</data>
 		<key>Main.storyboardc/newTableViewController.nib/objects-12.3+.nib</key>
 		<data>
@@ -266,43 +270,43 @@
 		</data>
 		<key>Main.storyboardc/pUF-1A-qE0-view-pzm-sN-2LA.nib/objects-12.3+.nib</key>
 		<data>
-		ojBbAaEVzoRH3tzFxBkDQ6k6CYA=
+		4IygWam6NG6OWvpgumPh0+kcXUU=
 		</data>
 		<key>Main.storyboardc/pUF-1A-qE0-view-pzm-sN-2LA.nib/runtime.nib</key>
 		<data>
-		ojBbAaEVzoRH3tzFxBkDQ6k6CYA=
+		4IygWam6NG6OWvpgumPh0+kcXUU=
 		</data>
 		<key>Main.storyboardc/rSM-5M-mZ5-view-78S-Ia-wBN.nib/objects-12.3+.nib</key>
 		<data>
-		5IGlon8hH1R4JJxjBn3g/bE2QWk=
+		F8I/U4Ao9+tVSbDgOfn59lyHxr0=
 		</data>
 		<key>Main.storyboardc/rSM-5M-mZ5-view-78S-Ia-wBN.nib/runtime.nib</key>
 		<data>
-		j3okSCXxPFANVBjFPaCuCk55xhU=
+		iX+Fvz0rEJ7Ygw5I7YZnpMM/eJs=
 		</data>
 		<key>Modules/AP_PaySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		I8Bv7LAhiOuMVg/rfMbPRyGHETQ=
+		t2PSAAIeoKsD6Jk9APF2G+nFQTo=
 		</data>
 		<key>Modules/AP_PaySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		UOn43DRUen2mITqV6MGZyNhWF0E=
+		9sDWnK+bx1ahvkgVXzyE3rx6fVI=
 		</data>
 		<key>Modules/AP_PaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		SHieC9EXmTZyzqPhhh+jQOMPZXk=
+		sEsTJUedGAqzR7KbRzGummGX23c=
 		</data>
 		<key>Modules/AP_PaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		UOn43DRUen2mITqV6MGZyNhWF0E=
+		9sDWnK+bx1ahvkgVXzyE3rx6fVI=
 		</data>
 		<key>Modules/AP_PaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		w0j/8Ul6AAS//IzPcIP+GuTzNVw=
+		eWOwRXfPMEnaDeWB83i65mNBTgQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		SL7XDG3kt7C47uyCbZEuH4usLqc=
+		Uvi5wvt8qgBUaXxzmRB6oLU9n5E=
 		</data>
 		<key>README.txt</key>
 		<data>
@@ -364,14 +368,6 @@
 		<data>
 		mtG1XxZunvggdgCwFOBv7DD7f/I=
 		</data>
-		<key>mastercard.cer</key>
-		<data>
-		6QqEKleaktL0+NBwJRdmBAxK8gY=
-		</data>
-		<key>visa.crt</key>
-		<data>
-		23VNhZiJd2QqVxQrcJTZuDCIXUw=
-		</data>
 		<key>visa.der</key>
 		<data>
 		cIAUXvXkElHLQ1L0+fmxo+SGZps=
@@ -379,11 +375,18 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>3ds2.directory.mastercard.com.cer</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IXLcxDCl7MP3hELEJmOZ6FXlYue2oUkE0bZx7a9vbi8=
+			</data>
+		</dict>
 		<key>3ds2.rsa.encryption.crt</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ab9FUjaBoVH2raD9Wk1An9zSTSYbsd4hEG2LcSM8gCM=
+			DJnw+zB53PqSRmjSukgryObhzG4l+tTjQgVDpOJy8t4=
 			</data>
 		</dict>
 		<key>AlipaySDK.bundle/alipay_msp_back@2x.png</key>
@@ -446,14 +449,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bxNk6YfVtxmF0ITmTl7ap2fgZ6HXTsYgZly9cmAs4Aw=
+			Hq8Ur1nXTgxW/jdgnIphVCmFKLLSO8svvcrBSYOAcUo=
 			</data>
 		</dict>
 		<key>Headers/AP_PaySDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ySDAEtaDEh52JlKI9RmJhrc5HjmA2R0E4M0cE+PI/dY=
+			qElbUiiwVDMPZKpErJ3Iid21GlkJA2li3EiEfdJAe+0=
 			</data>
 		</dict>
 		<key>Headers/AP_PaySDK.h</key>
@@ -530,14 +533,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hxgNk7y3ARBankCjI7tTsETPSe5JBYkEl+sLRsbuLFg=
+			md67EEeSjrCJUCwgtReLjpJUpPoo8RUtFLsGvqW5LuI=
 			</data>
 		</dict>
 		<key>Main.storyboardc/AZN-ab-SNP-view-kTi-YP-LvB.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c+v04Np5zU9MRMDNwHqEmC4pkFpFvF5sZa/doqQ2A7o=
+			kH6d4qUEYoVrIUtW+7vaEFSxgTLdxVIjpIJos1icBFw=
 			</data>
 		</dict>
 		<key>Main.storyboardc/BuyOptions1ViewController.nib/objects-12.3+.nib</key>
@@ -572,14 +575,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jfdlpu/JKgww4erfICKoeWgjdhh0d+CyFnny28Rqab8=
+			mmSjysUIiQYEL7Zj7jL3IP1vw+mD3GBgex9I5rXXxc4=
 			</data>
 		</dict>
 		<key>Main.storyboardc/DF2-Uc-ZyI-view-RhD-A5-a8i.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e6D3WhCdEDE9enT4QbJ/TsA4omm/1pLxgxgdFN/TvoM=
+			FyNGVd8KH+vrLproFOW27Nl3bV6v95LPrf3RiZPw0Tg=
 			</data>
 		</dict>
 		<key>Main.storyboardc/Info.plist</key>
@@ -593,28 +596,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jc+ZO5AvS5s0njQRnErWs5KDlhlXQnAIrcUI/JMY07U=
+			gbgzlNwRS7/8doNVfBLijnjhSAIcGpE7dwtRyiuE8hY=
 			</data>
 		</dict>
 		<key>Main.storyboardc/JDJ-ch-yoM-view-hVD-87-sWu.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jc+ZO5AvS5s0njQRnErWs5KDlhlXQnAIrcUI/JMY07U=
+			gbgzlNwRS7/8doNVfBLijnjhSAIcGpE7dwtRyiuE8hY=
 			</data>
 		</dict>
 		<key>Main.storyboardc/K5K-6Y-Adj-view-f3C-jc-Gdm.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			duBDJqKSeF0bt4ZkjLQC6us/cHFByOoRO7xcu6RMrVI=
+			6qOs1PnEk9jIPe57cgldMPJgPblF0eYl2HjmBEYV2Bs=
 			</data>
 		</dict>
 		<key>Main.storyboardc/K5K-6Y-Adj-view-f3C-jc-Gdm.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oInd+KuaG9ZR0m+po7rd2uyAIxchcXVZQ7XHd6MY5ng=
+			vMkDKD430x9atbzdjpwTVOTD4ySjvbLBA86FGnaGl3A=
 			</data>
 		</dict>
 		<key>Main.storyboardc/MerchantInfoScreenViewController.nib/objects-12.3+.nib</key>
@@ -635,14 +638,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8QE5KdgIrCXB4tmeTPbO93XtGsssWdI4f9nQmQTfDt8=
+			xWPMsrCS87cE+htlp53cQGTXmNi0WWczwZabkD2Kf+g=
 			</data>
 		</dict>
 		<key>Main.storyboardc/N9n-SJ-xPd-view-2xU-a3-LOx.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8QE5KdgIrCXB4tmeTPbO93XtGsssWdI4f9nQmQTfDt8=
+			xWPMsrCS87cE+htlp53cQGTXmNi0WWczwZabkD2Kf+g=
 			</data>
 		</dict>
 		<key>Main.storyboardc/NetbankingPaymentView.nib/objects-12.3+.nib</key>
@@ -705,14 +708,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fIXq9QcInXcctzMm7WFgeAlmv7SPxQqXFy6w0rESnjs=
+			HMF1l6raQ8YZU/L8V9T9UXnl8PnHb8peOBseWx8tWNQ=
 			</data>
 		</dict>
 		<key>Main.storyboardc/S97-Wu-33Z-view-eZP-Fk-aed.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fIXq9QcInXcctzMm7WFgeAlmv7SPxQqXFy6w0rESnjs=
+			HMF1l6raQ8YZU/L8V9T9UXnl8PnHb8peOBseWx8tWNQ=
 			</data>
 		</dict>
 		<key>Main.storyboardc/ShowChallengeViewController.nib/objects-12.3+.nib</key>
@@ -733,14 +736,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vrSRruGBBNrNS9I7sXddS1pO9nvWc0HmCm791B3k3d0=
+			05sfcFqupuey1MOn0nuJQN8bwJCt4Eua7l+5UrEpbxI=
 			</data>
 		</dict>
 		<key>Main.storyboardc/UINavigationController-d0k-hv-APK.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vrSRruGBBNrNS9I7sXddS1pO9nvWc0HmCm791B3k3d0=
+			05sfcFqupuey1MOn0nuJQN8bwJCt4Eua7l+5UrEpbxI=
 			</data>
 		</dict>
 		<key>Main.storyboardc/ViewController1.nib/objects-12.3+.nib</key>
@@ -761,56 +764,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZQ5X6JruDw1/2VuNzNDGAkJDf/9qSCR2hNJz3sZBz9w=
+			xb1yfyazsrL5dHSiA0nzcIBdZFHj3Qbk15ROEoeWFjM=
 			</data>
 		</dict>
 		<key>Main.storyboardc/aaa.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZQ5X6JruDw1/2VuNzNDGAkJDf/9qSCR2hNJz3sZBz9w=
+			xb1yfyazsrL5dHSiA0nzcIBdZFHj3Qbk15ROEoeWFjM=
 			</data>
 		</dict>
 		<key>Main.storyboardc/gr8-ot-mny-view-cLu-TE-Phq.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J4by5YikUFS9bwqGxV4eBj8EdKeXf+aeFpFVImpXHMA=
+			1eNW5Bs+0RNIh3uW5Tlz7zutX1xpVPM1sphkzgNv9Zg=
 			</data>
 		</dict>
 		<key>Main.storyboardc/gr8-ot-mny-view-cLu-TE-Phq.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J4by5YikUFS9bwqGxV4eBj8EdKeXf+aeFpFVImpXHMA=
+			1eNW5Bs+0RNIh3uW5Tlz7zutX1xpVPM1sphkzgNv9Zg=
 			</data>
 		</dict>
 		<key>Main.storyboardc/iif-Cl-MBd-view-xkC-Vb-zs1.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aB3qQMlvkKNTWwUymSGumwz4FcC0+UANaMocN5g5izw=
+			jd294e098AG7WWUInhHenFNnGs9Yvb22i3QHuQqZ6hI=
 			</data>
 		</dict>
 		<key>Main.storyboardc/iif-Cl-MBd-view-xkC-Vb-zs1.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aB3qQMlvkKNTWwUymSGumwz4FcC0+UANaMocN5g5izw=
+			jd294e098AG7WWUInhHenFNnGs9Yvb22i3QHuQqZ6hI=
 			</data>
 		</dict>
 		<key>Main.storyboardc/lyo-Bn-Ul7-view-g7h-5y-q4s.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mv2ObcXpVpjvsR2cgO2lg5zkV23BVoaKZavjK5xB1PU=
+			cpvIbwFYqhKAp6VnM6JThWhg94odzb4qzgo3IqIQdkQ=
 			</data>
 		</dict>
 		<key>Main.storyboardc/lyo-Bn-Ul7-view-g7h-5y-q4s.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jZp3bnyRfyCME5stKx/e3Sco4Qq0tOAXaHvm0CX0UVw=
+			j4NAOucqY2f32gp5hDDwOXHTEat5uaS3gbSz4ZBf8Fk=
 			</data>
 		</dict>
 		<key>Main.storyboardc/newTableViewController.nib/objects-12.3+.nib</key>
@@ -831,70 +834,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RgO46Gb/8RmNQFOzyVw19JEE9ifK00aaudeR1++HF30=
+			yGeo5QaUthScWj5cvfYIzGcb9QW87bIRB/UknW86JeE=
 			</data>
 		</dict>
 		<key>Main.storyboardc/pUF-1A-qE0-view-pzm-sN-2LA.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RgO46Gb/8RmNQFOzyVw19JEE9ifK00aaudeR1++HF30=
+			yGeo5QaUthScWj5cvfYIzGcb9QW87bIRB/UknW86JeE=
 			</data>
 		</dict>
 		<key>Main.storyboardc/rSM-5M-mZ5-view-78S-Ia-wBN.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zIfBortJd6g2VtUKShOI5RofhGoXmGUgNKm0+oWvD8Y=
+			lq2g/2+NffDWbdWnwl7hvBOMIuqhoHdQs5kyxFfstJo=
 			</data>
 		</dict>
 		<key>Main.storyboardc/rSM-5M-mZ5-view-78S-Ia-wBN.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			339lnb0BbJcSrPfZ3euFehVZalL5JDRip7eR0VjO0FI=
+			5ovVIDktu9REL8XjYs2S5GESDjxVUa7TWo1PDsEcE4U=
 			</data>
 		</dict>
 		<key>Modules/AP_PaySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hTlTA/7Kq2nbo1JCX3j/3/PqydxgXBaJPJKml3riiYY=
+			xvU8FBjGAlpjbJOGwS0Ek4MCaEvMcwI7QRD5uK7Twq8=
 			</data>
 		</dict>
 		<key>Modules/AP_PaySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0uF3a+KhVs32Qs0vgv+e3I3AC3AddW8dYa4SthrnJBQ=
+			6ZgeXBMtlv1kfYmEfvjEnsPL1pescC/SeHYRXq+A/3g=
 			</data>
 		</dict>
 		<key>Modules/AP_PaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iHZz3zEVnNZ+TNFn665tffNIzlvbXzMVo0L9HmcvdTY=
+			vt3uxZD161V8lB0nCaLyxnifb7HbuuZ/EYpxPN1hX9o=
 			</data>
 		</dict>
 		<key>Modules/AP_PaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0uF3a+KhVs32Qs0vgv+e3I3AC3AddW8dYa4SthrnJBQ=
+			6ZgeXBMtlv1kfYmEfvjEnsPL1pescC/SeHYRXq+A/3g=
 			</data>
 		</dict>
 		<key>Modules/AP_PaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+bzXt585g8O5ounAlfohzUyw6vebvM0YuNvU/1acxEk=
+			BfTDYH4DZ0Iz+4ZeBy3+DhzsWWLeXKyPH+muHZU3hXI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2tchfu3kZdv6Qei9VQueBZ3GgqQt2QMwGsslY3j1yY4=
+			6lfbb+sNN7tXQqcMx8amYcBnIk7PJfWIMldO9dXQNp4=
 			</data>
 		</dict>
 		<key>README.txt</key>
@@ -1000,20 +1003,6 @@
 			<key>hash2</key>
 			<data>
 			4nn4l1pT+G9RaE4XQSdTDFZvZGdIM3dOEDG6qIJofUA=
-			</data>
-		</dict>
-		<key>mastercard.cer</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			E5nZdBQA7MOlJ4biYm1610cIexUboNPdGxAffXrw+Lw=
-			</data>
-		</dict>
-		<key>visa.crt</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jFI6U6A63obYnbYpbmFoh3Q1e3bCUlND6xlawu+W81I=
 			</data>
 		</dict>
 		<key>visa.der</key>
