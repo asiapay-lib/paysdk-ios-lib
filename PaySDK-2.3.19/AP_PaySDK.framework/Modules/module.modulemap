@@ -1,0 +1,11 @@
+framework module AP_PaySDK {
+  umbrella header "AP_PaySDK.h"
+
+  export *
+  module * { export * }
+}
+
+module AP_PaySDK.Swift {
+    header "AP_PaySDK-Swift.h"
+    requires objc
+}
