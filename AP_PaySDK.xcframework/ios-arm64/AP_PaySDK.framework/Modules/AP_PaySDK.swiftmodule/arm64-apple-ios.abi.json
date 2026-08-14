@@ -45907,392 +45907,462 @@
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 296,
+      "offset": 15091,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 640,
+      "offset": 15123,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
+      "kind": "StringLiteral",
+      "offset": 15733,
       "length": 8,
       "value": "\"errMsg\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 651,
+      "offset": 15744,
       "length": 20,
       "value": "\"Auth token missing\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 673,
+      "offset": 15766,
       "length": 13,
       "value": "\"successCode\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 826,
+      "offset": 15927,
       "length": 12,
       "value": "\"merchantId\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 894,
+      "offset": 15995,
       "length": 10,
       "value": "\"orderRef\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 951,
+      "offset": 16052,
       "length": 8,
       "value": "\"amount\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 1004,
+      "offset": 16105,
       "length": 10,
       "value": "\"currCode\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 1072,
+      "offset": 16173,
       "length": 6,
       "value": "\"lang\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 1128,
+      "offset": 16229,
       "length": 11,
       "value": "\"payMethod\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 1187,
+      "offset": 16288,
       "length": 9,
       "value": "\"payType\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 1259,
-      "length": 9,
-      "value": "\"payGate\""
+      "offset": 16453,
+      "length": 8,
+      "value": "\"remark\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 1321,
+      "offset": 16478,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
+      "kind": "StringLiteral",
+      "offset": 16511,
       "length": 12,
       "value": "\"successUrl\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 1408,
+      "offset": 16598,
       "length": 11,
       "value": "\"cancelUrl\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 1493,
-      "length": 10,
-      "value": "\"errorUrl\""
-    },
-    {
-      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
-      "kind": "StringLiteral",
-      "offset": 1575,
+      "offset": 16796,
       "length": 9,
       "value": "\"failUrl\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
+      "kind": "StringLiteral",
+      "offset": 16877,
+      "length": 11,
+      "value": "\"extraData\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "Array",
-      "offset": 1760,
+      "offset": 17039,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 2055,
+      "offset": 17061,
+      "length": 63,
+      "value": "\"Payme Request Data: \""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
+      "kind": "StringLiteral",
+      "offset": 17123,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
+      "kind": "StringLiteral",
+      "offset": 17425,
       "length": 8,
       "value": "\"errMsg\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 2065,
+      "offset": 17435,
       "length": 22,
       "value": "\"JSON encoding failed\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 2109,
+      "offset": 17479,
       "length": 13,
       "value": "\"successCode\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 2440,
+      "offset": 17631,
+      "length": 31,
+      "value": "\"PayMe Request Data: \""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
+      "kind": "StringLiteral",
+      "offset": 17661,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
+      "kind": "StringLiteral",
+      "offset": 17863,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 2457,
+      "offset": 17880,
       "length": 9,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 2515,
+      "offset": 17938,
       "length": 6,
       "value": "\"data\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 2534,
+      "offset": 17957,
       "length": 6,
       "value": "\"hash\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 2541,
+      "offset": 17964,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 2545,
+      "offset": 17968,
       "length": 4,
       "value": "\"ts\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 2550,
+      "offset": 17973,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 2963,
+      "offset": 18406,
       "length": 8,
       "value": "\"errMsg\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 3002,
+      "offset": 18445,
       "length": 13,
       "value": "\"successCode\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "Array",
-      "offset": 3263,
+      "offset": 18722,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 3394,
+      "offset": 18837,
       "length": 6,
       "value": "\"data\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "Array",
-      "offset": 3894,
+      "offset": 19305,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 3986,
+      "offset": 19389,
       "length": 8,
       "value": "\"PayRef\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 4163,
+      "offset": 19550,
       "length": 8,
       "value": "\"errMsg\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 4276,
+      "offset": 19655,
       "length": 4,
       "value": "\"\r\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 4288,
+      "offset": 19667,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 4317,
+      "offset": 19696,
       "length": 4,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 4329,
+      "offset": 19708,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 4709,
+      "offset": 20055,
       "length": 8,
       "value": "\"errMsg\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 4730,
+      "offset": 20076,
       "length": 13,
       "value": "\"successCode\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 5340,
+      "offset": 20676,
       "length": 8,
       "value": "\"errMsg\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 5361,
+      "offset": 20697,
       "length": 13,
       "value": "\"successCode\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 6308,
+      "offset": 21733,
       "length": 58,
       "value": "\"payMePaymentUrl : \""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 6365,
+      "offset": 21790,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 6453,
+      "offset": 21870,
       "length": 24,
       "value": "\"?returnUrl=appswift:\/\/\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 6532,
+      "offset": 21941,
       "length": 59,
       "value": "\"payMePaymentUrl 2: \""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 6590,
+      "offset": 21999,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "BooleanLiteral",
-      "offset": 6850,
+      "offset": 22239,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "BooleanLiteral",
-      "offset": 7362,
+      "offset": 22699,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "Dictionary",
-      "offset": 7461,
+      "offset": 22790,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 8034,
+      "offset": 23307,
       "length": 8,
       "value": "\"errMsg\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 8072,
+      "offset": 23345,
       "length": 13,
       "value": "\"successCode\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 8282,
+      "offset": 23571,
       "length": 8,
       "value": "\"errMsg\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 8320,
+      "offset": 23609,
       "length": 13,
       "value": "\"successCode\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 8497,
+      "offset": 23798,
       "length": 8,
       "value": "\"errMsg\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
       "kind": "StringLiteral",
-      "offset": 8533,
+      "offset": 23834,
+      "length": 13,
+      "value": "\"successCode\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
+      "kind": "StringLiteral",
+      "offset": 23932,
+      "length": 39,
+      "value": "\"PayMe JSON\/encryption error: \""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
+      "kind": "StringLiteral",
+      "offset": 23970,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
+      "kind": "StringLiteral",
+      "offset": 24093,
+      "length": 8,
+      "value": "\"errMsg\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/PayMeClass.swift",
+      "kind": "StringLiteral",
+      "offset": 24146,
       "length": 13,
       "value": "\"successCode\""
     },
@@ -63190,98 +63260,280 @@
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2360,
+      "offset": 2372,
+      "length": 26,
+      "value": "\"===== HTTP REQUEST =====\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2422,
+      "length": 43,
+      "value": "\"URL: \""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2461,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2464,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2489,
+      "length": 37,
+      "value": "\"Method: \""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2522,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2525,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2550,
+      "length": 48,
+      "value": "\"Headers: \""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "Dictionary",
+      "offset": 2593,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2597,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2675,
+      "length": 7,
+      "value": "\"BODY:\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2749,
+      "length": 14,
+      "value": "\"INVALID UTF8\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2805,
+      "length": 26,
+      "value": "\"========================\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2931,
       "length": 20,
       "value": "\"URL: \""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2379,
+      "offset": 2950,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2400,
+      "offset": 2971,
       "length": 110,
       "value": "\"Response: \""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2433,
+      "offset": 3004,
       "length": 1,
       "value": "\":::\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2509,
+      "offset": 3080,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2624,
+      "offset": 3195,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 3135,
+      "offset": 3706,
       "length": 8,
       "value": "\"errMsg\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 3177,
+      "offset": 3748,
       "length": 13,
       "value": "\"successCode\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 3223,
+      "offset": 3794,
       "length": 5,
       "value": "\"prc\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 3256,
+      "offset": 3827,
       "length": 5,
       "value": "\"src\""
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "BooleanLiteral",
-      "offset": 3770,
+      "offset": 4341,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 4720,
+      "length": 26,
+      "value": "\"===== HTTP REQUEST =====\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 4770,
+      "length": 43,
+      "value": "\"URL: \""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 4809,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 4812,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 4837,
+      "length": 37,
+      "value": "\"Method: \""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 4870,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 4873,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 4898,
+      "length": 48,
+      "value": "\"Headers: \""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "Dictionary",
+      "offset": 4941,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 4945,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 5023,
+      "length": 7,
+      "value": "\"BODY:\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 5097,
+      "length": 14,
+      "value": "\"INVALID UTF8\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 5153,
+      "length": 26,
+      "value": "\"========================\""
+    },
+    {
+      "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "BooleanLiteral",
-      "offset": 4181,
+      "offset": 5315,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "IntegerLiteral",
-      "offset": 4837,
+      "offset": 5971,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/virendrapatil\/Documents\/Projects\/Paysdk_Old\/AP_PaySDK\/Core\/APIService.swift",
       "kind": "IntegerLiteral",
-      "offset": 4884,
+      "offset": 6018,
       "length": 2,
       "value": "30"
     },
