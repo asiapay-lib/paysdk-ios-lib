@@ -17,10 +17,10 @@
 
 ## Requirements
 
-- iOS 11.0+
-- Xcode 10.0+
+- iOS 15.0+
+- Xcode 13.0+ for local development and XCode 26+ for AppStore Submission
 - Swift version 4+
--Objective C
+- Objective C
 
 
 
@@ -36,7 +36,7 @@ Add `paysdk.plist` and set value of certificate and "Domain" key value pair. Val
 
 ### Framework file (On version 2.6.02 and lower version)
 
-Add `AP_PaySDK.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries
+Add `AP_PaySDK.xcframework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries
 <!-- and also add `Material.framework` file into your project by adding the dependencies in Build Phases / Link Binary With Libraries or add using  cocoapods as 
 
 ```
@@ -45,13 +45,6 @@ pod 'Material'
 ``` -->
 
 
-### CocoaPods
-
-[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate PayDollarSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```
-pod 'AP_PaySDK', '2.6.23'
-```
 
 ### Implementation
 
