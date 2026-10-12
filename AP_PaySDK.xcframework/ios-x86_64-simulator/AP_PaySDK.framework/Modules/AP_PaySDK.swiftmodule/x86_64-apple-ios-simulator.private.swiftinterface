@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 effective-4.2 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name AP_PaySDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.2.4 effective-4.2 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AP_PaySDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 @_exported import AP_PaySDK
 import AdSupport
 import CommonCrypto
@@ -40,7 +40,9 @@ import _SwiftConcurrencyShims
   @objc public var errMsg: Swift.String?
   @objc public var resultCode: Swift.String?
   @objc public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResults]
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc required public init?(dictionary: Foundation.NSDictionary)
+  #endif
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class PayResult : ObjectiveC.NSObject {
@@ -137,7 +139,9 @@ open class ThreeDSParams : ObjectiveC.NSObject {
   case RUSSIAN
   case SPANISH
   case VIETNAMESE
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -158,7 +162,9 @@ open class ThreeDSParams : ObjectiveC.NSObject {
   case WECHATAPP
   case THREEDS2
   case CIMBCLICKS
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -167,7 +173,9 @@ open class ThreeDSParams : ObjectiveC.NSObject {
 @objc public enum payType : Swift.Int {
   case NORMAL_PAYMENT
   case HOLD_PAYMENT
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -176,7 +184,9 @@ open class ThreeDSParams : ObjectiveC.NSObject {
 public enum Action : Swift.String {
   case TX_QUERY
   case PAYMENT_METHOD
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -186,7 +196,9 @@ public enum Action : Swift.String {
   case PAYDOLLAR
   case PESOPAY
   case SIAMPAY
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -197,7 +209,9 @@ public enum Action : Swift.String {
   case DIRECT
   case EASYPAYMENTFORM
   case NONE
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -206,7 +220,9 @@ public enum Action : Swift.String {
 @objc public enum EnvType : Swift.Int {
   case SANDBOX
   case PRODUCTION
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -239,7 +255,9 @@ public enum Action : Swift.String {
   case LKR
   case KWD
   case NZD
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -254,7 +272,9 @@ public enum Action : Swift.String {
   case Checkout
   case Book
   case Subscribe
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -264,7 +284,9 @@ public enum Action : Swift.String {
   case White
   case WhiteOutline
   case Black
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -327,13 +349,17 @@ public enum Action : Swift.String {
   public var rawValue: AP_PaySDK.PayMethodType.RawValue {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: AP_PaySDK.PayMethodType.RawValue)
+  #endif
 }
 public enum CardSchemeType : Swift.String {
   case visa
   case master
   case amex
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -342,19 +368,25 @@ public enum CardSchemeType : Swift.String {
 public enum ActionType : Swift.String {
   case paymethod
   case txquery
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
 extension UIKit.UIColor {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc convenience dynamic public init?(hex: Swift.String)
+  #endif
 }
 extension Foundation.URL {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var queryParameters: [Swift.String : Swift.String]? {
     get
   }
+  #endif
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(OrderId) open class OrderId : ObjectiveC.NSObject {
   @objc public init(orderId: Swift.String)
@@ -407,12 +439,18 @@ infix operator >>> : DefaultPrecedence
   @objc func payMethodOptions(method: AP_PaySDK.PaymentOptionsDetail)
   @objc optional func showProgress()
   @objc optional func hideProgress()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func setMerchantInfoImg() -> UIKit.UIImage?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func setMerchantInfoScreen() -> UIKit.UIViewController?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func setMerchantInfo() -> Swift.String?
+  #endif
 }
 extension UIKit.UIButton {
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func setApplePayButton(btnType: AP_PaySDK.ApplePayButtonType, btnStyle: AP_PaySDK.ApplePayButtonStyle, inView: UIKit.UIView)
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func setApplePayButton(btnType: AP_PaySDK.ApplePayButtonType, btnStyle: AP_PaySDK.ApplePayButtonStyle, inView: UIKit.UIView)
 }
 @objc public enum PaySDKButtonType : Swift.Int {
   case SUBMIT
@@ -420,7 +458,9 @@ extension UIKit.UIButton {
   case NEXT
   case CANCEL
   case RESEND
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -510,7 +550,9 @@ extension UIKit.UIButton {
   @objc public var holder: Swift.String?
   @objc public var sourceIp: Swift.String?
   @objc public class func modelsFromDictionaryArray(array: Foundation.NSArray) -> [AP_PaySDK.TransQueryResult]
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc required public init?(dictionary: Foundation.NSDictionary)
+  #endif
   @objc public func dictionaryRepresentation() -> Foundation.NSDictionary
   @objc deinit
 }
@@ -555,7 +597,9 @@ extension UIKit.UIButton {
   @objc public var cardDetails: AP_PaySDK.CardDetails?
   @objc public var callBackParam: AP_PaySDK.CallBackParam?
   @objc public var threeDSParams: AP_PaySDK.ThreeDSParams?
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(channelType: AP_PaySDK.PayChannel, envType: AP_PaySDK.EnvType, amount: Swift.String, payGate: AP_PaySDK.PayGate, currCode: AP_PaySDK.CurrencyCode, payType: AP_PaySDK.payType, orderRef: Swift.String, payMethod: Swift.String, lang: AP_PaySDK.Language, merchantId: Swift.String, remark: Swift.String, payRef: Swift.String, resultpage: Swift.String, showCloseButton: Swift.Bool, showToolbar: Swift.Bool, webViewClosePrompt: Swift.String, extraData: [Swift.String : Any]?, merchantCapabilitiesData: PassKit.PKMerchantCapability = [], supportedNetworksData: [PassKit.PKPaymentNetwork] = [])
+  #endif
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(CallBackParam) open class CallBackParam : ObjectiveC.NSObject {
